@@ -256,7 +256,7 @@
         start: 'top top',
         end: '+=200%',
         pin: true,
-        scrub: 1,
+        scrub: 0.5,
         onUpdate: (self) => {
           gsap.to(casesTrack, {
             xPercent: -66 * self.progress,
@@ -266,27 +266,27 @@
         }
       });
     }
-  }
-
-  // Case cards - Horizontal stagger with different directions (mobile fallback)
-  gsap.utils.toArray('.case-card').forEach((card, i) => {
-    const isEven = i % 2 === 0;
-    
-    gsap.from(card, {
-      scrollTrigger: {
-        trigger: card,
-        start: 'top 80%',
-        toggleActions: 'play none none none'
-      },
-      x: isEven ? -150 : 150,
-      y: 60,
-      rotation: isEven ? -3 : 3,
-      opacity: 0,
-      scale: 0.92,
-      duration: 1.1,
-      ease: 'expo.out'
+  } else {
+    // Mobile fallback - regular stagger animations
+    gsap.utils.toArray('.case-card').forEach((card, i) => {
+      const isEven = i % 2 === 0;
+      
+      gsap.from(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: 'top 80%',
+          toggleActions: 'play none none none'
+        },
+        x: isEven ? -150 : 150,
+        y: 60,
+        rotation: isEven ? -3 : 3,
+        opacity: 0,
+        scale: 0.92,
+        duration: 1.1,
+        ease: 'expo.out'
+      });
     });
-  });
+  }
 
   // Why items - Alternating slide directions with stagger
   gsap.utils.toArray('.why-item').forEach((item, i) => {
@@ -476,7 +476,43 @@
     formMessage.textContent = msg;
   }
 
-  // ---------- Simplified parallax (removed for performance) ----------
-  // Parallax effects disabled to prevent scroll lag
+  // ---------- Lightweight parallax effects (non-blocking) ----------
+  if (!isTouch) {
+    // Hero title - subtle parallax
+    const heroSection = document.getElementById('hero');
+    if (heroSection) {
+      const heroTitle = heroSection.querySelector('h1');
+      if (heroTitle) {
+        gsap.to(heroTitle, {
+          scrollTrigger: {
+            trigger: heroSection,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 0.5
+          },
+          yPercent: -10,
+          ease: 'none'
+        });
+      }
+    }
+
+    // Earnings section SVG - subtle movement
+    const earningsSection = document.getElementById('earnings');
+    if (earningsSection) {
+      const svgBg = earningsSection.querySelector('svg');
+      if (svgBg) {
+        gsap.to(svgBg, {
+          scrollTrigger: {
+            trigger: earningsSection,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 0.8
+          },
+          y: -40,
+          ease: 'none'
+        });
+      }
+    }
+  }
 
 })();
