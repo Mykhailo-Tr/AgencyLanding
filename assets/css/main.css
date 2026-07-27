@@ -12,7 +12,7 @@
 }
 
 html {
-  scroll-behavior: auto; /* Lenis handles smooth */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -220,6 +220,186 @@ body {
   stroke-dashoffset: 1200;
 }
 
+/* ========== SVG Divider animations ========== */
+.wave-path,
+.wave-path-2 {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+}
+
+.diagonal-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+/* ========== Floating decorative elements ========== */
+.floating-orb {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(60px);
+  opacity: 0.4;
+}
+
+.floating-orb-1 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 45, 85, 0.3) 0%, transparent 70%);
+  top: 20%;
+  left: 10%;
+  animation: float1 20s ease-in-out infinite;
+}
+
+.floating-orb-2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 240, 255, 0.2) 0%, transparent 70%);
+  top: 60%;
+  right: 15%;
+  animation: float2 25s ease-in-out infinite;
+}
+
+.floating-orb-3 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255, 45, 85, 0.25) 0%, transparent 70%);
+  bottom: 30%;
+  left: 30%;
+  animation: float3 18s ease-in-out infinite;
+}
+
+.floating-gradient {
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(80px);
+  opacity: 0.15;
+}
+
+.floating-gradient-1 {
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(135deg, rgba(255, 45, 85, 0.2) 0%, rgba(0, 240, 255, 0.1) 100%);
+  top: -10%;
+  right: -10%;
+  animation: gradientFloat1 30s ease-in-out infinite;
+}
+
+.floating-gradient-2 {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(45deg, rgba(0, 240, 255, 0.15) 0%, rgba(255, 45, 85, 0.1) 100%);
+  bottom: -10%;
+  left: -10%;
+  animation: gradientFloat2 35s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(50px, -30px) scale(1.1); }
+  50% { transform: translate(-30px, 50px) scale(0.95); }
+  75% { transform: translate(-50px, -20px) scale(1.05); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-40px, 60px) scale(1.15); }
+  66% { transform: translate(60px, -40px) scale(0.9); }
+}
+
+@keyframes float3 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(30px, -50px) rotate(180deg); }
+}
+
+@keyframes gradientFloat1 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-100px, 100px) rotate(90deg); }
+}
+
+@keyframes gradientFloat2 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(80px, -80px) rotate(-90deg); }
+}
+
+/* ========== Responsive optimizations ========== */
+@media (max-width: 768px) {
+  /* Disable floating elements on mobile for performance */
+  .floating-orb,
+  .floating-gradient {
+    display: none;
+  }
+  
+  /* Reduce animation complexity on mobile */
+  .feature-card,
+  .case-card,
+  .team-card {
+    transform: none !important;
+  }
+  
+  /* Simplified hero on mobile */
+  #hero {
+    min-height: 75svh;
+  }
+}
+
+/* ========== Accessibility improvements ========== */
+@media (prefers-reduced-motion: reduce) {
+  .floating-orb,
+  .floating-gradient {
+    animation: none;
+    opacity: 0.1;
+  }
+  
+  .wave-path,
+  .wave-path-2,
+  .diagonal-path,
+  .hero-path {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .noise-overlay,
+  .ambient-bloom,
+  .floating-orb,
+  .floating-gradient {
+    opacity: 0.05;
+  }
+  
+  .btn-primary {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Focus visible improvements */
+.btn-primary:focus-visible,
+.btn-ghost:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: white;
+  padding: 1rem 2rem;
+  z-index: 10000;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
 /* ========== Reduced motion ========== */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -239,4 +419,28 @@ body {
 /* ========== Utility for GPU ========== */
 .will-change-transform {
   will-change: transform;
+}
+
+/* GPU acceleration for animated elements */
+.hero-line,
+.feature-card,
+.case-card,
+.why-item,
+.team-card,
+.floating-orb,
+.floating-gradient {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Optimize scroll performance */
+html {
+  will-change: scroll-position;
+}
+
+/* Reduce paint complexity */
+.noise-overlay,
+.ambient-bloom {
+  will-change: opacity;
 }
