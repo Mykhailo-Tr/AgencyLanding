@@ -1,159 +1,72 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="uk" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Florence Agency — офіційна TikTok Live агенція | Стань стрімером</title>
-  <meta name="description" content="Florence Agency — TikTok Live агенція, яка тренує та продюсує нових стрімерів. Персональний менеджер, навчальна програма, дохід від $2000/міс. Почни безкоштовно.">
-  <link rel="canonical" href="https://yourdomain.com/">
+  <title>UniLive Agency — Офіційна TikTok Live агенція | Стань стрімером</title>
+  <meta name="description" content="Офіційна TikTok Live Agency. Тренуємо, продюсуємо та створюємо нових стрімерів. Безкоштовно. Від $2 000 на місяць. Понад 640 стрімерів уже з нами.">
+  <link rel="canonical" href="https://unilive.agency/">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0A0A0F">
-
-  <meta property="og:title" content="Florence Agency — офіційна TikTok Live агенція">
-  <meta property="og:description" content="Тренуємо та продюсуємо нових стрімерів у TikTok Live. Персональний менеджер, навчання, дохід від $2000/міс.">
-  <meta property="og:image" content="https://yourdomain.com/assets/img/og-image.jpg">
+  <meta property="og:title" content="UniLive Agency — Офіційна TikTok Live агенція">
+  <meta property="og:description" content="Тренуємо, продюсуємо та створюємо нових стрімерів у TikTok Live. Наші послуги безкоштовні. Все, що потрібно — мобільний телефон.">
+  <meta property="og:image" content="https://unilive.agency/og-image.jpg">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourdomain.com/">
+  <meta property="og:url" content="https://unilive.agency/">
   <meta property="og:locale" content="uk_UA">
-
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Florence Agency — офіційна TikTok Live агенція">
-  <meta name="twitter:description" content="Тренуємо та продюсуємо нових стрімерів у TikTok Live.">
-  <meta name="twitter:image" content="https://yourdomain.com/assets/img/og-image.jpg">
+  <meta name="twitter:title" content="UniLive Agency — TikTok Live Agency">
+  <meta name="twitter:description" content="Стань стрімером TikTok Live. Безкоштовне навчання, персональний менеджер, закритий чат. Від $2 000/міс.">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
 
-  <link rel="icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
-
-  <!-- Fonts -->
+  <!-- Fonts: distinctive variable + display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=General+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            'bg-base': '#0A0A0F',
-            'bg-surface': '#14141C',
-            'bg-surface-raised': '#1C1C26',
-            'accent-live': '#F5306B',
-            'accent-tech': '#22D3C7',
-            'accent-gold': '#E8B34F',
-            'text-primary': '#F5F5F7',
-            'text-muted': '#9A9AA8',
-            'border-subtle': '#26262F',
+            ink: '#050505',
+            paper: '#f4f0e8',
+            accent: '#ff2d55',
+            accent2: '#00f0ff',
+            muted: '#8a8680',
+            surface: '#0c0c0c',
+            elev: '#141414'
           },
           fontFamily: {
-            display: ['"Bricolage Grotesque"', 'sans-serif'],
-            body: ['"General Sans"', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
+            display: ['Syne', 'system-ui', 'sans-serif'],
+            body: ['Space Grotesk', 'system-ui', 'sans-serif']
           },
+          letterSpacing: {
+            tightest: '-0.06em',
+            tighter: '-0.04em'
+          }
         }
       }
     }
   </script>
 
-  <!-- Alpine.js -->
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
 
-  <!-- GSAP + ScrollTrigger -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-  <!-- Lenis smooth scroll -->
-  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.25/dist/lenis.css">
-  <script src="https://unpkg.com/lenis@1.3.25/dist/lenis.min.js"></script>
-
-  <style>
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-      }
-    }
-
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-
-    /* WebGL Canvas */
-    #shader-canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      opacity: 0.2;
-    }
-
-    /* Mosaic Reveal */
-    .mosaic-reveal {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .mosaic-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, var(--accent-live), var(--accent-tech));
-      z-index: 10;
-      transform: translateY(-100%);
-      pointer-events: none;
-    }
-
-    /* Growth Ticker */
-    .growth-ticker {
-      font-family: 'JetBrains Mono', monospace;
-      background: rgba(20, 20, 28, 0.8);
-      border: 1px solid var(--border-subtle);
-      backdrop-filter: blur(10px);
-    }
-
-    /* Custom scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: var(--bg-base);
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: var(--border-subtle);
-      border-radius: 4px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: var(--accent-tech);
-    }
-  </style>
-
-  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Florence Agency",
-    "url": "https://yourdomain.com",
-    "logo": "https://yourdomain.com/assets/img/logo.png",
+    "name": "UniLive Agency",
+    "legalName": "UNILIVE LIMITED",
+    "url": "https://unilive.agency",
+    "logo": "https://unilive.agency/assets/icons/logo.svg",
+    "description": "Офіційна TikTok Live агенція. Тренуємо, продюсуємо та створюємо нових стрімерів.",
     "foundingDate": "2022",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "GB"
+    },
     "sameAs": []
   }
   </script>
@@ -161,858 +74,626 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "TikTok Live streamer training and management",
-    "provider": { "@type": "Organization", "name": "Florence Agency" },
-    "areaServed": "Worldwide",
-    "description": "Навчання та продюсування нових стрімерів TikTok Live: персональний менеджер, навчальна програма, програма розвитку аудиторії."
+    "name": "TikTok Live Streaming Training & Management",
+    "provider": {
+      "@type": "Organization",
+      "name": "UniLive Agency"
+    },
+    "areaServed": "UA",
+    "description": "Безкоштовне навчання, персональний менеджер та програма розвитку для стрімерів TikTok Live."
   }
   </script>
 </head>
-<body class="bg-bg-base text-text-primary font-body antialiased overflow-x-hidden">
+<body class="bg-ink text-paper font-body antialiased overflow-x-hidden selection:bg-accent selection:text-white">
 
-  <!-- WebGL Background -->
-  <canvas id="shader-canvas"></canvas>
+  <!-- Grain + noise overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
 
-  <!-- Header -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-bg-base/80 backdrop-blur-md border-b border-border-subtle" x-data="{ open: false }">
-    <nav class="max-w-[1200px] mx-auto px-6 md:px-8 py-4" aria-label="Головна навігація">
-      <div class="flex items-center justify-between">
-        <a href="#" class="font-display font-bold text-xl text-text-primary">Florence Agency</a>
-        
-        <!-- Desktop Navigation -->
-        <ul class="hidden md:flex items-center gap-8">
-          <li><a href="#about" class="text-text-muted hover:text-accent-tech transition-colors">Про нас</a></li>
-          <li><a href="#cases" class="text-text-muted hover:text-accent-tech transition-colors">Наші кейси</a></li>
-          <li><a href="#team" class="text-text-muted hover:text-accent-tech transition-colors">Команда</a></li>
-          <li><a href="#contacts" class="text-text-muted hover:text-accent-tech transition-colors">Контакти</a></li>
-          <li><a href="#" class="text-text-muted hover:text-accent-tech transition-colors" aria-label="Перейти на англійську версію">EN</a></li>
-        </ul>
+  <!-- Ambient bloom -->
+  <div class="ambient-bloom" aria-hidden="true"></div>
 
-        <!-- Mobile Menu Button -->
-        <button @click="open = !open" class="md:hidden p-2 text-text-primary focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base" aria-label="Відкрити меню">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
+  <!-- ========== NAV ========== -->
+  <header id="site-header" class="fixed top-0 inset-x-0 z-50 mix-blend-difference">
+    <div class="flex items-center justify-between px-5 md:px-10 py-5 md:py-6">
+      <a href="/" class="font-display text-xl md:text-2xl font-800 tracking-tighter text-paper hover:text-accent transition-colors duration-300" data-magnetic>
+        UniLive
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm tracking-wide uppercase">
+        <a href="#about" class="nav-link" data-magnetic>Про нас</a>
+        <a href="#cases" class="nav-link" data-magnetic>Кейси</a>
+        <a href="#team" class="nav-link" data-magnetic>Команда</a>
+        <a href="#apply" class="nav-link" data-magnetic>Контакти</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <a href="#apply" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 border border-paper/30 text-xs tracking-widest uppercase hover:bg-paper hover:text-ink transition-all duration-300" data-magnetic>
+          Почати
+        </a>
+        <button id="menu-toggle" class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5" aria-label="Меню">
+          <span class="menu-line w-6 h-px bg-paper"></span>
+          <span class="menu-line w-6 h-px bg-paper"></span>
         </button>
       </div>
-
-      <!-- Mobile Navigation -->
-      <ul x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="md:hidden mt-4 pb-4 space-y-4" role="menu">
-        <li role="none"><a href="#about" @click="open = false" class="block text-text-muted hover:text-accent-tech transition-colors" role="menuitem">Про нас</a></li>
-        <li role="none"><a href="#cases" @click="open = false" class="block text-text-muted hover:text-accent-tech transition-colors" role="menuitem">Наші кейси</a></li>
-        <li role="none"><a href="#team" @click="open = false" class="block text-text-muted hover:text-accent-tech transition-colors" role="menuitem">Команда</a></li>
-        <li role="none"><a href="#contacts" @click="open = false" class="block text-text-muted hover:text-accent-tech transition-colors" role="menuitem">Контакти</a></li>
-        <li role="none"><a href="#" class="block text-text-muted hover:text-accent-tech transition-colors" role="menuitem" aria-label="Перейти на англійську версію">EN</a></li>
-      </ul>
-    </nav>
+    </div>
   </header>
 
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-ink/98 backdrop-blur-xl flex flex-col justify-center px-8 opacity-0 pointer-events-none transition-opacity duration-500">
+    <nav class="flex flex-col gap-8 text-4xl font-display font-700 tracking-tighter">
+      <a href="#about" class="mobile-link">Про нас</a>
+      <a href="#cases" class="mobile-link">Кейси</a>
+      <a href="#team" class="mobile-link">Команда</a>
+      <a href="#apply" class="mobile-link">Заявка</a>
+    </nav>
+  </div>
+
   <main>
-    <!-- Hero Section -->
-    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 px-6 md:px-8">
-      <div class="max-w-[1200px] mx-auto w-full">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div class="hero-content">
-            <p class="text-accent-tech font-mono text-sm mb-4 tracking-wider">ОФІЦІЙНА TIKTOK LIVE АГЕНЦІЯ</p>
-            <h1 class="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-tight mb-6 hero-title">
-              Florence Agency
+    <!-- ========== HERO ========== -->
+    <section id="hero" class="relative min-h-[100svh] flex flex-col justify-end pb-16 md:pb-24 overflow-hidden">
+      <!-- Layered SVG mesh / abstract geometry -->
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <svg class="absolute -top-[20%] -right-[15%] w-[90vw] h-[90vw] opacity-[0.07]" viewBox="0 0 800 800" fill="none">
+          <path class="hero-path" d="M400 50C550 50 700 200 700 400C700 600 550 750 400 750C250 750 100 600 100 400C100 200 250 50 400 50Z" stroke="currentColor" stroke-width="1"/>
+          <path class="hero-path" d="M400 120C510 120 620 240 620 400C620 560 510 680 400 680C290 680 180 560 180 400C180 240 290 120 400 120Z" stroke="currentColor" stroke-width="1"/>
+          <circle class="hero-orb" cx="400" cy="400" r="40" fill="url(#g1)"/>
+          <defs>
+            <radialGradient id="g1" cx="0.3" cy="0.3">
+              <stop offset="0%" stop-color="#ff2d55"/>
+              <stop offset="100%" stop-color="#ff2d55" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+        </svg>
+        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-ink via-ink/80 to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 px-5 md:px-10 max-w-[1600px] mx-auto w-full">
+        <div class="grid grid-cols-12 gap-y-8 items-end">
+          <div class="col-span-12 lg:col-span-8">
+            <p class="hero-eyebrow text-xs md:text-sm tracking-[0.3em] uppercase text-muted mb-6 opacity-0">
+              Офіційна TikTok Live Agency
+            </p>
+            <h1 class="font-display font-800 leading-[0.85] tracking-tightest text-[clamp(3.2rem,12vw,9.5rem)] opacity-0">
+              <span class="block overflow-hidden">
+                <span class="hero-line inline-block">Ми створюємо</span>
+              </span>
+              <span class="block overflow-hidden">
+                <span class="hero-line inline-block text-accent">стрімерів,</span>
+              </span>
+              <span class="block overflow-hidden">
+                <span class="hero-line inline-block">які заробляють.</span>
+              </span>
             </h1>
-            <p class="text-xl md:text-2xl text-text-muted mb-4">
-              Ми тренуємо, продюсуємо та створюємо нових стрімерів у TikTok Live.
+          </div>
+          <div class="col-span-12 lg:col-span-4 lg:pl-8 flex flex-col gap-8">
+            <p class="hero-desc text-base md:text-lg text-muted leading-relaxed max-w-sm opacity-0">
+              Тренуємо, продюсуємо та запускаємо нових стрімерів у TikTok Live. Послуги безкоштовні. Потрібен лише телефон.
             </p>
-            <p class="text-text-muted mb-8 max-w-lg">
-              Наші послуги безкоштовні. Все, що потрібно для початку роботи з нами — це мобільний телефон.
+            <div class="hero-cta flex flex-wrap gap-4 opacity-0">
+              <a href="#apply" class="btn-primary group" data-magnetic>
+                <span>Почати</span>
+                <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+              <a href="#how" class="btn-ghost" data-magnetic>Як це працює</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating stats bar -->
+        <div class="hero-stats mt-16 md:mt-24 flex flex-wrap gap-x-12 gap-y-4 text-sm tracking-wide opacity-0">
+          <div>
+            <span class="block text-2xl md:text-3xl font-display font-700 text-paper">640+</span>
+            <span class="text-muted uppercase text-xs tracking-widest">стрімерів</span>
+          </div>
+          <div>
+            <span class="block text-2xl md:text-3xl font-display font-700 text-paper">4</span>
+            <span class="text-muted uppercase text-xs tracking-widest">роки на ринку</span>
+          </div>
+          <div>
+            <span class="block text-2xl md:text-3xl font-display font-700 text-accent">$2K–10K</span>
+            <span class="text-muted uppercase text-xs tracking-widest">на місяць</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-6 right-5 md:right-10 flex items-center gap-3 text-xs tracking-widest uppercase text-muted">
+        <span>Scroll</span>
+        <div class="w-px h-10 bg-muted/40 relative overflow-hidden">
+          <div class="scroll-line absolute top-0 left-0 w-full h-1/2 bg-accent"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HOW IT WORKS ========== -->
+    <section id="how" class="relative py-24 md:py-40 overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-paper/20 to-transparent"></div>
+      
+      <div class="px-5 md:px-10 max-w-[1600px] mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 md:mb-24">
+          <div>
+            <p class="text-xs tracking-[0.3em] uppercase text-muted mb-4">Процес</p>
+            <h2 class="font-display font-700 text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.95] tracking-tighter max-w-xl">
+              Як це<br><span class="text-accent">працює</span>
+            </h2>
+          </div>
+          <p class="text-muted max-w-xs text-sm md:text-base leading-relaxed md:text-right">
+            Нам довіряють понад 640 стрімерів. Ось що ти отримаєш з першого дня.
+          </p>
+        </div>
+
+        <!-- Asymmetric feature grid -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
+          <!-- Large feature -->
+          <article class="feature-card md:col-span-7 relative group overflow-hidden border border-paper/10 bg-elev/40 p-8 md:p-12 min-h-[320px] flex flex-col justify-between">
+            <div class="absolute -right-10 -top-10 w-48 h-48 rounded-full bg-accent/10 blur-3xl group-hover:bg-accent/20 transition-all duration-700"></div>
+            <div class="relative z-10">
+              <span class="text-5xl md:text-7xl font-display font-800 text-paper/10 group-hover:text-accent/20 transition-colors">01</span>
+              <h3 class="mt-4 text-2xl md:text-3xl font-display font-700 tracking-tight">Персональний менеджер</h3>
+              <p class="mt-4 text-muted max-w-md leading-relaxed">
+                У тебе буде персональний менеджер, який супроводжуватиме тебе на всьому шляху. Його завдання — допомогти збільшити аудиторію та дохід.
+              </p>
+            </div>
+            <div class="mt-8 flex items-center gap-2 text-xs tracking-widest uppercase text-accent opacity-0 group-hover:opacity-100 transition-opacity">
+              <span>Супровід 6 днів/тиждень</span>
+            </div>
+          </article>
+
+          <article class="feature-card md:col-span-5 relative group overflow-hidden border border-paper/10 bg-elev/40 p-8 md:p-10 min-h-[280px] flex flex-col justify-between">
+            <div class="relative z-10">
+              <span class="text-4xl font-display font-800 text-paper/10">02</span>
+              <h3 class="mt-3 text-xl md:text-2xl font-display font-700 tracking-tight">Навчальна програма</h3>
+              <p class="mt-3 text-muted text-sm leading-relaxed">
+                Програма, яка допомогла вивести в топ TikTok більше ніж 640 стрімерів.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-card md:col-span-4 relative group overflow-hidden border border-paper/10 bg-elev/40 p-8 md:p-10 min-h-[260px]">
+            <span class="text-4xl font-display font-800 text-paper/10">03</span>
+            <h3 class="mt-3 text-xl font-display font-700 tracking-tight">Програма розвитку</h3>
+            <p class="mt-3 text-muted text-sm leading-relaxed">
+              Більше глядачів і підписників, ніж у звичайного користувача.
             </p>
-            
-            <!-- YouTube Video Placeholder -->
-            <div class="aspect-video bg-bg-surface border border-border-subtle rounded-lg mb-8 flex items-center justify-center">
-              <div class="text-center">
-                <svg class="w-16 h-16 mx-auto text-text-muted mb-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                </svg>
-                <p class="text-text-muted text-sm">YouTube Video</p>
-                <!-- TODO: Замінити на реальне YouTube відео -->
-              </div>
+          </article>
+
+          <article class="feature-card md:col-span-4 relative group overflow-hidden border border-paper/10 bg-elev/40 p-8 md:p-10 min-h-[260px]">
+            <span class="text-4xl font-display font-800 text-paper/10">04</span>
+            <h3 class="mt-3 text-xl font-display font-700 tracking-tight">Закритий чат</h3>
+            <p class="mt-3 text-muted text-sm leading-relaxed">
+              Груповий чат зі всіма стрімерами. Партнерства та свіжі інсайти.
+            </p>
+          </article>
+
+          <article class="feature-card md:col-span-4 relative group overflow-hidden border border-paper/10 bg-elev/40 p-8 md:p-10 min-h-[260px] flex flex-col justify-between">
+            <div>
+              <span class="text-4xl font-display font-800 text-paper/10">05</span>
+              <h3 class="mt-3 text-xl font-display font-700 tracking-tight">Високий дохід</h3>
+              <p class="mt-3 text-muted text-sm leading-relaxed">
+                Заробляй у рази більше, ніж 90% населення.
+              </p>
             </div>
-
-            <a href="#form" class="magnetic-btn inline-flex items-center justify-center bg-accent-live text-white font-medium px-8 py-4 rounded-full hover:bg-accent-live/90 transition-all focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base" aria-label="Перейти до форми заявки">
-              Почати
-            </a>
-          </div>
-
-          <!-- Growth Ticker -->
-          <div class="growth-ticker rounded-xl p-6 lg:p-8" aria-live="polite">
-            <div class="space-y-4">
-              <div class="flex items-center justify-between">
-                <span class="text-text-muted text-sm">Активних стрімерів</span>
-                <span class="font-mono text-accent-tech text-2xl font-bold" id="streamer-count">0</span>
-              </div>
-              <div class="h-px bg-border-subtle"></div>
-              <div class="flex items-center justify-between">
-                <span class="text-text-muted text-sm">Загальний дохід</span>
-                <span class="font-mono text-accent-gold text-2xl font-bold">$<span id="total-revenue">0</span></span>
-              </div>
-              <div class="h-px bg-border-subtle"></div>
-              <div class="flex items-center justify-between">
-                <span class="text-text-muted text-sm">Статус</span>
-                <span class="font-mono text-accent-live text-sm animate-pulse">● LIVE</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="about" class="py-24 md:py-32 px-6 md:px-8 mosaic-reveal relative">
-      <div class="mosaic-overlay"></div>
-      <div class="max-w-[1200px] mx-auto">
-        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4">Як це працює</h2>
-        <p class="text-text-muted text-lg mb-12">Нам довіряють понад 640 стрімерів</p>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-20">
-          <article class="bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/50 hover:bg-bg-surface-raised transition-all duration-300 hover:-translate-y-1 group">
-            <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎯</div>
-            <h3 class="font-display font-semibold text-xl mb-3">Персональний менеджер</h3>
-            <p class="text-text-muted">У тебе буде персональний менеджер, який супроводжуватиме тебе на всьому шляху. Його завдання — допомогти тобі збільшити аудиторію та дохід.</p>
-          </article>
-
-          <article class="bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/50 hover:bg-bg-surface-raised transition-all duration-300 hover:-translate-y-1 group">
-            <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">📚</div>
-            <h3 class="font-display font-semibold text-xl mb-3">Навчальна програма</h3>
-            <p class="text-text-muted">Ти пройдеш нашу навчальну програму, яка допомогла вивести в топ TikTok більше ніж <span class="text-accent-gold font-mono">640 стрімерів</span>.</p>
-          </article>
-
-          <article class="bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/50 hover:bg-bg-surface-raised transition-all duration-300 hover:-translate-y-1 group">
-            <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🚀</div>
-            <h3 class="font-display font-semibold text-xl mb-3">Програма розвитку</h3>
-            <p class="text-text-muted">Ми додамо тебе до нашої власної програми розвитку. Завдяки цьому у тебе буде більше глядачів і підписників, ніж у будь-якого звичайного користувача.</p>
-          </article>
-
-          <article class="bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/50 hover:bg-bg-surface-raised transition-all duration-300 hover:-translate-y-1 group">
-            <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">💬</div>
-            <h3 class="font-display font-semibold text-xl mb-3">Закритий чат</h3>
-            <p class="text-text-muted">Ми додамо тебе до групового чату зі всіма стрімерами нашої агенції. Там ти отримуватимеш нову інформацію та знаходиш партнерів для спільних прямих ефірів.</p>
-          </article>
-
-          <article class="bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/50 hover:bg-bg-surface-raised transition-all duration-300 hover:-translate-y-1 group md:col-span-2 lg:col-span-2">
-            <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">💰</div>
-            <h3 class="font-display font-semibold text-xl mb-3">Високий дохід</h3>
-            <p class="text-text-muted">Ти почнеш заробляти у рази більше, ніж 90% населення, і закохаєшся у цей процес.</p>
+            <div class="mt-4 text-accent font-display font-700 text-2xl">$2K–10K</div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Cases Section (Pinned Horizontal) -->
-    <section id="cases" class="cases-section py-24 md:py-32 px-6 md:px-8 min-h-screen">
-      <div class="max-w-[1200px] mx-auto">
-        <h2 class="font-display font-bold text-3xl md:text-4xl mb-12">Наші кейси</h2>
+    <!-- ========== CASES ========== -->
+    <section id="cases" class="relative py-24 md:py-40">
+      <div class="px-5 md:px-10 max-w-[1600px] mx-auto">
+        <div class="mb-16 md:mb-20">
+          <p class="text-xs tracking-[0.3em] uppercase text-muted mb-4">Результати</p>
+          <h2 class="font-display font-700 text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.95] tracking-tighter">
+            Наші <span class="text-accent">кейси</span>
+          </h2>
+        </div>
 
-        <div class="cases-track flex gap-8">
-          <article class="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.333%-16px)] bg-bg-surface border border-border-subtle rounded-xl p-6 hover:bg-bg-surface-raised hover:shadow-lg hover:shadow-accent-live/10 transition-all duration-300">
-            <div class="flex items-start gap-4 mb-6">
-              <img src="https://placehold.co/80x80/14141C/22D3C7?text=K" alt="Karina avatar" class="w-20 h-20 rounded-full object-cover" loading="lazy" width="80" height="80">
-              <!-- TODO: замінити на реальне фото -->
-              <div>
-                <h3 class="font-display font-semibold text-2xl">Karina</h3>
-                <p class="text-text-muted">@carry</p>
+        <!-- Horizontal-ish case cards with offset -->
+        <div class="space-y-6 md:space-y-8">
+          <!-- Case 1 -->
+          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 border border-paper/10 overflow-hidden bg-surface/60">
+            <div class="md:col-span-5 relative min-h-[280px] md:min-h-[360px] overflow-hidden bg-elev">
+              <div class="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-accent2/10"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full border border-paper/20 flex items-center justify-center">
+                  <span class="font-display text-4xl md:text-5xl font-700 text-paper/80">K</span>
+                </div>
               </div>
+              <div class="absolute bottom-4 left-4 text-xs tracking-widest uppercase text-muted">@carry..ray</div>
             </div>
-            <div class="space-y-3 mb-6">
-              <div class="flex justify-between">
-                <span class="text-text-muted">Підписники</span>
-                <span class="font-mono text-accent-tech">29K</span>
+            <div class="md:col-span-7 p-8 md:p-12 flex flex-col justify-center">
+              <h3 class="font-display text-3xl md:text-4xl font-700 tracking-tight">Karina</h3>
+              <div class="mt-6 flex flex-wrap gap-8">
+                <div>
+                  <span class="block text-3xl md:text-4xl font-display font-700 text-accent">29K</span>
+                  <span class="text-xs tracking-widest uppercase text-muted">підписників</span>
+                </div>
+                <div>
+                  <span class="block text-3xl md:text-4xl font-display font-700">3–7K $</span>
+                  <span class="text-xs tracking-widest uppercase text-muted">на місяць</span>
+                </div>
               </div>
-              <div class="flex justify-between">
-                <span class="text-text-muted">Дохід</span>
-                <span class="font-mono text-accent-gold">3–7K $/міс</span>
-              </div>
+              <a href="https://www.tiktok.com/@carry..ray" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-paper/30 pb-1 w-fit hover:border-accent hover:text-accent transition-colors">
+                Відкрити профіль
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
             </div>
-            <a href="https://tiktok.com/@carry" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full bg-bg-surface-raised border border-border-subtle text-text-primary font-medium px-6 py-3 rounded-lg hover:border-accent-tech transition-colors focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base" aria-label="Відкрити TikTok профіль Karina (@carry) в новій вкладці">
-              Відкрити профіль
-            </a>
           </article>
 
-          <article class="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.333%-16px)] bg-bg-surface border border-border-subtle rounded-xl p-6 hover:bg-bg-surface-raised hover:shadow-lg hover:shadow-accent-live/10 transition-all duration-300">
-            <div class="flex items-start gap-4 mb-6">
-              <img src="https://placehold.co/80x80/14141C/F5306B?text=V" alt="Valentine avatar" class="w-20 h-20 rounded-full object-cover" loading="lazy" width="80" height="80">
-              <!-- TODO: замінити на реальне фото -->
-              <div>
-                <h3 class="font-display font-semibold text-2xl">Valentine</h3>
-                <p class="text-text-muted">@tiny</p>
+          <!-- Case 2 - offset -->
+          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 border border-paper/10 overflow-hidden bg-surface/60 md:translate-x-8">
+            <div class="md:col-span-7 p-8 md:p-12 flex flex-col justify-center order-2 md:order-1">
+              <h3 class="font-display text-3xl md:text-4xl font-700 tracking-tight">Valentine</h3>
+              <div class="mt-6 flex flex-wrap gap-8">
+                <div>
+                  <span class="block text-3xl md:text-4xl font-display font-700 text-accent">13K</span>
+                  <span class="text-xs tracking-widest uppercase text-muted">підписників</span>
+                </div>
+                <div>
+                  <span class="block text-3xl md:text-4xl font-display font-700">22K $</span>
+                  <span class="text-xs tracking-widest uppercase text-muted">за 3 місяці</span>
+                </div>
               </div>
+              <a href="https://www.tiktok.com/@tiny.val" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-paper/30 pb-1 w-fit hover:border-accent hover:text-accent transition-colors">
+                Відкрити профіль
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
             </div>
-            <div class="space-y-3 mb-6">
-              <div class="flex justify-between">
-                <span class="text-text-muted">Підписники</span>
-                <span class="font-mono text-accent-tech">13K</span>
+            <div class="md:col-span-5 relative min-h-[280px] md:min-h-[360px] overflow-hidden bg-elev order-1 md:order-2">
+              <div class="absolute inset-0 bg-gradient-to-bl from-accent2/15 via-transparent to-accent/10"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full border border-paper/20 flex items-center justify-center">
+                  <span class="font-display text-4xl md:text-5xl font-700 text-paper/80">V</span>
+                </div>
               </div>
-              <div class="flex justify-between">
-                <span class="text-text-muted">Заробила</span>
-                <span class="font-mono text-accent-gold">22K $ за 3 міс</span>
-              </div>
+              <div class="absolute bottom-4 right-4 text-xs tracking-widest uppercase text-muted">@tiny.val</div>
             </div>
-            <a href="https://tiktok.com/@tiny" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full bg-bg-surface-raised border border-border-subtle text-text-primary font-medium px-6 py-3 rounded-lg hover:border-accent-tech transition-colors focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base" aria-label="Відкрити TikTok профіль Valentine (@tiny) в новій вкладці">
-              Відкрити профіль
-            </a>
           </article>
 
-          <article class="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.333%-16px)] bg-bg-surface border border-border-subtle rounded-xl p-6 hover:bg-bg-surface-raised hover:shadow-lg hover:shadow-accent-live/10 transition-all duration-300">
-            <div class="flex items-start gap-4 mb-6">
-              <img src="https://placehold.co/80x80/14141C/E8B34F?text=K" alt="Kristina avatar" class="w-20 h-20 rounded-full object-cover" loading="lazy" width="80" height="80">
-              <!-- TODO: замінити на реальне фото -->
-              <div>
-                <h3 class="font-display font-semibold text-2xl">Kristina</h3>
-                <p class="text-text-muted">@kris.tina</p>
+          <!-- Case 3 -->
+          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 border border-paper/10 overflow-hidden bg-surface/60">
+            <div class="md:col-span-5 relative min-h-[280px] md:min-h-[360px] overflow-hidden bg-elev">
+              <div class="absolute inset-0 bg-gradient-to-tr from-accent/15 via-transparent to-paper/5"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full border border-paper/20 flex items-center justify-center">
+                  <span class="font-display text-4xl md:text-5xl font-700 text-paper/80">K</span>
+                </div>
               </div>
+              <div class="absolute bottom-4 left-4 text-xs tracking-widest uppercase text-muted">@kris.tina.coconut</div>
             </div>
-            <div class="space-y-3 mb-6">
-              <div class="flex justify-between">
-                <span class="text-text-muted">Підписники</span>
-                <span class="font-mono text-accent-tech">10K</span>
+            <div class="md:col-span-7 p-8 md:p-12 flex flex-col justify-center">
+              <h3 class="font-display text-3xl md:text-4xl font-700 tracking-tight">Kristina</h3>
+              <div class="mt-6 flex flex-wrap gap-8">
+                <div>
+                  <span class="block text-3xl md:text-4xl font-display font-700 text-accent">10K</span>
+                  <span class="text-xs tracking-widest uppercase text-muted">підписників</span>
+                </div>
+                <div>
+                  <span class="block text-3xl md:text-4xl font-display font-700">15K $</span>
+                  <span class="text-xs tracking-widest uppercase text-muted">за 4 місяці</span>
+                </div>
               </div>
-              <div class="flex justify-between">
-                <span class="text-text-muted">Заробила</span>
-                <span class="font-mono text-accent-gold">15K $ за 4 міс</span>
-              </div>
+              <a href="https://www.tiktok.com/@kris.tina.coconut" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-paper/30 pb-1 w-fit hover:border-accent hover:text-accent transition-colors">
+                Відкрити профіль
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
             </div>
-            <a href="https://tiktok.com/@kris.tina" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full bg-bg-surface-raised border border-border-subtle text-text-primary font-medium px-6 py-3 rounded-lg hover:border-accent-tech transition-colors focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base" aria-label="Відкрити TikTok профіль Kristina (@kris.tina) в новій вкладці">
-              Відкрити профіль
-            </a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Earn With Us Section -->
-    <section class="py-24 md:py-32 px-6 md:px-8">
-      <div class="max-w-[1200px] mx-auto">
-        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4">Заробляй з нами</h2>
-        <p class="font-display font-semibold text-2xl md:text-3xl text-accent-gold mb-6">Від $2 000 до $10 000 на місяць</p>
-        <p class="text-text-muted text-lg mb-4">Без досвіду у прямих ефірах.</p>
-        
-        <div class="max-w-3xl">
-          <p class="text-text-muted mb-6">
-            Тільки у нас ти знайдеш навчальну програму, створену професійними продюсерами з використанням знань, отриманих під час вивчення прямих трансляцій TikTok протягом більше ніж двох років.
-          </p>
-          <p class="text-text-muted mb-8">
-            Цей тренінг допоміг отримати перший дохід більш ніж <span class="text-accent-gold font-mono">640 новим стрімерам</span>.
-          </p>
-          
-          <a href="#form" class="magnetic-btn inline-flex items-center justify-center bg-accent-live text-white font-medium px-8 py-4 rounded-full hover:bg-accent-live/90 transition-all focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base" aria-label="Подати заявку на навчання">
-            Пройти навчання
-          </a>
+    <!-- ========== EARNINGS BANNER ========== -->
+    <section id="earnings" class="relative py-28 md:py-40 overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <svg class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] max-w-none opacity-[0.04]" viewBox="0 0 1200 600" fill="none">
+          <path d="M0 300 Q300 100 600 300 T1200 300" stroke="currentColor" stroke-width="2"/>
+          <path d="M0 320 Q300 150 600 320 T1200 320" stroke="currentColor" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="relative px-5 md:px-10 max-w-[1400px] mx-auto text-center">
+        <p class="text-xs tracking-[0.3em] uppercase text-muted mb-6">Заробляй з нами</p>
+        <h2 class="font-display font-800 text-[clamp(2.8rem,8vw,6.5rem)] leading-[0.9] tracking-tightest">
+          Від <span class="text-accent">$2 000</span><br>
+          до <span class="text-accent">$10 000</span><br>
+          <span class="text-paper/90">на місяць</span>
+        </h2>
+        <p class="mt-8 text-muted max-w-lg mx-auto text-base md:text-lg leading-relaxed">
+          Без досвіду у прямих ефірах. Навчальна програма від професійних продюсерів, створена за 2+ роки вивчення TikTok Live.
+        </p>
+        <p class="mt-4 text-sm text-paper/70">
+          Цей тренінг допоміг отримати перший дохід більш ніж <strong class="text-accent">640</strong> новим стрімерам.
+        </p>
+        <a href="#apply" class="btn-primary mt-10 inline-flex" data-magnetic>
+          <span>Пройти навчання</span>
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== WHY US ========== -->
+    <section id="about" class="relative py-24 md:py-40">
+      <div class="px-5 md:px-10 max-w-[1600px] mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+          <div class="lg:col-span-4 lg:sticky lg:top-32 self-start">
+            <p class="text-xs tracking-[0.3em] uppercase text-muted mb-4">Чому саме ми</p>
+            <h2 class="font-display font-700 text-[clamp(2.2rem,4vw,3.5rem)] leading-[0.95] tracking-tighter">
+              Зростай<br>разом<br><span class="text-accent">з нами</span>
+            </h2>
+          </div>
+          <div class="lg:col-span-8">
+            <ul class="why-list space-y-0">
+              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-paper/10 group">
+                <span class="text-muted text-sm font-display pt-1 w-8 shrink-0">01</span>
+                <span class="text-lg md:text-xl font-medium group-hover:text-accent transition-colors">4 роки на ринку прямих трансляцій</span>
+              </li>
+              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-paper/10 group">
+                <span class="text-muted text-sm font-display pt-1 w-8 shrink-0">02</span>
+                <span class="text-lg md:text-xl font-medium group-hover:text-accent transition-colors">Продюсуємо понад 640 стрімерів</span>
+              </li>
+              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-paper/10 group">
+                <span class="text-muted text-sm font-display pt-1 w-8 shrink-0">03</span>
+                <span class="text-lg md:text-xl font-medium group-hover:text-accent transition-colors">Закритий чат зі стрімерами агентства</span>
+              </li>
+              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-paper/10 group">
+                <span class="text-muted text-sm font-display pt-1 w-8 shrink-0">04</span>
+                <span class="text-lg md:text-xl font-medium group-hover:text-accent transition-colors">Наші стрімери займають топи TikTok</span>
+              </li>
+              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-paper/10 group">
+                <span class="text-muted text-sm font-display pt-1 w-8 shrink-0">05</span>
+                <span class="text-lg md:text-xl font-medium group-hover:text-accent transition-colors">Професійна програма навчання</span>
+              </li>
+              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-paper/10 group">
+                <span class="text-muted text-sm font-display pt-1 w-8 shrink-0">06</span>
+                <span class="text-lg md:text-xl font-medium group-hover:text-accent transition-colors">Робота з донатерами + аналітика ефірів</span>
+              </li>
+              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-paper/10 group">
+                <span class="text-muted text-sm font-display pt-1 w-8 shrink-0">07</span>
+                <span class="text-lg md:text-xl font-medium group-hover:text-accent transition-colors">Технічна підтримка акаунта</span>
+              </li>
+              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-paper/10 group">
+                <span class="text-muted text-sm font-display pt-1 w-8 shrink-0">08</span>
+                <span class="text-lg md:text-xl font-medium group-hover:text-accent transition-colors">15 кваліфікованих спеціалістів</span>
+              </li>
+              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-b border-paper/10 group">
+                <span class="text-muted text-sm font-display pt-1 w-8 shrink-0">09</span>
+                <span class="text-lg md:text-xl font-medium group-hover:text-accent transition-colors">Онлайн майстер-класи від топів TikTok</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Why Us Section -->
-    <section class="py-24 md:py-32 px-6 md:px-8 why-us-section">
-      <div class="max-w-[1200px] mx-auto">
-        <h2 class="font-display font-bold text-3xl md:text-4xl mb-12">Чому саме ми</h2>
-        
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/30 hover:bg-bg-surface-raised transition-all duration-300">
-            <p class="text-text-muted">4 роки на ринку прямих трансляцій</p>
-          </div>
-          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/30 hover:bg-bg-surface-raised transition-all duration-300">
-            <p class="text-text-muted">Продюсуємо понад <span class="text-accent-gold font-mono">640 стрімерів</span></p>
-          </div>
-          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/30 hover:bg-bg-surface-raised transition-all duration-300">
-            <p class="text-text-muted">Закритий чат зі стрімерами агентства</p>
-          </div>
-          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/30 hover:bg-bg-surface-raised transition-all duration-300">
-            <p class="text-text-muted">Наші стрімери займають топи TikTok</p>
-          </div>
-          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/30 hover:bg-bg-surface-raised transition-all duration-300">
-            <p class="text-text-muted">Професійна програма навчання</p>
-          </div>
-          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/30 hover:bg-bg-surface-raised transition-all duration-300">
-            <p class="text-text-muted">Робота з донатерами</p>
-          </div>
-          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/30 hover:bg-bg-surface-raised transition-all duration-300">
-            <p class="text-text-muted">Аналітика ваших прямих ефірів</p>
-          </div>
-          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/30 hover:bg-bg-surface-raised transition-all duration-300">
-            <p class="text-text-muted">Технічна підтримка акаунта</p>
-          </div>
-          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/30 hover:bg-bg-surface-raised transition-all duration-300">
-            <p class="text-text-muted"><span class="text-accent-gold font-mono">15</span> кваліфікованих спеціалістів</p>
-          </div>
-          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/30 hover:bg-bg-surface-raised transition-all duration-300">
-            <p class="text-text-muted">Онлайн майстер-класи від топів TikTok</p>
-          </div>
+    <!-- ========== TEAM ========== -->
+    <section id="team" class="relative py-24 md:py-40 overflow-hidden">
+      <div class="px-5 md:px-10 max-w-[1600px] mx-auto">
+        <div class="mb-16 md:mb-20">
+          <p class="text-xs tracking-[0.3em] uppercase text-muted mb-4">Люди</p>
+          <h2 class="font-display font-700 text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.95] tracking-tighter">
+            Співзасновники
+          </h2>
         </div>
-      </div>
-    </section>
 
-    <!-- Team Section -->
-    <section id="team" class="py-24 md:py-32 px-6 md:px-8">
-      <div class="max-w-[1200px] mx-auto">
-        <h2 class="font-display font-bold text-3xl md:text-4xl mb-12">Наша команда</h2>
-
-        <div class="grid md:grid-cols-3 gap-8">
-          <article class="bg-bg-surface border border-border-subtle rounded-xl p-6 text-center hover:bg-bg-surface-raised hover:border-accent-tech/50 transition-all duration-300 hover:-translate-y-2 group">
-            <div class="relative inline-block mb-4">
-              <img src="https://placehold.co/120x120/14141C/22D3C7?text=DR" alt="Дмитро Ренебе" class="w-30 h-30 rounded-full mx-auto object-cover group-hover:ring-2 group-hover:ring-accent-tech transition-all duration-300" loading="lazy" width="120" height="120">
-              <!-- TODO: замінити на реальне фото -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4">
+          <article class="team-card group relative border border-paper/10 overflow-hidden bg-elev/50">
+            <div class="aspect-[4/5] relative overflow-hidden bg-surface">
+              <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent opacity-80"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-28 h-28 rounded-full border border-paper/15 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                  <span class="font-display text-3xl font-700 text-paper/70">ДВ</span>
+                </div>
+              </div>
             </div>
-            <h3 class="font-display font-semibold text-xl mb-2">Дмитро Ренебе</h3>
-            <p class="text-accent-tech text-sm font-mono">Співзасновник</p>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-700 tracking-tight">Дмитро Велком</h3>
+              <p class="mt-1 text-xs tracking-widest uppercase text-muted">Співзасновник</p>
+            </div>
           </article>
-
-          <article class="bg-bg-surface border border-border-subtle rounded-xl p-6 text-center hover:bg-bg-surface-raised hover:border-accent-tech/50 transition-all duration-300 hover:-translate-y-2 group">
-            <div class="relative inline-block mb-4">
-              <img src="https://placehold.co/120x120/14141C/F5306B?text=DF" alt="Дмитро Флоренс" class="w-30 h-30 rounded-full mx-auto object-cover group-hover:ring-2 group-hover:ring-accent-tech transition-all duration-300" loading="lazy" width="120" height="120">
-              <!-- TODO: замінити на реальне фото -->
+          <article class="team-card group relative border border-paper/10 overflow-hidden bg-elev/50 md:mt-12">
+            <div class="aspect-[4/5] relative overflow-hidden bg-surface">
+              <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent opacity-80"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-28 h-28 rounded-full border border-paper/15 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                  <span class="font-display text-3xl font-700 text-paper/70">ДР</span>
+                </div>
+              </div>
             </div>
-            <h3 class="font-display font-semibold text-xl mb-2">Дмитро Флоренс</h3>
-            <p class="text-accent-tech text-sm font-mono">Співзасновник</p>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-700 tracking-tight">Дмитро Респект</h3>
+              <p class="mt-1 text-xs tracking-widest uppercase text-muted">Співзасновник</p>
+            </div>
           </article>
-
-          <article class="bg-bg-surface border border-border-subtle rounded-xl p-6 text-center hover:bg-bg-surface-raised hover:border-accent-tech/50 transition-all duration-300 hover:-translate-y-2 group">
-            <div class="relative inline-block mb-4">
-              <img src="https://placehold.co/120x120/14141C/E8B34F?text=DP" alt="Дмитро Пастущин" class="w-30 h-30 rounded-full mx-auto object-cover group-hover:ring-2 group-hover:ring-accent-tech transition-all duration-300" loading="lazy" width="120" height="120">
-              <!-- TODO: замінити на реальне фото -->
+          <article class="team-card group relative border border-paper/10 overflow-hidden bg-elev/50">
+            <div class="aspect-[4/5] relative overflow-hidden bg-surface">
+              <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent opacity-80"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-28 h-28 rounded-full border border-paper/15 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                  <span class="font-display text-3xl font-700 text-paper/70">ДЛ</span>
+                </div>
+              </div>
             </div>
-            <h3 class="font-display font-semibold text-xl mb-2">Дмитро Пастущин</h3>
-            <p class="text-accent-tech text-sm font-mono">Співзасновник</p>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-700 tracking-tight">Дмитро Лисиця</h3>
+              <p class="mt-1 text-xs tracking-widest uppercase text-muted">Співзасновник</p>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Requirements Section -->
-    <section class="py-24 md:py-32 px-6 md:px-8">
-      <div class="max-w-[1200px] mx-auto">
-        <h2 class="font-display font-bold text-3xl md:text-4xl mb-12">Мінімальні вимоги</h2>
-        
-        <div class="max-w-3xl">
-          <p class="text-text-muted mb-8">Для співпраці з нами необхідно:</p>
-          
-          <ul class="space-y-4 mb-8">
-            <li class="flex items-start gap-3">
-              <span class="text-accent-tech mt-1">•</span>
-              <span class="text-text-muted">Бути старше 18 років.</span>
+    <!-- ========== REQUIREMENTS ========== -->
+    <section id="requirements" class="relative py-24 md:py-32">
+      <div class="px-5 md:px-10 max-w-[1100px] mx-auto">
+        <div class="text-center mb-14">
+          <p class="text-xs tracking-[0.3em] uppercase text-muted mb-4">Перед стартом</p>
+          <h2 class="font-display font-700 text-[clamp(2rem,5vw,3.5rem)] leading-[0.95] tracking-tighter">
+            Мінімальні вимоги
+          </h2>
+        </div>
+        <div class="border border-paper/10 bg-elev/30 p-8 md:p-12">
+          <ul class="space-y-5 text-base md:text-lg leading-relaxed">
+            <li class="flex gap-4">
+              <span class="text-accent shrink-0 mt-1">▸</span>
+              <span>Бути старше 18 років</span>
             </li>
-            <li class="flex items-start gap-3">
-              <span class="text-accent-tech mt-1">•</span>
-              <span class="text-text-muted">Не співпрацювати з іншими TikTok Live агентствами.</span>
+            <li class="flex gap-4">
+              <span class="text-accent shrink-0 mt-1">▸</span>
+              <span>Не співпрацювати з іншими TikTok Live агентствами</span>
             </li>
-            <li class="flex items-start gap-3">
-              <span class="text-accent-tech mt-1">•</span>
-              <span class="text-text-muted">Бути готовим проводити прямі ефіри не менше <span class="text-accent-gold font-mono">4 годин на день</span>, щоб заробляти від <span class="text-accent-gold font-mono">$2 000 щомісяця</span>.</span>
+            <li class="flex gap-4">
+              <span class="text-accent shrink-0 mt-1">▸</span>
+              <span>Бути готовим проводити прямі ефіри не менше <strong class="text-paper">4 годин на день</strong>, щоб заробляти від <strong class="text-accent">$2 000</strong> щомісяця</span>
             </li>
-            <li class="flex items-start gap-3">
-              <span class="text-accent-tech mt-1">•</span>
-              <span class="text-text-muted">Дотримуватися правил платформи TikTok та правил нашої спільноти.</span>
+            <li class="flex gap-4">
+              <span class="text-accent shrink-0 mt-1">▸</span>
+              <span>Дотримуватися правил платформи TikTok та правил нашої спільноти</span>
             </li>
-            <li class="flex items-start gap-3">
-              <span class="text-accent-tech mt-1">•</span>
-              <span class="text-text-muted">Проходити навчання від наших продюсерів.</span>
+            <li class="flex gap-4">
+              <span class="text-accent shrink-0 mt-1">▸</span>
+              <span>Проходити навчання від наших продюсерів</span>
             </li>
-            <li class="flex items-start gap-3">
-              <span class="text-accent-tech mt-1">•</span>
-              <span class="text-text-muted">Бути на зв'язку зі своїм менеджером <span class="text-accent-gold font-mono">6 днів на тиждень</span>.</span>
+            <li class="flex gap-4">
+              <span class="text-accent shrink-0 mt-1">▸</span>
+              <span>Бути на зв'язку зі своїм менеджером <strong class="text-paper">6 днів на тиждень</strong></span>
             </li>
-            <li class="flex items-start gap-3">
-              <span class="text-accent-tech mt-1">•</span>
-              <span class="text-text-muted">Вміти працювати в команді.</span>
+            <li class="flex gap-4">
+              <span class="text-accent shrink-0 mt-1">▸</span>
+              <span>Вміти працювати в команді</span>
             </li>
-            <li class="flex items-start gap-3">
-              <span class="text-accent-tech mt-1">•</span>
-              <span class="text-text-muted">Мати смартфон із якісною фронтальною камерою.</span>
+            <li class="flex gap-4">
+              <span class="text-accent shrink-0 mt-1">▸</span>
+              <span>Мати смартфон із якісною фронтальною камерою</span>
             </li>
-            <li class="flex items-start gap-3">
-              <span class="text-accent-tech mt-1">•</span>
-              <span class="text-text-muted">Бути харизматичним, активним та комунікабельним.</span>
+            <li class="flex gap-4">
+              <span class="text-accent shrink-0 mt-1">▸</span>
+              <span>Бути харизматичним, активним та комунікабельним</span>
             </li>
-            <li class="flex items-start gap-3">
-              <span class="text-accent-tech mt-1">•</span>
-              <span class="text-text-muted">Усвідомлювати, що стрімінг — це повноцінна високооплачувана робота, яка потребує серйозного підходу.</span>
+            <li class="flex gap-4">
+              <span class="text-accent shrink-0 mt-1">▸</span>
+              <span>Усвідомлювати, що стрімінг — це повноцінна високооплачувана робота</span>
             </li>
           </ul>
-
-          <a href="#form" class="magnetic-btn inline-flex items-center justify-center bg-accent-live text-white font-medium px-8 py-4 rounded-full hover:bg-accent-live/90 transition-all focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base" aria-label="Подати заявку на вступ в агенцію">
-            Стати стрімером
-          </a>
+          <div class="mt-10 text-center">
+            <a href="#apply" class="btn-primary inline-flex" data-magnetic>
+              <span>Стати стрімером</span>
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Form Section -->
-    <section id="form" class="py-24 md:py-32 px-6 md:px-8">
-      <div class="max-w-[1200px] mx-auto">
-        <h2 id="form-heading" class="font-display font-bold text-3xl md:text-4xl mb-4">Форма заявки</h2>
-        <p class="text-text-muted text-lg mb-12">Зростати разом з нами</p>
+    <!-- ========== APPLY / FORM ========== -->
+    <section id="apply" class="relative py-24 md:py-40 overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-paper/15 to-transparent"></div>
+      <div class="px-5 md:px-10 max-w-[900px] mx-auto">
+        <div class="text-center mb-12 md:mb-16">
+          <p class="text-xs tracking-[0.3em] uppercase text-muted mb-4">Заявка</p>
+          <h2 class="font-display font-700 text-[clamp(2.2rem,5vw,3.8rem)] leading-[0.95] tracking-tighter">
+            Зростати разом<br><span class="text-accent">з нами</span>
+          </h2>
+          <p class="mt-4 text-muted max-w-md mx-auto">Заповни форму — менеджер зв'яжеться протягом 24 годин.</p>
+        </div>
 
-        <div class="max-w-xl mx-auto">
-          <form id="leadForm" novalidate x-data="leadForm" @submit="submit($event)" class="space-y-6" aria-labelledby="form-heading">
-            <div>
-              <label for="name" class="sr-only">Ім'я</label>
-              <input 
-                type="text" 
-                id="name" 
-                name="name" 
-                required 
-                minlength="2" 
-                placeholder="Ім'я" 
-                :class="{ 'border-accent-live': hasError('name') }"
-                @input="clearFieldError('name')"
-                class="w-full bg-bg-surface border border-border-subtle rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-tech focus:ring-1 focus:ring-accent-tech transition-colors"
-                aria-invalid="hasError('name')"
-                aria-describedby="name-error"
-              >
-              <span x-show="hasError('name')" x-text="fieldErrors.name" id="name-error" class="text-accent-live text-sm mt-1" role="alert"></span>
+        <form id="leadForm" class="space-y-6" novalidate>
+          <!-- Honeypot -->
+          <input type="text" name="website" class="absolute left-[-9999px]" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="field-group">
+              <label for="name" class="block text-xs tracking-widest uppercase text-muted mb-2">Ім'я *</label>
+              <input type="text" id="name" name="name" required minlength="2" maxlength="100"
+                class="form-input" placeholder="Як тебе звати?" autocomplete="name">
             </div>
-
-            <div>
-              <label for="age" class="sr-only">Вік</label>
-              <input 
-                type="number" 
-                id="age" 
-                name="age" 
-                required 
-                min="18" 
-                max="100" 
-                placeholder="Вік" 
-                :class="{ 'border-accent-live': hasError('age') }"
-                @input="clearFieldError('age')"
-                class="w-full bg-bg-surface border border-border-subtle rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-tech focus:ring-1 focus:ring-accent-tech transition-colors"
-                aria-invalid="hasError('age')"
-                aria-describedby="age-error"
-              >
-              <span x-show="hasError('age')" x-text="fieldErrors.age" id="age-error" class="text-accent-live text-sm mt-1" role="alert"></span>
+            <div class="field-group">
+              <label for="age" class="block text-xs tracking-widest uppercase text-muted mb-2">Вік *</label>
+              <input type="number" id="age" name="age" required min="18" max="99"
+                class="form-input" placeholder="Скільки тобі років?" inputmode="numeric">
             </div>
+          </div>
 
-            <div>
-              <label for="tiktok" class="sr-only">TikTok</label>
-              <input 
-                type="text" 
-                id="tiktok" 
-                name="tiktok" 
-                placeholder="TikTok (необов'язково)" 
-                class="w-full bg-bg-surface border border-border-subtle rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-tech focus:ring-1 focus:ring-accent-tech transition-colors"
-              >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="field-group">
+              <label for="tiktok" class="block text-xs tracking-widest uppercase text-muted mb-2">TikTok</label>
+              <input type="text" id="tiktok" name="tiktok" maxlength="50"
+                class="form-input" placeholder="@username (необов'язково)" autocomplete="off">
             </div>
-
-            <div>
-              <label for="instagram" class="sr-only">Instagram</label>
-              <input 
-                type="text" 
-                id="instagram" 
-                name="instagram" 
-                placeholder="Instagram (необов'язково)" 
-                class="w-full bg-bg-surface border border-border-subtle rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-tech focus:ring-1 focus:ring-accent-tech transition-colors"
-              >
+            <div class="field-group">
+              <label for="instagram" class="block text-xs tracking-widest uppercase text-muted mb-2">Instagram</label>
+              <input type="text" id="instagram" name="instagram" maxlength="50"
+                class="form-input" placeholder="@username (необов'язково)" autocomplete="off">
             </div>
+          </div>
 
-            <div>
-              <label for="contact" class="sr-only">Telegram / Телефон</label>
-              <input 
-                type="text" 
-                id="contact" 
-                name="contact" 
-                required 
-                placeholder="Telegram @username або телефон +38..." 
-                :class="{ 'border-accent-live': hasError('contact') }"
-                @input="clearFieldError('contact')"
-                class="w-full bg-bg-surface border border-border-subtle rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-tech focus:ring-1 focus:ring-accent-tech transition-colors"
-                aria-invalid="hasError('contact')"
-                aria-describedby="contact-error"
-              >
-              <span x-show="hasError('contact')" x-text="fieldErrors.contact" id="contact-error" class="text-accent-live text-sm mt-1" role="alert"></span>
-            </div>
+          <div class="field-group">
+            <label for="contact" class="block text-xs tracking-widest uppercase text-muted mb-2">Telegram / Телефон *</label>
+            <input type="text" id="contact" name="contact" required minlength="5" maxlength="40"
+              class="form-input" placeholder="@username або +38..." autocomplete="tel">
+          </div>
 
-            <!-- Honeypot -->
-            <input type="text" name="website" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true">
-
-            <button type="submit" :disabled="submitting || success" class="magnetic-btn w-full inline-flex items-center justify-center bg-accent-live text-white font-medium px-8 py-4 rounded-full hover:bg-accent-live/90 transition-all focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base disabled:opacity-50 disabled:cursor-not-allowed" aria-live="polite">
-              <template x-if="submitting">
-                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
-                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-              </template>
-              <span x-text="submitting ? 'Надсилаємо...' : (success ? 'Надіслано!' : 'Надіслати заявку')"></span>
+          <div class="pt-4">
+            <button type="submit" id="submitBtn" class="btn-primary w-full md:w-auto min-w-[220px] justify-center" data-magnetic>
+              <span class="btn-text">Надіслати заявку</span>
+              <span class="btn-loading hidden">Надсилаємо...</span>
             </button>
+          </div>
 
-            <div x-show="error" x-transition class="text-accent-live text-sm mt-2" aria-live="polite" x-text="error"></div>
-
-            <div x-show="success" x-transition class="bg-bg-surface border border-accent-tech rounded-lg p-6 text-center" aria-live="polite">
-              <p class="text-accent-tech font-semibold mb-2">Дякуємо за заявку!</p>
-              <p class="text-text-muted">Ми зв'яжемося з вами найближчим часом.</p>
-            </div>
-          </form>
-        </div>
+          <p id="formMessage" class="text-sm text-center min-h-[1.5rem]" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
 
-    <!-- Contacts Section -->
-    <section id="contacts" class="py-24 md:py-32 px-6 md:px-8">
-      <div class="max-w-[1200px] mx-auto text-center">
-        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4">Контакти</h2>
-        <p class="text-text-muted text-lg mb-8">Інші питання?</p>
-        <p class="text-text-primary text-xl">Звертайся до нас.</p>
+    <!-- ========== CONTACTS TEASER ========== -->
+    <section class="relative py-20 border-t border-paper/10">
+      <div class="px-5 md:px-10 max-w-[900px] mx-auto text-center">
+        <h2 class="font-display font-700 text-2xl md:text-3xl tracking-tight">Інші питання?</h2>
+        <p class="mt-3 text-muted">Звертайся до нас — відповімо швидко.</p>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="border-t border-border-subtle py-12 px-6 md:px-8">
-    <div class="max-w-[1200px] mx-auto text-center">
-      <p class="text-text-muted mb-4">Copyright © 2022–2026</p>
-      <p class="text-text-muted mb-2">All Rights Reserved.</p>
-      <p class="text-text-muted">Florence LIMITED</p>
-      <p class="text-text-muted text-sm mt-2">Incorporated in England</p>
+  <!-- ========== FOOTER ========== -->
+  <footer class="relative border-t border-paper/10 pt-16 pb-10">
+    <div class="px-5 md:px-10 max-w-[1600px] mx-auto">
+      <div class="flex flex-col md:flex-row justify-between gap-12">
+        <div>
+          <a href="/" class="font-display text-2xl font-800 tracking-tighter">UniLive</a>
+          <p class="mt-4 text-sm text-muted max-w-xs leading-relaxed">
+            Офіційна TikTok Live Agency. Тренуємо та продюсуємо стрімерів з 2022 року.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-x-16 gap-y-8 text-sm">
+          <div>
+            <p class="text-xs tracking-widest uppercase text-muted mb-4">Навігація</p>
+            <ul class="space-y-2">
+              <li><a href="#about" class="hover:text-accent transition-colors">Про нас</a></li>
+              <li><a href="#cases" class="hover:text-accent transition-colors">Кейси</a></li>
+              <li><a href="#team" class="hover:text-accent transition-colors">Команда</a></li>
+              <li><a href="#apply" class="hover:text-accent transition-colors">Заявка</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs tracking-widest uppercase text-muted mb-4">Юридична</p>
+            <p class="text-muted text-xs leading-relaxed max-w-[200px]">
+              UNILIVE LIMITED<br>
+              Incorporated in England and Wales<br>
+              Incorporation Number: 15456941
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-16 pt-8 border-t border-paper/10 flex flex-col sm:flex-row justify-between gap-4 text-xs text-muted">
+        <p>Copyright © 2022–2026 All Rights Reserved.</p>
+        <p>UNILIVE LIMITED</p>
+      </div>
     </div>
   </footer>
 
-  <!-- Form Script -->
-  <script src="assets/js/form.js"></script>
-
-  <!-- Animations Script -->
-  <script>
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    // WebGL Shader Background
-    const canvas = document.getElementById('shader-canvas');
-    const gl = canvas.getContext('webgl2');
-
-    if (gl && !prefersReducedMotion) {
-      const vertexShaderSource = `#version 300 es
-        in vec4 a_position;
-        void main() {
-          gl_Position = a_position;
-        }
-      `;
-
-      const fragmentShaderSource = `#version 300 es
-        precision highp float;
-        uniform float u_time;
-        uniform vec2 u_resolution;
-        uniform vec2 u_mouse;
-        out vec4 fragColor;
-
-        // Simplex noise function
-        vec3 permute(vec3 x) { return mod(((x*34.0)+1.0)*x, 289.0); }
-        float snoise(vec2 v){
-          const vec4 C = vec4(0.211324865405187, 0.366025403784439,
-                  -0.577350269189626, 0.024390243902439);
-          vec2 i  = floor(v + dot(v, C.yy) );
-          vec2 x0 = v -   i + dot(i, C.xx);
-          vec2 i1;
-          i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
-          vec4 x12 = x0.xyxy + C.xxzz;
-          x12.xy -= i1;
-          i = mod(i, 289.0);
-          vec3 p = permute( permute( i.y + vec3(0.0, i1.y, 1.0 ))
-          + i.x + vec3(0.0, i1.x, 1.0 ));
-          vec3 m = max(0.5 - vec3(dot(x0,x0), dot(x12.xy,x12.xy), dot(x12.zw,x12.zw)), 0.0);
-          m = m*m ;
-          m = m*m ;
-          vec3 x = 2.0 * fract(p * C.www) - 1.0;
-          vec3 h = abs(x) - 0.5;
-          vec3 ox = floor(x + 0.5);
-          vec3 a0 = x - ox;
-          m *= 1.79284291400159 - 0.85373472095314 * ( a0*a0 + h*h );
-          vec3 g;
-          g.x  = a0.x  * x0.x  + h.x  * x0.y;
-          g.yz = a0.yz * x12.xz + h.yz * x12.yw;
-          return 130.0 * dot(m, g);
-        }
-
-        void main() {
-          vec2 uv = gl_FragCoord.xy / u_resolution.xy;
-          float n = snoise(vec2(uv * 2.5, u_time * 0.05));
-          float mouseInfluence = smoothstep(0.4, 0.0, distance(uv, u_mouse)) * 0.15;
-          vec3 colA = vec3(0.043, 0.043, 0.059);
-          vec3 colB = vec3(0.961, 0.188, 0.420);
-          vec3 colC = vec3(0.133, 0.827, 0.780);
-          vec3 color = mix(colA, mix(colB, colC, uv.y), n * 0.5 + 0.5 + mouseInfluence);
-          fragColor = vec4(color, 1.0);
-        }
-      `;
-
-      function createShader(gl, type, source) {
-        const shader = gl.createShader(type);
-        gl.shaderSource(shader, source);
-        gl.compileShader(shader);
-        return shader;
-      }
-
-      const vertexShader = createShader(gl, gl.VERTEX_SHADER, vertexShaderSource);
-      const fragmentShader = createShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource);
-
-      const program = gl.createProgram();
-      gl.attachShader(program, vertexShader);
-      gl.attachShader(program, fragmentShader);
-      gl.linkProgram(program);
-      gl.useProgram(program);
-
-      const positionBuffer = gl.createBuffer();
-      gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
-      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
-        -1, -1, 1, -1, -1, 1,
-        -1, 1, 1, -1, 1, 1
-      ]), gl.STATIC_DRAW);
-
-      const positionLocation = gl.getAttribLocation(program, 'a_position');
-      gl.enableVertexAttribArray(positionLocation);
-      gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
-
-      const timeLocation = gl.getUniformLocation(program, 'u_time');
-      const resolutionLocation = gl.getUniformLocation(program, 'u_resolution');
-      const mouseLocation = gl.getUniformLocation(program, 'u_mouse');
-
-      let mouseX = 0.5, mouseY = 0.5;
-      let lastMouseUpdate = 0;
-      const mouseThrottle = 50; // Throttle mouse updates to 50ms
-      
-      if (window.matchMedia('(hover: hover)').matches) {
-        document.addEventListener('mousemove', (e) => {
-          const now = performance.now();
-          if (now - lastMouseUpdate > mouseThrottle) {
-            mouseX = e.clientX / window.innerWidth;
-            mouseY = 1.0 - e.clientY / window.innerHeight;
-            lastMouseUpdate = now;
-          }
-        });
-      }
-
-      let isAnimating = true;
-      let animationId;
-      let frameCount = 0;
-      let lastFpsCheck = performance.now();
-      let currentQuality = 1.0;
-
-      function resize() {
-        const dpr = window.devicePixelRatio || 1;
-        const width = window.innerWidth;
-        const height = window.innerHeight;
-        
-        // Adaptive quality based on screen size and device
-        const isMobile = width < 768;
-        const isLowEnd = navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4;
-        
-        let qualityScale = 1.0;
-        if (isMobile) qualityScale = 0.5;
-        if (isLowEnd) qualityScale *= 0.75;
-        
-        currentQuality = qualityScale;
-        
-        const targetWidth = width * qualityScale;
-        const targetHeight = height * qualityScale;
-        
-        canvas.width = targetWidth * dpr;
-        canvas.height = targetHeight * dpr;
-        gl.viewport(0, 0, canvas.width, canvas.height);
-      }
-
-      window.addEventListener('resize', resize);
-      resize();
-
-      function render(time) {
-        if (!isAnimating) return;
-        
-        // FPS monitoring for adaptive quality
-        frameCount++;
-        const now = performance.now();
-        if (now - lastFpsCheck > 1000) {
-          const fps = frameCount / ((now - lastFpsCheck) / 1000);
-          frameCount = 0;
-          lastFpsCheck = now;
-          
-          // Auto-downgrade if FPS is too low
-          if (fps < 30 && currentQuality > 0.25) {
-            currentQuality *= 0.8;
-            resize();
-          }
-        }
-        
-        gl.uniform1f(timeLocation, time * 0.001);
-        gl.uniform2f(resolutionLocation, canvas.width, canvas.height);
-        gl.uniform2f(mouseLocation, mouseX, mouseY);
-        gl.drawArrays(gl.TRIANGLES, 0, 6);
-        
-        animationId = requestAnimationFrame(render);
-      }
-
-      // Pause when not visible
-      document.addEventListener('visibilitychange', () => {
-        if (document.hidden) {
-          isAnimating = false;
-          cancelAnimationFrame(animationId);
-        } else {
-          isAnimating = true;
-          render(performance.now());
-        }
-      });
-
-      // Intersection Observer to pause when out of viewport
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) {
-            isAnimating = false;
-            cancelAnimationFrame(animationId);
-          } else if (!document.hidden) {
-            isAnimating = true;
-            render(performance.now());
-          }
-        });
-      }, { threshold: 0 });
-      observer.observe(canvas);
-
-      render(performance.now());
-    } else {
-      // Fallback: CSS gradient
-      canvas.style.display = 'none';
-      document.body.style.background = 'radial-gradient(ellipse at center, #1C1C26 0%, #0A0A0F 100%)';
-    }
-
-    // GSAP + Lenis + ScrollTrigger
-    gsap.registerPlugin(ScrollTrigger);
-
-    let lenis;
-    if (!prefersReducedMotion) {
-      lenis = new Lenis({ lerp: 0.1, duration: 1.2, smoothWheel: true });
-      lenis.on('scroll', ScrollTrigger.update);
-      gsap.ticker.add((time) => lenis.raf(time * 1000));
-      gsap.ticker.lagSmoothing(0);
-    }
-
-    document.addEventListener('visibilitychange', () => {
-      if (document.hidden) {
-        lenis?.stop();
-        gsap.ticker.sleep?.();
-      } else {
-        lenis?.start();
-        gsap.ticker.wake?.();
-      }
-    });
-
-    // Growth Ticker Animation
-    if (!prefersReducedMotion) {
-      ScrollTrigger.create({
-        trigger: '#hero',
-        start: 'top center',
-        onEnter: () => {
-          gsap.to('#streamer-count', {
-            innerHTML: 640,
-            duration: 2,
-            snap: { innerHTML: 1 },
-            ease: 'power2.out'
-          });
-          gsap.to('#total-revenue', {
-            innerHTML: 1250000,
-            duration: 2.5,
-            snap: { innerHTML: 10000 },
-            ease: 'power2.out',
-            onUpdate: function() {
-              this.targets()[0].innerHTML = Math.floor(this.targets()[0].innerHTML).toLocaleString();
-            }
-          });
-        },
-        once: true
-      });
-    } else {
-      document.getElementById('streamer-count').innerHTML = '640';
-      document.getElementById('total-revenue').innerHTML = '1,250,000';
-    }
-
-    // Hero Parallax
-    if (!prefersReducedMotion) {
-      gsap.to('.hero-title', {
-        yPercent: -15,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '#hero',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: true
-        }
-      });
-    }
-
-    // Mosaic Reveal
-    if (!prefersReducedMotion) {
-      gsap.to('.mosaic-overlay', {
-        yPercent: 100,
-        duration: 1,
-        ease: 'power2.inOut',
-        scrollTrigger: {
-          trigger: '#about',
-          start: 'top 80%',
-          end: 'top 60%',
-          scrub: true
-        }
-      });
-    }
-
-    // Cases Pinned Section
-    if (!prefersReducedMotion) {
-      ScrollTrigger.create({
-        trigger: '.cases-section',
-        start: 'top top',
-        end: '+=200%',
-        pin: true,
-        scrub: 1,
-        onUpdate: (self) => {
-          gsap.to('.cases-track', { xPercent: -66 * self.progress, ease: 'none', duration: 0 });
-        }
-      });
-    }
-
-    // Why Us Staggered Slides
-    if (!prefersReducedMotion) {
-      gsap.from('.why-us-item', {
-        x: (i) => (i % 2 === 0 ? -60 : 60),
-        opacity: 0,
-        duration: 0.7,
-        stagger: 0.12,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.why-us-section',
-          start: 'top 75%'
-        }
-      });
-    }
-
-    // Team Stagger
-    if (!prefersReducedMotion) {
-      gsap.from('#team article', {
-        opacity: 0,
-        scale: 0.9,
-        duration: 0.6,
-        stagger: 0.15,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '#team',
-          start: 'top 75%'
-        }
-      });
-    }
-
-    // Magnetic Buttons
-    if (!prefersReducedMotion && window.matchMedia('(hover: hover)').matches) {
-      document.querySelectorAll('.magnetic-btn').forEach((btn) => {
-        btn.addEventListener('mousemove', (e) => {
-          const r = btn.getBoundingClientRect();
-          const x = e.clientX - r.left - r.width / 2;
-          const y = e.clientY - r.top - r.height / 2;
-          gsap.to(btn, { x: x * 0.3, y: y * 0.3, duration: 0.4, ease: 'power3.out' });
-        });
-        btn.addEventListener('mouseleave', () => {
-          gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.4)' });
-        });
-      });
-    }
-
-    // Refresh ScrollTrigger after fonts load
-    document.fonts.ready.then(() => {
-      ScrollTrigger.refresh();
-    });
-  </script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.14.3/dist/cdn.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
