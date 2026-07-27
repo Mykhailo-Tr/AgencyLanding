@@ -106,8 +106,7 @@
       overflow: hidden;
     }
 
-    .mosaic-reveal::before {
-      content: '';
+    .mosaic-overlay {
       position: absolute;
       top: 0;
       left: 0;
@@ -116,6 +115,7 @@
       background: linear-gradient(135deg, var(--accent-live), var(--accent-tech));
       z-index: 10;
       transform: translateY(-100%);
+      pointer-events: none;
     }
 
     /* Growth Ticker */
@@ -185,7 +185,7 @@
           <li><a href="#cases" class="text-text-muted hover:text-accent-tech transition-colors">Наші кейси</a></li>
           <li><a href="#team" class="text-text-muted hover:text-accent-tech transition-colors">Команда</a></li>
           <li><a href="#contacts" class="text-text-muted hover:text-accent-tech transition-colors">Контакти</a></li>
-          <li><a href="#" class="text-text-muted hover:text-accent-tech transition-colors" aria-label="English version">EN</a></li>
+          <li><a href="#" class="text-text-muted hover:text-accent-tech transition-colors" aria-label="Перейти на англійську версію">EN</a></li>
         </ul>
 
         <!-- Mobile Menu Button -->
@@ -197,12 +197,12 @@
       </div>
 
       <!-- Mobile Navigation -->
-      <ul x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="md:hidden mt-4 pb-4 space-y-4">
-        <li><a href="#about" @click="open = false" class="block text-text-muted hover:text-accent-tech transition-colors">Про нас</a></li>
-        <li><a href="#cases" @click="open = false" class="block text-text-muted hover:text-accent-tech transition-colors">Наші кейси</a></li>
-        <li><a href="#team" @click="open = false" class="block text-text-muted hover:text-accent-tech transition-colors">Команда</a></li>
-        <li><a href="#contacts" @click="open = false" class="block text-text-muted hover:text-accent-tech transition-colors">Контакти</a></li>
-        <li><a href="#" class="block text-text-muted hover:text-accent-tech transition-colors">EN</a></li>
+      <ul x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="md:hidden mt-4 pb-4 space-y-4" role="menu">
+        <li role="none"><a href="#about" @click="open = false" class="block text-text-muted hover:text-accent-tech transition-colors" role="menuitem">Про нас</a></li>
+        <li role="none"><a href="#cases" @click="open = false" class="block text-text-muted hover:text-accent-tech transition-colors" role="menuitem">Наші кейси</a></li>
+        <li role="none"><a href="#team" @click="open = false" class="block text-text-muted hover:text-accent-tech transition-colors" role="menuitem">Команда</a></li>
+        <li role="none"><a href="#contacts" @click="open = false" class="block text-text-muted hover:text-accent-tech transition-colors" role="menuitem">Контакти</a></li>
+        <li role="none"><a href="#" class="block text-text-muted hover:text-accent-tech transition-colors" role="menuitem" aria-label="Перейти на англійську версію">EN</a></li>
       </ul>
     </nav>
   </header>
@@ -235,7 +235,7 @@
               </div>
             </div>
 
-            <a href="#form" class="magnetic-btn inline-flex items-center justify-center bg-accent-live text-white font-medium px-8 py-4 rounded-full hover:bg-accent-live/90 transition-all focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base">
+            <a href="#form" class="magnetic-btn inline-flex items-center justify-center bg-accent-live text-white font-medium px-8 py-4 rounded-full hover:bg-accent-live/90 transition-all focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base" aria-label="Перейти до форми заявки">
               Почати
             </a>
           </div>
@@ -264,38 +264,39 @@
     </section>
 
     <!-- How It Works Section -->
-    <section id="about" class="py-24 md:py-32 px-6 md:px-8 mosaic-reveal">
+    <section id="about" class="py-24 md:py-32 px-6 md:px-8 mosaic-reveal relative">
+      <div class="mosaic-overlay"></div>
       <div class="max-w-[1200px] mx-auto">
         <h2 class="font-display font-bold text-3xl md:text-4xl mb-4">Як це працює</h2>
         <p class="text-text-muted text-lg mb-12">Нам довіряють понад 640 стрімерів</p>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <article class="bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/50 transition-colors">
-            <div class="text-4xl mb-4">🎯</div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-20">
+          <article class="bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/50 hover:bg-bg-surface-raised transition-all duration-300 hover:-translate-y-1 group">
+            <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎯</div>
             <h3 class="font-display font-semibold text-xl mb-3">Персональний менеджер</h3>
             <p class="text-text-muted">У тебе буде персональний менеджер, який супроводжуватиме тебе на всьому шляху. Його завдання — допомогти тобі збільшити аудиторію та дохід.</p>
           </article>
 
-          <article class="bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/50 transition-colors">
-            <div class="text-4xl mb-4">📚</div>
+          <article class="bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/50 hover:bg-bg-surface-raised transition-all duration-300 hover:-translate-y-1 group">
+            <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">📚</div>
             <h3 class="font-display font-semibold text-xl mb-3">Навчальна програма</h3>
             <p class="text-text-muted">Ти пройдеш нашу навчальну програму, яка допомогла вивести в топ TikTok більше ніж <span class="text-accent-gold font-mono">640 стрімерів</span>.</p>
           </article>
 
-          <article class="bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/50 transition-colors">
-            <div class="text-4xl mb-4">🚀</div>
+          <article class="bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/50 hover:bg-bg-surface-raised transition-all duration-300 hover:-translate-y-1 group">
+            <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🚀</div>
             <h3 class="font-display font-semibold text-xl mb-3">Програма розвитку</h3>
             <p class="text-text-muted">Ми додамо тебе до нашої власної програми розвитку. Завдяки цьому у тебе буде більше глядачів і підписників, ніж у будь-якого звичайного користувача.</p>
           </article>
 
-          <article class="bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/50 transition-colors">
-            <div class="text-4xl mb-4">💬</div>
+          <article class="bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/50 hover:bg-bg-surface-raised transition-all duration-300 hover:-translate-y-1 group">
+            <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">💬</div>
             <h3 class="font-display font-semibold text-xl mb-3">Закритий чат</h3>
             <p class="text-text-muted">Ми додамо тебе до групового чату зі всіма стрімерами нашої агенції. Там ти отримуватимеш нову інформацію та знаходиш партнерів для спільних прямих ефірів.</p>
           </article>
 
-          <article class="bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/50 transition-colors md:col-span-2 lg:col-span-2">
-            <div class="text-4xl mb-4">💰</div>
+          <article class="bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/50 hover:bg-bg-surface-raised transition-all duration-300 hover:-translate-y-1 group md:col-span-2 lg:col-span-2">
+            <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">💰</div>
             <h3 class="font-display font-semibold text-xl mb-3">Високий дохід</h3>
             <p class="text-text-muted">Ти почнеш заробляти у рази більше, ніж 90% населення, і закохаєшся у цей процес.</p>
           </article>
@@ -328,7 +329,7 @@
                 <span class="font-mono text-accent-gold">3–7K $/міс</span>
               </div>
             </div>
-            <a href="https://tiktok.com/@carry" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full bg-bg-surface-raised border border-border-subtle text-text-primary font-medium px-6 py-3 rounded-lg hover:border-accent-tech transition-colors focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base">
+            <a href="https://tiktok.com/@carry" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full bg-bg-surface-raised border border-border-subtle text-text-primary font-medium px-6 py-3 rounded-lg hover:border-accent-tech transition-colors focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base" aria-label="Відкрити TikTok профіль Karina (@carry) в новій вкладці">
               Відкрити профіль
             </a>
           </article>
@@ -352,7 +353,7 @@
                 <span class="font-mono text-accent-gold">22K $ за 3 міс</span>
               </div>
             </div>
-            <a href="https://tiktok.com/@tiny" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full bg-bg-surface-raised border border-border-subtle text-text-primary font-medium px-6 py-3 rounded-lg hover:border-accent-tech transition-colors focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base">
+            <a href="https://tiktok.com/@tiny" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full bg-bg-surface-raised border border-border-subtle text-text-primary font-medium px-6 py-3 rounded-lg hover:border-accent-tech transition-colors focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base" aria-label="Відкрити TikTok профіль Valentine (@tiny) в новій вкладці">
               Відкрити профіль
             </a>
           </article>
@@ -376,7 +377,7 @@
                 <span class="font-mono text-accent-gold">15K $ за 4 міс</span>
               </div>
             </div>
-            <a href="https://tiktok.com/@kris.tina" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full bg-bg-surface-raised border border-border-subtle text-text-primary font-medium px-6 py-3 rounded-lg hover:border-accent-tech transition-colors focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base">
+            <a href="https://tiktok.com/@kris.tina" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full bg-bg-surface-raised border border-border-subtle text-text-primary font-medium px-6 py-3 rounded-lg hover:border-accent-tech transition-colors focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base" aria-label="Відкрити TikTok профіль Kristina (@kris.tina) в новій вкладці">
               Відкрити профіль
             </a>
           </article>
@@ -399,7 +400,7 @@
             Цей тренінг допоміг отримати перший дохід більш ніж <span class="text-accent-gold font-mono">640 новим стрімерам</span>.
           </p>
           
-          <a href="#form" class="magnetic-btn inline-flex items-center justify-center bg-accent-live text-white font-medium px-8 py-4 rounded-full hover:bg-accent-live/90 transition-all focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base">
+          <a href="#form" class="magnetic-btn inline-flex items-center justify-center bg-accent-live text-white font-medium px-8 py-4 rounded-full hover:bg-accent-live/90 transition-all focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base" aria-label="Подати заявку на навчання">
             Пройти навчання
           </a>
         </div>
@@ -412,34 +413,34 @@
         <h2 class="font-display font-bold text-3xl md:text-4xl mb-12">Чому саме ми</h2>
         
         <div class="grid md:grid-cols-2 gap-6">
-          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6">
+          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/30 hover:bg-bg-surface-raised transition-all duration-300">
             <p class="text-text-muted">4 роки на ринку прямих трансляцій</p>
           </div>
-          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6">
-            <p class="text-text-muted">Продюсуємо понад 640 стрімерів</p>
+          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/30 hover:bg-bg-surface-raised transition-all duration-300">
+            <p class="text-text-muted">Продюсуємо понад <span class="text-accent-gold font-mono">640 стрімерів</span></p>
           </div>
-          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6">
+          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/30 hover:bg-bg-surface-raised transition-all duration-300">
             <p class="text-text-muted">Закритий чат зі стрімерами агентства</p>
           </div>
-          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6">
+          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/30 hover:bg-bg-surface-raised transition-all duration-300">
             <p class="text-text-muted">Наші стрімери займають топи TikTok</p>
           </div>
-          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6">
+          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/30 hover:bg-bg-surface-raised transition-all duration-300">
             <p class="text-text-muted">Професійна програма навчання</p>
           </div>
-          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6">
+          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/30 hover:bg-bg-surface-raised transition-all duration-300">
             <p class="text-text-muted">Робота з донатерами</p>
           </div>
-          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6">
+          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/30 hover:bg-bg-surface-raised transition-all duration-300">
             <p class="text-text-muted">Аналітика ваших прямих ефірів</p>
           </div>
-          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6">
+          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/30 hover:bg-bg-surface-raised transition-all duration-300">
             <p class="text-text-muted">Технічна підтримка акаунта</p>
           </div>
-          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6">
-            <p class="text-text-muted">15 кваліфікованих спеціалістів</p>
+          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/30 hover:bg-bg-surface-raised transition-all duration-300">
+            <p class="text-text-muted"><span class="text-accent-gold font-mono">15</span> кваліфікованих спеціалістів</p>
           </div>
-          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6">
+          <div class="why-us-item bg-bg-surface border border-border-subtle rounded-lg p-6 hover:border-accent-tech/30 hover:bg-bg-surface-raised transition-all duration-300">
             <p class="text-text-muted">Онлайн майстер-класи від топів TikTok</p>
           </div>
         </div>
@@ -452,25 +453,31 @@
         <h2 class="font-display font-bold text-3xl md:text-4xl mb-12">Наша команда</h2>
 
         <div class="grid md:grid-cols-3 gap-8">
-          <article class="bg-bg-surface border border-border-subtle rounded-xl p-6 text-center hover:bg-bg-surface-raised transition-all">
-            <img src="https://placehold.co/120x120/14141C/22D3C7?text=DR" alt="Дмитро Ренебе" class="w-30 h-30 rounded-full mx-auto mb-4 object-cover" loading="lazy" width="120" height="120">
-            <!-- TODO: замінити на реальне фото -->
+          <article class="bg-bg-surface border border-border-subtle rounded-xl p-6 text-center hover:bg-bg-surface-raised hover:border-accent-tech/50 transition-all duration-300 hover:-translate-y-2 group">
+            <div class="relative inline-block mb-4">
+              <img src="https://placehold.co/120x120/14141C/22D3C7?text=DR" alt="Дмитро Ренебе" class="w-30 h-30 rounded-full mx-auto object-cover group-hover:ring-2 group-hover:ring-accent-tech transition-all duration-300" loading="lazy" width="120" height="120">
+              <!-- TODO: замінити на реальне фото -->
+            </div>
             <h3 class="font-display font-semibold text-xl mb-2">Дмитро Ренебе</h3>
-            <p class="text-accent-tech text-sm">Співзасновник</p>
+            <p class="text-accent-tech text-sm font-mono">Співзасновник</p>
           </article>
 
-          <article class="bg-bg-surface border border-border-subtle rounded-xl p-6 text-center hover:bg-bg-surface-raised transition-all">
-            <img src="https://placehold.co/120x120/14141C/F5306B?text=DF" alt="Дмитро Флоренс" class="w-30 h-30 rounded-full mx-auto mb-4 object-cover" loading="lazy" width="120" height="120">
-            <!-- TODO: замінити на реальне фото -->
+          <article class="bg-bg-surface border border-border-subtle rounded-xl p-6 text-center hover:bg-bg-surface-raised hover:border-accent-tech/50 transition-all duration-300 hover:-translate-y-2 group">
+            <div class="relative inline-block mb-4">
+              <img src="https://placehold.co/120x120/14141C/F5306B?text=DF" alt="Дмитро Флоренс" class="w-30 h-30 rounded-full mx-auto object-cover group-hover:ring-2 group-hover:ring-accent-tech transition-all duration-300" loading="lazy" width="120" height="120">
+              <!-- TODO: замінити на реальне фото -->
+            </div>
             <h3 class="font-display font-semibold text-xl mb-2">Дмитро Флоренс</h3>
-            <p class="text-accent-tech text-sm">Співзасновник</p>
+            <p class="text-accent-tech text-sm font-mono">Співзасновник</p>
           </article>
 
-          <article class="bg-bg-surface border border-border-subtle rounded-xl p-6 text-center hover:bg-bg-surface-raised transition-all">
-            <img src="https://placehold.co/120x120/14141C/E8B34F?text=DP" alt="Дмитро Пастущин" class="w-30 h-30 rounded-full mx-auto mb-4 object-cover" loading="lazy" width="120" height="120">
-            <!-- TODO: замінити на реальне фото -->
+          <article class="bg-bg-surface border border-border-subtle rounded-xl p-6 text-center hover:bg-bg-surface-raised hover:border-accent-tech/50 transition-all duration-300 hover:-translate-y-2 group">
+            <div class="relative inline-block mb-4">
+              <img src="https://placehold.co/120x120/14141C/E8B34F?text=DP" alt="Дмитро Пастущин" class="w-30 h-30 rounded-full mx-auto object-cover group-hover:ring-2 group-hover:ring-accent-tech transition-all duration-300" loading="lazy" width="120" height="120">
+              <!-- TODO: замінити на реальне фото -->
+            </div>
             <h3 class="font-display font-semibold text-xl mb-2">Дмитро Пастущин</h3>
-            <p class="text-accent-tech text-sm">Співзасновник</p>
+            <p class="text-accent-tech text-sm font-mono">Співзасновник</p>
           </article>
         </div>
       </div>
@@ -527,7 +534,7 @@
             </li>
           </ul>
 
-          <a href="#form" class="magnetic-btn inline-flex items-center justify-center bg-accent-live text-white font-medium px-8 py-4 rounded-full hover:bg-accent-live/90 transition-all focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base">
+          <a href="#form" class="magnetic-btn inline-flex items-center justify-center bg-accent-live text-white font-medium px-8 py-4 rounded-full hover:bg-accent-live/90 transition-all focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base" aria-label="Подати заявку на вступ в агенцію">
             Стати стрімером
           </a>
         </div>
@@ -537,40 +544,91 @@
     <!-- Form Section -->
     <section id="form" class="py-24 md:py-32 px-6 md:px-8">
       <div class="max-w-[1200px] mx-auto">
-        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4">Форма заявки</h2>
+        <h2 id="form-heading" class="font-display font-bold text-3xl md:text-4xl mb-4">Форма заявки</h2>
         <p class="text-text-muted text-lg mb-12">Зростати разом з нами</p>
 
         <div class="max-w-xl mx-auto">
-          <form id="leadForm" novalidate x-data="{ submitting: false, success: false, error: ''" @submit="submitting = true" class="space-y-6">
+          <form id="leadForm" novalidate x-data="leadForm" @submit="submit($event)" class="space-y-6" aria-labelledby="form-heading">
             <div>
               <label for="name" class="sr-only">Ім'я</label>
-              <input type="text" id="name" name="name" required minlength="2" placeholder="Ім'я" class="w-full bg-bg-surface border border-border-subtle rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-tech focus:ring-1 focus:ring-accent-tech transition-colors">
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required 
+                minlength="2" 
+                placeholder="Ім'я" 
+                :class="{ 'border-accent-live': hasError('name') }"
+                @input="clearFieldError('name')"
+                class="w-full bg-bg-surface border border-border-subtle rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-tech focus:ring-1 focus:ring-accent-tech transition-colors"
+                aria-invalid="hasError('name')"
+                aria-describedby="name-error"
+              >
+              <span x-show="hasError('name')" x-text="fieldErrors.name" id="name-error" class="text-accent-live text-sm mt-1" role="alert"></span>
             </div>
 
             <div>
               <label for="age" class="sr-only">Вік</label>
-              <input type="number" id="age" name="age" required min="18" max="100" placeholder="Вік" class="w-full bg-bg-surface border border-border-subtle rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-tech focus:ring-1 focus:ring-accent-tech transition-colors">
+              <input 
+                type="number" 
+                id="age" 
+                name="age" 
+                required 
+                min="18" 
+                max="100" 
+                placeholder="Вік" 
+                :class="{ 'border-accent-live': hasError('age') }"
+                @input="clearFieldError('age')"
+                class="w-full bg-bg-surface border border-border-subtle rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-tech focus:ring-1 focus:ring-accent-tech transition-colors"
+                aria-invalid="hasError('age')"
+                aria-describedby="age-error"
+              >
+              <span x-show="hasError('age')" x-text="fieldErrors.age" id="age-error" class="text-accent-live text-sm mt-1" role="alert"></span>
             </div>
 
             <div>
               <label for="tiktok" class="sr-only">TikTok</label>
-              <input type="text" id="tiktok" name="tiktok" placeholder="TikTok (необов'язково)" class="w-full bg-bg-surface border border-border-subtle rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-tech focus:ring-1 focus:ring-accent-tech transition-colors">
+              <input 
+                type="text" 
+                id="tiktok" 
+                name="tiktok" 
+                placeholder="TikTok (необов'язково)" 
+                class="w-full bg-bg-surface border border-border-subtle rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-tech focus:ring-1 focus:ring-accent-tech transition-colors"
+              >
             </div>
 
             <div>
               <label for="instagram" class="sr-only">Instagram</label>
-              <input type="text" id="instagram" name="instagram" placeholder="Instagram (необов'язково)" class="w-full bg-bg-surface border border-border-subtle rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-tech focus:ring-1 focus:ring-accent-tech transition-colors">
+              <input 
+                type="text" 
+                id="instagram" 
+                name="instagram" 
+                placeholder="Instagram (необов'язково)" 
+                class="w-full bg-bg-surface border border-border-subtle rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-tech focus:ring-1 focus:ring-accent-tech transition-colors"
+              >
             </div>
 
             <div>
               <label for="contact" class="sr-only">Telegram / Телефон</label>
-              <input type="text" id="contact" name="contact" required placeholder="Telegram @username або телефон +38..." class="w-full bg-bg-surface border border-border-subtle rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-tech focus:ring-1 focus:ring-accent-tech transition-colors">
+              <input 
+                type="text" 
+                id="contact" 
+                name="contact" 
+                required 
+                placeholder="Telegram @username або телефон +38..." 
+                :class="{ 'border-accent-live': hasError('contact') }"
+                @input="clearFieldError('contact')"
+                class="w-full bg-bg-surface border border-border-subtle rounded-lg px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-tech focus:ring-1 focus:ring-accent-tech transition-colors"
+                aria-invalid="hasError('contact')"
+                aria-describedby="contact-error"
+              >
+              <span x-show="hasError('contact')" x-text="fieldErrors.contact" id="contact-error" class="text-accent-live text-sm mt-1" role="alert"></span>
             </div>
 
             <!-- Honeypot -->
             <input type="text" name="website" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-            <button type="submit" :disabled="submitting || success" class="magnetic-btn w-full inline-flex items-center justify-center bg-accent-live text-white font-medium px-8 py-4 rounded-full hover:bg-accent-live/90 transition-all focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base disabled:opacity-50 disabled:cursor-not-allowed">
+            <button type="submit" :disabled="submitting || success" class="magnetic-btn w-full inline-flex items-center justify-center bg-accent-live text-white font-medium px-8 py-4 rounded-full hover:bg-accent-live/90 transition-all focus-visible:ring-2 focus-visible:ring-accent-tech focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base disabled:opacity-50 disabled:cursor-not-allowed" aria-live="polite">
               <template x-if="submitting">
                 <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
                   <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -709,24 +767,43 @@
       const mouseLocation = gl.getUniformLocation(program, 'u_mouse');
 
       let mouseX = 0.5, mouseY = 0.5;
+      let lastMouseUpdate = 0;
+      const mouseThrottle = 50; // Throttle mouse updates to 50ms
+      
       if (window.matchMedia('(hover: hover)').matches) {
         document.addEventListener('mousemove', (e) => {
-          mouseX = e.clientX / window.innerWidth;
-          mouseY = 1.0 - e.clientY / window.innerHeight;
+          const now = performance.now();
+          if (now - lastMouseUpdate > mouseThrottle) {
+            mouseX = e.clientX / window.innerWidth;
+            mouseY = 1.0 - e.clientY / window.innerHeight;
+            lastMouseUpdate = now;
+          }
         });
       }
 
       let isAnimating = true;
       let animationId;
+      let frameCount = 0;
+      let lastFpsCheck = performance.now();
+      let currentQuality = 1.0;
 
       function resize() {
         const dpr = window.devicePixelRatio || 1;
         const width = window.innerWidth;
         const height = window.innerHeight;
         
-        // Lower resolution on mobile
-        const targetWidth = width < 768 ? width / 2 : width;
-        const targetHeight = height < 768 ? height / 2 : height;
+        // Adaptive quality based on screen size and device
+        const isMobile = width < 768;
+        const isLowEnd = navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4;
+        
+        let qualityScale = 1.0;
+        if (isMobile) qualityScale = 0.5;
+        if (isLowEnd) qualityScale *= 0.75;
+        
+        currentQuality = qualityScale;
+        
+        const targetWidth = width * qualityScale;
+        const targetHeight = height * qualityScale;
         
         canvas.width = targetWidth * dpr;
         canvas.height = targetHeight * dpr;
@@ -738,6 +815,21 @@
 
       function render(time) {
         if (!isAnimating) return;
+        
+        // FPS monitoring for adaptive quality
+        frameCount++;
+        const now = performance.now();
+        if (now - lastFpsCheck > 1000) {
+          const fps = frameCount / ((now - lastFpsCheck) / 1000);
+          frameCount = 0;
+          lastFpsCheck = now;
+          
+          // Auto-downgrade if FPS is too low
+          if (fps < 30 && currentQuality > 0.25) {
+            currentQuality *= 0.8;
+            resize();
+          }
+        }
         
         gl.uniform1f(timeLocation, time * 0.001);
         gl.uniform2f(resolutionLocation, canvas.width, canvas.height);
@@ -845,7 +937,7 @@
 
     // Mosaic Reveal
     if (!prefersReducedMotion) {
-      gsap.to('.mosaic-reveal::before', {
+      gsap.to('.mosaic-overlay', {
         yPercent: 100,
         duration: 1,
         ease: 'power2.inOut',
