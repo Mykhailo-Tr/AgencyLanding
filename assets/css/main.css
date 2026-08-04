@@ -11,14 +11,37 @@
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-html {
-  scroll-behavior: smooth;
+/* Mobile-first base styles */
+* {
+  box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* Mobile font sizes (base) */
 body {
   background-color: var(--ink);
   color: var(--paper);
+  font-size: 1rem;
+  line-height: 1.6;
 }
+
+/* Desktop enhancements */
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+  
+  body {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+}
+
+
 
 /* Noise / grain overlay */
 .noise-overlay {
@@ -54,19 +77,22 @@ body {
 .btn-primary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
-  padding: 0.9rem 1.75rem;
+  padding: 1rem 1.5rem;
   background: var(--accent);
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
   transition: transform 0.4s var(--ease-out-expo), background 0.3s, box-shadow 0.4s;
   position: relative;
   overflow: hidden;
+  min-height: 48px; /* Touch target size */
+  min-width: 44px; /* Touch target size */
 }
 
 .btn-primary::before {
@@ -94,14 +120,31 @@ body {
 .btn-ghost {
   display: inline-flex;
   align-items: center;
-  padding: 0.9rem 1.5rem;
+  justify-content: center;
+  padding: 1rem 1.5rem;
   border: 1px solid rgba(244, 240, 232, 0.25);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--paper);
   transition: border-color 0.3s, background 0.3s, color 0.3s;
+  min-height: 48px; /* Touch target size */
+  min-width: 44px; /* Touch target size */
+}
+
+/* Desktop button enhancements */
+@media (min-width: 768px) {
+  .btn-primary {
+    padding: 0.9rem 1.75rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+  }
+  
+  .btn-ghost {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.8rem;
+  }
 }
 
 .btn-ghost:hover {
@@ -154,13 +197,22 @@ body {
   background: transparent;
   border: none;
   border-bottom: 1px solid rgba(244, 240, 232, 0.2);
-  padding: 0.85rem 0;
-  font-size: 1.05rem;
+  padding: 1rem 0;
+  font-size: 1rem;
   color: var(--paper);
   font-family: inherit;
   transition: border-color 0.3s;
   outline: none;
   border-radius: 0;
+  min-height: 48px; /* Touch target size */
+}
+
+/* Desktop form enhancements */
+@media (min-width: 768px) {
+  .form-input {
+    padding: 0.85rem 0;
+    font-size: 1.05rem;
+  }
 }
 
 .form-input::placeholder {
@@ -178,6 +230,13 @@ body {
 /* ========== Feature cards ========== */
 .feature-card {
   transition: border-color 0.4s, transform 0.5s var(--ease-out-expo), background 0.4s;
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .feature-card {
+    padding: 2rem 3rem;
+  }
 }
 
 .feature-card:hover {
@@ -188,6 +247,13 @@ body {
 /* ========== Case cards ========== */
 .case-card {
   transition: border-color 0.4s, transform 0.5s var(--ease-out-expo);
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .case-card {
+    padding: 2rem 3rem;
+  }
 }
 
 .case-card:hover {
@@ -197,6 +263,13 @@ body {
 /* ========== Why list ========== */
 .why-item {
   transition: padding-left 0.4s var(--ease-out-expo);
+  padding: 1.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .why-item {
+    padding: 1.5rem 0;
+  }
 }
 
 .why-item:hover {
@@ -323,9 +396,31 @@ body {
   50% { transform: translate(80px, -80px) rotate(-90deg); }
 }
 
-/* ========== Responsive optimizations ========== */
-@media (max-width: 768px) {
-  /* Disable floating elements on mobile for performance */
+/* ========== Mobile First Responsive Design ========== */
+/* Base styles optimized for 360-430px screens */
+
+/* Enable floating elements on desktop only */
+@media (min-width: 768px) {
+  .floating-orb,
+  .floating-gradient {
+    display: block;
+  }
+  
+  /* Full animation complexity on desktop */
+  .feature-card,
+  .case-card,
+  .team-card {
+    transform: translateZ(0);
+  }
+  
+  /* Full hero height on desktop */
+  #hero {
+    min-height: 85svh;
+  }
+}
+
+/* Disable floating elements on mobile for performance */
+@media (max-width: 767px) {
   .floating-orb,
   .floating-gradient {
     display: none;
@@ -375,14 +470,6 @@ body {
   }
 }
 
-/* Focus visible improvements */
-.btn-primary:focus-visible,
-.btn-ghost:focus-visible,
-.nav-link:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 4px;
-}
-
 /* Skip link for accessibility */
 .skip-link {
   position: absolute;
@@ -391,9 +478,20 @@ body {
   transform: translateX(-50%);
   background: var(--accent);
   color: white;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   z-index: 10000;
   transition: top 0.3s;
+  min-height: 48px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .skip-link {
+    padding: 1rem 2rem;
+  }
 }
 
 .skip-link:focus {
