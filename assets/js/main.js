@@ -1,5 +1,5 @@
 /**
- * UniLive Agency — main interaction & motion
+ * Exlive agency — main interaction & motion
  * GSAP ScrollTrigger + form + magnetic
  * Native scroll for better performance
  */
