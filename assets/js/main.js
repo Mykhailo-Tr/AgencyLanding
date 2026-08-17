@@ -42,6 +42,293 @@
     });
   }
 
+  // ---------- Portfolio Carousel Loader ----------
+  const portfolioFiles = [
+    'assets/videos/IMG_0743.mp4',
+    'assets/videos/IMG_1284.mp4',
+    'assets/videos/IMG_1285.mp4',
+    'assets/videos/IMG_1286.mp4',
+    'assets/videos/IMG_2133.jpg',
+    'assets/videos/IMG_3248.jpg',
+    'assets/videos/IMG_3552.mp4'
+  ];
+
+  // Convert all extensions to lowercase for consistent checking
+  const normalizedPortfolioFiles = portfolioFiles.map(file => {
+    const parts = file.split('.');
+    const extension = parts.pop().toLowerCase();
+    return parts.join('.') + '.' + extension;
+  });
+
+  // Filter out HEIC files (not supported in browsers) and keep only supported formats
+  const supportedPortfolioFiles = normalizedPortfolioFiles.filter(file => {
+    const extension = file.split('.').pop().toLowerCase();
+    return ['mov', 'mp4', 'webm', 'png', 'jpg', 'jpeg'].includes(extension);
+  });
+
+  console.log('Portfolio files:', portfolioFiles);
+  console.log('Normalized files:', normalizedPortfolioFiles);
+  console.log('Supported files:', supportedPortfolioFiles);
+
+  let carouselDisplay;
+  let carouselItems = [];
+  let currentIndex = 0;
+  let isAnimating = false;
+
+  function loadPortfolioCarousel() {
+    carouselDisplay = document.getElementById('carousel-display');
+    const loading = document.getElementById('portfolio-loading');
+    const error = document.getElementById('portfolio-error');
+    const progressContainer = document.getElementById('carousel-progress');
+
+    if (!carouselDisplay) {
+      console.error('Carousel display not found');
+      return;
+    }
+
+    console.log('Loading carousel with files:', supportedPortfolioFiles);
+
+    // Hide loading state
+    if (loading) loading.style.display = 'none';
+
+    // Check if we have any files to display
+    if (supportedPortfolioFiles.length === 0) {
+      console.error('No supported portfolio files found');
+      if (error) {
+        error.classList.remove('hidden');
+        error.querySelector('p').textContent = 'Немає доступних файлів для відображення.';
+      }
+      return;
+    }
+
+    // Create carousel items
+    supportedPortfolioFiles.forEach((file, index) => {
+      const isVideo = file.toLowerCase().endsWith('.mov') || file.toLowerCase().endsWith('.mp4') || file.toLowerCase().endsWith('.webm');
+      const isImage = file.toLowerCase().endsWith('.png') || file.toLowerCase().endsWith('.jpg') || file.toLowerCase().endsWith('.jpeg');
+      
+      console.log(`Processing file ${index}: ${file}, isVideo: ${isVideo}, isImage: ${isImage}`);
+      
+      const card = document.createElement('div');
+      card.className = 'carousel-item group relative hidden';
+      card.dataset.index = index;
+
+      if (isVideo) {
+        card.innerHTML = `
+          <div class="relative w-full h-full bg-black/50">
+            <video 
+              src="${file}" 
+              class="carousel-video"
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              onerror="console.error('Video error:', '${file}'); this.parentElement.parentElement.classList.add('error');"
+            ></video>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <button class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" onclick="toggleVideoPlay(this)">
+              <svg class="w-12 h-12 text-white/90" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </button>
+          </div>
+        `;
+      } else if (isImage) {
+        card.innerHTML = `
+          <div class="relative w-full h-full bg-black/50">
+            <img 
+              src="${file}" 
+              alt="Portfolio work ${index + 1}" 
+              class="carousel-image transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+              onerror="console.error('Image error:', '${file}'); this.parentElement.parentElement.classList.add('error');"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+        `;
+      } else {
+        console.warn('Unsupported file type:', file);
+        return;
+      }
+
+      carouselDisplay.appendChild(card);
+      carouselItems.push(card);
+    });
+
+    console.log(`Successfully loaded ${carouselItems.length} carousel items`);
+
+    if (carouselItems.length === 0) {
+      if (error) {
+        error.classList.remove('hidden');
+        error.querySelector('p').textContent = 'Не вдалося завантажити файли.';
+      }
+      return;
+    }
+
+    // Create progress dots
+    if (progressContainer) {
+      supportedPortfolioFiles.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.className = 'carousel-progress-dot';
+        dot.dataset.index = index;
+        dot.addEventListener('click', () => goToSlide(index));
+        progressContainer.appendChild(dot);
+      });
+    }
+
+    // Setup navigation
+    setupCarouselNavigation();
+
+    // Show first item
+    showItem(0);
+
+    // Add entrance animation
+    gsap.from('#carousel-display', {
+      scrollTrigger: {
+        trigger: '#portfolio',
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+      },
+      y: 60,
+      opacity: 0,
+      scale: 0.95,
+      duration: 0.8,
+      ease: 'power3.out'
+    });
+  }
+
+  function setupCarouselNavigation() {
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        if (!isAnimating) {
+          goToSlide(currentIndex - 1);
+        }
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        if (!isAnimating) {
+          goToSlide(currentIndex + 1);
+        }
+      });
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft' && !isAnimating) {
+        goToSlide(currentIndex - 1);
+      } else if (e.key === 'ArrowRight' && !isAnimating) {
+        goToSlide(currentIndex + 1);
+      }
+    });
+
+    // Touch support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carouselDisplay.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    carouselDisplay.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      const diff = touchStartX - touchEndX;
+
+      if (Math.abs(diff) > swipeThreshold && !isAnimating) {
+        if (diff > 0) {
+          goToSlide(currentIndex + 1);
+        } else {
+          goToSlide(currentIndex - 1);
+        }
+      }
+    }
+  }
+
+  function showItem(index) {
+    // Ensure index is within bounds
+    if (index < 0) {
+      index = carouselItems.length - 1;
+    } else if (index >= carouselItems.length) {
+      index = 0;
+    }
+
+    isAnimating = true;
+
+    // Hide all items
+    carouselItems.forEach(item => {
+      item.classList.add('hidden');
+      item.classList.remove('active');
+      
+      // Pause all videos
+      const video = item.querySelector('video');
+      if (video) {
+        video.pause();
+      }
+    });
+
+    // Show current item
+    const currentItem = carouselItems[index];
+    currentItem.classList.remove('hidden');
+    currentItem.classList.add('active');
+
+    // Update progress dots
+    updateProgressDots(index);
+
+    // Handle video playback
+    const video = currentItem.querySelector('video');
+    if (video) {
+      video.currentTime = 0;
+      video.play().catch(e => console.log('Autoplay prevented:', e));
+    }
+
+    currentIndex = index;
+    isAnimating = false;
+  }
+
+  function goToSlide(index) {
+    showItem(index);
+  }
+
+  function updateProgressDots(index) {
+    const dots = document.querySelectorAll('.carousel-progress-dot');
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+  }
+
+  // Video play/pause toggle function
+  window.toggleVideoPlay = function(button) {
+    const video = button.parentElement.querySelector('video');
+    if (video) {
+      if (video.paused) {
+        video.play();
+        button.innerHTML = `
+          <svg class="w-12 h-12 text-white/90" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+          </svg>
+        `;
+      } else {
+        video.pause();
+        button.innerHTML = `
+          <svg class="w-12 h-12 text-white/90" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        `;
+      }
+    }
+  };
+
+  // Initialize portfolio carousel when DOM is ready
+  document.addEventListener('DOMContentLoaded', loadPortfolioCarousel);
+
   // ---------- Enhanced magnetic buttons (desktop only) ----------
   const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
