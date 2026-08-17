@@ -64,7 +64,7 @@
         
         // Add glow effect on hover
         gsap.to(el, {
-          boxShadow: '0 0 30px rgba(255, 45, 85, 0.4)',
+          boxShadow: '0 0 30px rgba(236, 72, 153, 0.4)',
           duration: 0.3
         });
       });
