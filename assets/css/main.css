@@ -287,6 +287,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* Mobile font sizes (base) */
@@ -295,6 +297,8 @@ body {
   color: var(--white);
   font-size: 1rem;
   line-height: 1.6;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* Desktop enhancements */
@@ -313,10 +317,6 @@ body {
 @media (max-width: 767px) {
   .hero-logo-wrapper img {
     height: 10rem;
-  }
-  
-  #hero {
-    padding-top: 5rem;
   }
   
   .hero-cta {
@@ -361,7 +361,7 @@ body {
 }
 
 /* ========== Typography helpers ========== */
-.font-display { font-family: 'Inter', system-ui, sans-serif; }
+.font-display { font-family: 'Unbounded', system-ui, sans-serif; }
 .font-body { font-family: 'Inter', system-ui, sans-serif; }
 
 /* Inter font weights for visual hierarchy */
@@ -373,49 +373,149 @@ body {
 .font-extrabold { font-weight: 800; }
 .font-black { font-weight: 900; }
 
-/* Enhanced text rendering for Inter */
+/* Unbounded font weights for display */
+.font-display-light { font-family: 'Unbounded', system-ui, sans-serif; font-weight: 300; }
+.font-display-normal { font-family: 'Unbounded', system-ui, sans-serif; font-weight: 400; }
+.font-display-medium { font-family: 'Unbounded', system-ui, sans-serif; font-weight: 500; }
+.font-display-semibold { font-family: 'Unbounded', system-ui, sans-serif; font-weight: 600; }
+.font-display-bold { font-family: 'Unbounded', system-ui, sans-serif; font-weight: 700; }
+.font-display-extrabold { font-family: 'Unbounded', system-ui, sans-serif; font-weight: 800; }
+.font-display-black { font-family: 'Unbounded', system-ui, sans-serif; font-weight: 900; }
+
+/* Enhanced text rendering for both fonts */
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
-/* Headings hierarchy */
+/* Headings hierarchy - Unbounded for impact, Inter for readability */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Unbounded', system-ui, sans-serif;
   letter-spacing: -0.02em;
 }
 
 h1 {
   font-weight: 900;
   line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 
 h2 {
   font-weight: 800;
   line-height: 1.2;
+  letter-spacing: -0.025em;
 }
 
 h3 {
   font-weight: 700;
   line-height: 1.3;
+  letter-spacing: -0.02em;
 }
 
-/* Body text improvements */
+h4 {
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Body text - Inter for readability */
+p, span, div {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
 p {
   font-weight: 400;
   line-height: 1.6;
 }
 
-/* Navigation links */
+/* Navigation links - Inter for clarity */
 .nav-link {
+  font-family: 'Inter', system-ui, sans-serif;
   font-weight: 500;
 }
 
-/* Button text improvements */
+/* Button text - Unbounded for buttons */
 .btn-primary, .btn-ghost {
-  font-weight: 600;
+  font-family: 'Unbounded', system-ui, sans-serif;
+  font-weight: 700;
   letter-spacing: 0.05em;
+}
+
+/* Logo text - Unbounded for branding */
+.brand-text {
+  font-family: 'Unbounded', system-ui, sans-serif;
+  font-weight: 800;
+}
+
+/* Stats and numbers - Unbounded for impact */
+.stat-number {
+  font-family: 'Unbounded', system-ui, sans-serif;
+  font-weight: 700;
+}
+
+/* Small labels and tags - Inter for readability */
+.label-text {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Mixed typography for visual interest */
+.mixed-heading {
+  font-family: 'Unbounded', system-ui, sans-serif;
+}
+
+.mixed-subheading {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+}
+
+/* Special font combinations */
+.accent-text {
+  font-family: 'Unbounded', system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.body-text {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Button enhancements with Unbounded */
+.btn-primary {
+  font-family: 'Unbounded', system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.btn-ghost {
+  font-family: 'Unbounded', system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+/* Navigation with Inter for readability */
+nav a {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+}
+
+/* Logo text styling */
+.brand-text {
+  font-family: 'Unbounded', system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Stats and numbers with Unbounded */
+.stat-number {
+  font-family: 'Unbounded', system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 /* ========== Buttons ========== */
@@ -428,8 +528,9 @@ p {
   background: linear-gradient(135deg, var(--pink-500), var(--pink-600));
   color: #fff;
   font-size: 0.85rem;
+  font-family: 'Unbounded', system-ui, sans-serif;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   border: none;
   border-radius: 0.5rem;
@@ -475,8 +576,9 @@ p {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   font-size: 0.85rem;
+  font-family: 'Unbounded', system-ui, sans-serif;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white);
   border-radius: 0.5rem;
@@ -557,6 +659,20 @@ p {
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+/* Navbar width fixes for mobile */
+#site-header {
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+#site-header > div {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 #mobile-menu.open {
