@@ -19,10 +19,10 @@
   <link rel="icon" href="./assets/images/logo-exlive.png" type="image/png">
   <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
 
-  <!-- Fonts: distinctive variable + display -->
+  <!-- Fonts: Inter with multiple weights for visual hierarchy -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -55,8 +55,18 @@
             'pink-border': 'rgba(236, 72, 153, 0.25)'
           },
           fontFamily: {
-            display: ['Syne', 'system-ui', 'sans-serif'],
-            body: ['Space Grotesk', 'system-ui', 'sans-serif']
+            display: ['Inter', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif']
+          },
+          fontWeight: {
+            'extra-light': '200',
+            'light': '300',
+            'normal': '400',
+            'medium': '500',
+            'semi-bold': '600',
+            'bold': '700',
+            'extra-bold': '800',
+            'black': '900'
           },
           letterSpacing: {
             tightest: '-0.06em',
@@ -411,40 +421,14 @@
       <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
     </div>
     
-    <!-- Monogram 13 - Middle left area (new) -->
-    <div class="monogram-element absolute top-[55%] left-[5%] w-16 h-16 md:w-18 md:h-18 opacity-17 animate-monogram-3" style="animation-delay: -75s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
-    </div>
-    
-    <!-- Monogram 14 - Middle right area (new) -->
-    <div class="monogram-element absolute top-[40%] right-[8%] w-14 h-14 md:w-16 md:h-16 opacity-15 animate-monogram-5" style="animation-delay: -80s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
-    </div>
+
     
     <!-- Monogram 3 - Bottom right area (larger) -->
     <div class="monogram-element absolute top-[82%] right-[18%] w-18 h-18 md:w-20 md:h-20 opacity-19 animate-monogram-6" style="animation-delay: -12s;">
       <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
     </div>
     
-    <!-- Monogram 15 - Bottom left area (new) -->
-    <div class="monogram-element absolute top-[70%] left-[25%] w-14 h-14 md:w-16 md:h-16 opacity-14 animate-monogram-1" style="animation-delay: -85s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
-    </div>
-    
-    <!-- Monogram 7 - Top center area -->
-    <div class="monogram-element absolute top-[25%] left-[45%] w-12 h-12 md:w-14 md:h-14 opacity-15 animate-monogram-7" style="animation-delay: -10s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
-    </div>
-    
-    <!-- Monogram 8 - Upper left center -->
-    <div class="monogram-element absolute top-[30%] left-[15%] w-10 h-10 md:w-12 md:h-12 opacity-16 animate-monogram-8" style="animation-delay: -25s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
-    </div>
-    
-    <!-- Monogram 9 - Upper right center -->
-    <div class="monogram-element absolute top-[22%] right-[25%] w-14 h-14 md:w-16 md:h-16 opacity-17 animate-monogram-9" style="animation-delay: -18s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
-    </div>
+
     
     <!-- Monogram 10 - Middle center -->
     <div class="monogram-element absolute top-[48%] left-[50%] w-12 h-12 md:w-14 md:h-14 opacity-16 animate-monogram-10" style="animation-delay: -35s;">
@@ -506,6 +490,22 @@
       <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
     </div>
     
+    <!-- Fixed Scrolling Monograms -->
+    <!-- Fixed Monogram 1 - Left side, medium size - Circle path -->
+    <div class="fixed-monogram fixed left-[3%] top-[20%] w-16 h-16 md:w-20 md:h-20 opacity-25 z-0" data-path="circle" data-speed="0.005">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.5px]">
+    </div>
+    
+    <!-- Fixed Monogram 2 - Right side, large size - Lissajous curve -->
+    <div class="fixed-monogram fixed right-[4%] top-[40%] w-20 h-20 md:w-24 md:h-24 opacity-25 z-0" data-path="lissajous" data-speed="0.006">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.5px]">
+    </div>
+    
+    <!-- Fixed Monogram 3 - Left side, small size - Spiral path -->
+    <div class="fixed-monogram fixed left-[8%] top-[60%] w-12 h-12 md:w-16 md:h-16 opacity-25 z-0" data-path="spiral" data-speed="0.004">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.5px]">
+    </div>
+    
     <!-- Subtle gradient overlays -->
     <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30"></div>
     <div class="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/40"></div>
@@ -516,9 +516,9 @@
     <div class="flex items-center justify-between px-5 md:px-10 py-5 md:py-6">
       <a href="/" class="flex items-center gap-3 group" data-magnetic>
         <img src="assets/images/logo-exlive.png" alt="Exlive Logo" class="h-8 md:h-10 w-auto object-contain transition-transform group-hover:scale-105">
-        <span class="font-display text-xl md:text-2xl font-800 tracking-tighter text-white hover:text-pink-400 transition-colors duration-300">Exlive</span>
+        <span class="font-display text-xl md:text-2xl font-bold tracking-tight text-white hover:text-pink-400 transition-colors duration-300">Exlive</span>
       </a>
-      <nav class="hidden md:flex items-center gap-8 text-sm tracking-wide uppercase">
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase">
         <a href="#how" class="nav-link text-white/70 hover:text-pink-400 transition-colors" data-magnetic>FAQ</a>
         <a href="#cases" class="nav-link text-white/70 hover:text-pink-400 transition-colors" data-magnetic>Кейси</a>
         <a href="#about" class="nav-link text-white/70 hover:text-pink-400 transition-colors" data-magnetic>Про нас</a>
@@ -550,7 +550,7 @@
 
   <!-- Mobile menu -->
   <div id="mobile-menu" class="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex flex-col justify-center px-8 opacity-0 pointer-events-none transition-opacity duration-500">
-    <nav class="flex flex-col gap-8 text-4xl font-display font-700 tracking-tighter">
+    <nav class="flex flex-col gap-8 text-4xl font-display font-bold tracking-tight">
       <a href="#how" class="mobile-link text-white hover:text-pink-400 transition-colors">FAQ</a>
       <a href="#cases" class="mobile-link text-white hover:text-pink-400 transition-colors">Кейси</a>
       <a href="#about" class="mobile-link text-white hover:text-pink-400 transition-colors">Про нас</a>
@@ -595,15 +595,15 @@
           <div class="col-span-12 lg:col-span-8">
             <div class="flex flex-col items-center md:items-start gap-6 mb-8">
             </div>
-            <h1 class="font-display font-800 leading-[0.85] tracking-tightest text-[clamp(2.5rem,8vw,6rem)]">
+            <h1 class="font-display font-black leading-[0.9] tracking-tight text-[clamp(2.5rem,8vw,6rem)]">
               <span class="block overflow-hidden">
-                <span class="hero-line inline-block">Ми створюємо</span>
+                <span class="hero-line inline-block font-bold">Ми створюємо</span>
               </span>
               <span class="block overflow-hidden">
-                <span class="hero-line inline-block bg-gradient-to-r from-pink-400 to-pink-600 bg-clip-text text-transparent">стрімерів,</span>
+                <span class="hero-line inline-block font-extrabold bg-gradient-to-r from-pink-400 to-pink-600 bg-clip-text text-transparent">стрімерів,</span>
               </span>
               <span class="block overflow-hidden">
-                <span class="hero-line inline-block">які заробляють.</span>
+                <span class="hero-line inline-block font-semibold">які заробляють.</span>
               </span>
             </h1>
           </div>
@@ -626,14 +626,14 @@
         </div>
 
         <!-- Floating stats bar -->
-        <div class="hero-stats mt-10 md:mt-14 flex flex-wrap gap-x-12 gap-y-4 text-sm tracking-wide opacity-0">
+        <div class="hero-stats mt-10 md:mt-14 flex flex-wrap gap-x-12 gap-y-4 text-sm font-medium tracking-wide opacity-0">
           <div>
-            <span class="block text-2xl md:text-3xl font-display font-700 text-white">???+</span>
-            <span class="text-white/60 uppercase text-xs tracking-widest">стрімерів</span>
+            <span class="block text-2xl md:text-3xl font-display font-bold text-white">???+</span>
+            <span class="text-white/60 uppercase text-xs tracking-widest font-semibold">стрімерів</span>
           </div>
           <div>
-            <span class="block text-2xl md:text-3xl font-display font-700 text-white">?</span>
-            <span class="text-white/60 uppercase text-xs tracking-widest">роки на ринку</span>
+            <span class="block text-2xl md:text-3xl font-display font-bold text-white">?</span>
+            <span class="text-white/60 uppercase text-xs tracking-widest font-semibold">роки на ринку</span>
           </div>
           <div>
             <span class="block text-2xl md:text-3xl font-display font-700 bg-gradient-to-r from-pink-400 to-pink-600 bg-clip-text text-transparent">$???</span>

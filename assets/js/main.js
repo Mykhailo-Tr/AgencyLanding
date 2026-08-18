@@ -695,6 +695,128 @@
     }
   });
 
+  // ---------- Fixed Scrolling Monograms with Path Movement ----------
+  const fixedMonograms = document.querySelectorAll('.fixed-monogram');
+  
+  if (fixedMonograms.length > 0) {
+    // Get initial positions to maintain them during animation
+    const initialStyles = new Map();
+    fixedMonograms.forEach((monogram) => {
+      initialStyles.set(monogram, {
+        left: monogram.style.left,
+        right: monogram.style.right,
+        top: monogram.style.top,
+        bottom: monogram.style.bottom
+      });
+    });
+    
+    // Define diverse movement paths for each monogram (no rotation)
+    const paths = {
+      'circle': (progress) => ({
+        x: Math.cos(progress * Math.PI * 2) * 25,
+        y: Math.sin(progress * Math.PI * 2) * 25
+      }),
+      'figure-eight': (progress) => ({
+        x: Math.sin(progress * Math.PI * 2) * 35,
+        y: Math.sin(progress * Math.PI * 4) * 20
+      }),
+      'triangle': (progress) => {
+        const points = [
+          { x: 0, y: -30 },
+          { x: 26, y: 15 },
+          { x: -26, y: 15 }
+        ];
+        const segment = Math.floor(progress * 3);
+        const segmentProgress = (progress * 3) % 1;
+        const current = points[segment];
+        const next = points[(segment + 1) % 3];
+        return {
+          x: current.x + (next.x - current.x) * segmentProgress,
+          y: current.y + (next.y - current.y) * segmentProgress
+        };
+      },
+      'star': (progress) => {
+        const points = 5;
+        const outerRadius = 30;
+        const innerRadius = 12;
+        const angle = progress * Math.PI * 2;
+        const isOuter = Math.floor(progress * points * 2) % 2 === 0;
+        const radius = isOuter ? outerRadius : innerRadius;
+        return {
+          x: Math.cos(angle) * radius,
+          y: Math.sin(angle) * radius
+        };
+      },
+      'zigzag': (progress) => {
+        const width = 40;
+        const height = 30;
+        const segments = 4;
+        const segment = Math.floor(progress * segments);
+        const segmentProgress = (progress * segments) % 1;
+        const startX = -width / 2;
+        const x = startX + (width / segments) * (segment + segmentProgress);
+        const y = (segment % 2 === 0) ? -height / 2 : height / 2;
+        return { x, y };
+      },
+      'spiral': (progress) => {
+        const maxRadius = 35;
+        const angle = progress * Math.PI * 4; // 2 full rotations
+        const radius = (progress * maxRadius);
+        return {
+          x: Math.cos(angle) * radius,
+          y: Math.sin(angle) * radius
+        };
+      },
+      'random': (progress) => {
+        // Random-like movement using sine waves with different frequencies
+        const x = Math.sin(progress * Math.PI * 7) * 20 + Math.cos(progress * Math.PI * 3) * 15;
+        const y = Math.cos(progress * Math.PI * 5) * 18 + Math.sin(progress * Math.PI * 9) * 12;
+        return { x, y };
+      },
+      'lissajous': (progress) => {
+        // Lissajous curve for complex smooth movement
+        const x = Math.sin(progress * Math.PI * 3) * 28;
+        const y = Math.sin(progress * Math.PI * 4) * 22;
+        return { x, y };
+      }
+    };
+    
+    let lastTime = 0;
+    let animationProgress = 0;
+    
+    function animateMonograms(timestamp) {
+      if (!lastTime) lastTime = timestamp;
+      const deltaTime = timestamp - lastTime;
+      
+      // Update progress based on time - much slower for subtlety
+      animationProgress += deltaTime * 0.00002;
+      if (animationProgress > 1) animationProgress = 0;
+      
+      fixedMonograms.forEach((monogram, index) => {
+        const pathType = monogram.dataset.path;
+        const speed = parseFloat(monogram.dataset.speed) || 0.01;
+        const localProgress = (animationProgress * speed * 100 + index * 0.25) % 1; // Offset each monogram
+        
+        if (paths[pathType]) {
+          const movement = paths[pathType](localProgress);
+          // Apply movement while keeping original positioning - no rotation
+          const initial = initialStyles.get(monogram);
+          monogram.style.left = initial.left;
+          monogram.style.right = initial.right;
+          monogram.style.top = initial.top;
+          monogram.style.bottom = initial.bottom;
+          monogram.style.transform = `translate(${movement.x}px, ${movement.y}px)`;
+        }
+      });
+      
+      lastTime = timestamp;
+      requestAnimationFrame(animateMonograms);
+    }
+    
+    // Start animation loop
+    requestAnimationFrame(animateMonograms);
+  }
+
   // ---------- Form handling ----------
   const form = document.getElementById('leadForm');
   const submitBtn = document.getElementById('submitBtn');

@@ -53,6 +53,35 @@
   -webkit-backface-visibility: hidden;
 }
 
+/* ========== Fixed Scrolling Monograms ========== */
+.fixed-monogram {
+  position: fixed;
+  pointer-events: none;
+  will-change: transform, opacity;
+  z-index: 0;
+  mix-blend-mode: normal;
+  transition: transform 0.03s linear; /* Very fast for smooth animation */
+}
+
+.fixed-monogram img {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Desktop enhancements for fixed monograms */
+@media (min-width: 768px) {
+  .fixed-monogram {
+    /* Normal size on desktop */
+    transform: scale(1);
+  }
+  
+  /* Uniform opacity for all fixed monograms */
+  .fixed-monogram {
+    opacity: 0.25 !important;
+  }
+}
+
 /* Mobile-specific monogram positioning */
 @media (max-width: 767px) {
   .monogram-element {
@@ -62,6 +91,55 @@
     opacity: 0.15 !important;
     /* Larger size on mobile for better visibility */
     transform: scale(0.9);
+  }
+  
+  /* Fixed monograms optimization for mobile */
+  .fixed-monogram {
+    /* Moderate size on mobile */
+    transform: scale(0.75);
+    /* Uniform opacity on mobile */
+    opacity: 0.18 !important;
+    /* Fast movement on mobile */
+    transition: transform 0.04s linear;
+  }
+  
+  /* Specific positioning for fixed monograms on mobile */
+  .fixed-monogram:nth-child(1) {
+    left: 2% !important;
+    top: 15% !important;
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  
+  .fixed-monogram:nth-child(2) {
+    right: 3% !important;
+    top: 35% !important;
+    width: 3.5rem !important;
+    height: 3.5rem !important;
+  }
+  
+  .fixed-monogram:nth-child(3) {
+    left: 5% !important;
+    top: 55% !important;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+  
+  .fixed-monogram:nth-child(4) {
+    right: 4% !important;
+    top: 70% !important;
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  
+  /* Less blur on mobile for better visibility */
+  .fixed-monogram img {
+    filter: blur(0.3px) !important;
+  }
+  
+  /* Ensure fixed monograms don't interfere with content */
+  .fixed-monogram {
+    z-index: 0 !important;
   }
   
   /* Specific positioning to avoid content blocks */
@@ -283,8 +361,62 @@ body {
 }
 
 /* ========== Typography helpers ========== */
-.font-display { font-family: 'Syne', system-ui, sans-serif; }
-.font-body { font-family: 'Space Grotesk', system-ui, sans-serif; }
+.font-display { font-family: 'Inter', system-ui, sans-serif; }
+.font-body { font-family: 'Inter', system-ui, sans-serif; }
+
+/* Inter font weights for visual hierarchy */
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.font-extrabold { font-weight: 800; }
+.font-black { font-weight: 900; }
+
+/* Enhanced text rendering for Inter */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+h2 {
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+h3 {
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Body text improvements */
+p {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Navigation links */
+.nav-link {
+  font-weight: 500;
+}
+
+/* Button text improvements */
+.btn-primary, .btn-ghost {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
 
 /* ========== Buttons ========== */
 .btn-primary {
@@ -296,8 +428,8 @@ body {
   background: linear-gradient(135deg, var(--pink-500), var(--pink-600));
   color: #fff;
   font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   border: none;
   border-radius: 0.5rem;
@@ -343,8 +475,8 @@ body {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--white);
   border-radius: 0.5rem;
@@ -358,7 +490,7 @@ body {
   .btn-primary {
     padding: 0.9rem 1.75rem;
     font-size: 0.8rem;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.08em;
   }
   
   .btn-ghost {
@@ -464,8 +596,9 @@ body {
   border-radius: 0.5rem;
   padding: 1rem;
   font-size: 1rem;
+  font-weight: 400;
   color: var(--white);
-  font-family: inherit;
+  font-family: 'Inter', system-ui, sans-serif;
   transition: border-color 0.3s, box-shadow 0.3s;
   outline: none;
   min-height: 48px; /* Touch target size */
