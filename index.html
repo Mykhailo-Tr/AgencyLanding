@@ -70,7 +70,13 @@
             'blob-5': 'blob5 35s infinite ease-in-out',
             'blob-6': 'blob6 45s infinite ease-in-out',
             'blob-7': 'blob7 30s infinite ease-in-out',
-            'pulse-glow': 'pulseGlow 4s infinite ease-in-out'
+            'pulse-glow': 'pulseGlow 4s infinite ease-in-out',
+            'monogram-1': 'monogram1 48s infinite ease-in-out',
+            'monogram-2': 'monogram2 52s infinite ease-in-out',
+            'monogram-3': 'monogram3 44s infinite ease-in-out',
+            'monogram-4': 'monogram4 56s infinite ease-in-out',
+            'monogram-5': 'monogram5 50s infinite ease-in-out',
+            'monogram-6': 'monogram6 46s infinite ease-in-out'
           },
           keyframes: {
             blob1: {
@@ -127,6 +133,51 @@
             pulseGlow: {
               '0%, 100%': { opacity: '1' },
               '50%': { opacity: '0.7' }
+            },
+            monogram1: {
+              '0%': { transform: 'translate(0, 0) rotate(0deg) scale(1)', opacity: '0.15' },
+              '20%': { transform: 'translate(30px, -25px) rotate(5deg) scale(1.05)', opacity: '0.12' },
+              '40%': { transform: 'translate(60px, 15px) rotate(-3deg) scale(0.95)', opacity: '0.18' },
+              '60%': { transform: 'translate(25px, 45px) rotate(8deg) scale(1.02)', opacity: '0.14' },
+              '80%': { transform: 'translate(-15px, 20px) rotate(-5deg) scale(0.98)', opacity: '0.16' },
+              '100%': { transform: 'translate(0, 0) rotate(0deg) scale(1)', opacity: '0.15' }
+            },
+            monogram2: {
+              '0%': { transform: 'translate(0, 0) rotate(0deg) scale(1)', opacity: '0.12' },
+              '25%': { transform: 'translate(-25px, 35px) rotate(-8deg) scale(1.03)', opacity: '0.15' },
+              '50%': { transform: 'translate(-50px, -20px) rotate(4deg) scale(0.97)', opacity: '0.10' },
+              '75%': { transform: 'translate(20px, -40px) rotate(-6deg) scale(1.06)', opacity: '0.14' },
+              '100%': { transform: 'translate(0, 0) rotate(0deg) scale(1)', opacity: '0.12' }
+            },
+            monogram3: {
+              '0%': { transform: 'translate(0, 0) rotate(0deg) scale(1)', opacity: '0.18' },
+              '20%': { transform: 'translate(35px, 50px) rotate(7deg) scale(1.04)', opacity: '0.15' },
+              '40%': { transform: 'translate(-20px, 75px) rotate(-4deg) scale(0.96)', opacity: '0.20' },
+              '60%': { transform: 'translate(-55px, 25px) rotate(6deg) scale(1.01)', opacity: '0.16' },
+              '80%': { transform: 'translate(15px, -30px) rotate(-7deg) scale(0.99)', opacity: '0.17' },
+              '100%': { transform: 'translate(0, 0) rotate(0deg) scale(1)', opacity: '0.18' }
+            },
+            monogram4: {
+              '0%': { transform: 'translate(0, 0) rotate(0deg) scale(1)', opacity: '0.10' },
+              '30%': { transform: 'translate(-20px, -30px) rotate(-5deg) scale(1.05)', opacity: '0.13' },
+              '60%': { transform: 'translate(40px, 45px) rotate(8deg) scale(0.95)', opacity: '0.08' },
+              '90%': { transform: 'translate(15px, -15px) rotate(-3deg) scale(1.03)', opacity: '0.12' },
+              '100%': { transform: 'translate(0, 0) rotate(0deg) scale(1)', opacity: '0.10' }
+            },
+            monogram5: {
+              '0%': { transform: 'translate(0, 0) rotate(0deg) scale(1)', opacity: '0.14' },
+              '25%': { transform: 'translate(45px, 40px) rotate(6deg) scale(1.06)', opacity: '0.11' },
+              '50%': { transform: 'translate(20px, 80px) rotate(-7deg) scale(0.94)', opacity: '0.16' },
+              '75%': { transform: 'translate(-30px, 30px) rotate(4deg) scale(1.02)', opacity: '0.13' },
+              '100%': { transform: 'translate(0, 0) rotate(0deg) scale(1)', opacity: '0.14' }
+            },
+            monogram6: {
+              '0%': { transform: 'translate(0, 0) rotate(0deg) scale(1)', opacity: '0.16' },
+              '20%': { transform: 'translate(-35px, 60px) rotate(-9deg) scale(1.03)', opacity: '0.13' },
+              '40%': { transform: 'translate(-70px, 25px) rotate(5deg) scale(0.97)', opacity: '0.18' },
+              '60%': { transform: 'translate(50px, -30px) rotate(-6deg) scale(1.05)', opacity: '0.14' },
+              '80%': { transform: 'translate(25px, 40px) rotate(7deg) scale(0.96)', opacity: '0.17' },
+              '100%': { transform: 'translate(0, 0) rotate(0deg) scale(1)', opacity: '0.16' }
             }
           }
         }
@@ -197,6 +248,22 @@
     
     <!-- Blob 7 - Bottom section -->
     <div class="absolute top-[85%] right-[8%] w-[400px] h-[400px] rounded-full bg-pink-400/25 blur-[75px] animate-blob-7 opacity-30" style="animation-delay: -10s;"></div>
+    
+    <!-- Animated Monogram Logo Elements -->
+    <!-- Monogram 1 - Top left area (larger) -->
+    <div class="monogram-element absolute top-[12%] left-[8%] w-24 h-24 md:w-32 md:h-32 opacity-15 animate-monogram-1" style="animation-delay: 0s;">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+    </div>
+    
+    <!-- Monogram 2 - Top right area -->
+    <div class="monogram-element absolute top-[18%] right-[12%] w-12 h-12 md:w-16 md:h-16 opacity-12 animate-monogram-2" style="animation-delay: -8s;">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+    </div>
+    
+    <!-- Monogram 3 - Bottom right area (larger) -->
+    <div class="monogram-element absolute top-[82%] right-[18%] w-20 h-20 md:w-24 md:h-24 opacity-16 animate-monogram-6" style="animation-delay: -12s;">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+    </div>
     
     <!-- Subtle gradient overlays -->
     <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30"></div>
@@ -342,6 +409,11 @@
 
     <!-- ========== HOW IT WORKS ========== -->
     <section id="how" class="relative py-16 md:py-24 overflow-hidden">
+      <!-- Monogram 7 - FAQ section (larger) -->
+      <div class="monogram-element absolute top-[15%] right-[20%] w-16 h-16 md:w-20 md:h-20 opacity-12 animate-monogram-2" style="animation-delay: -25s;">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+      </div>
+      
       <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
       
       <div class="px-5 md:px-10 max-w-[1600px] mx-auto">
@@ -469,6 +541,11 @@
 
     <!-- ========== CASES ========== -->
     <section id="cases" class="relative py-16 md:py-24 overflow-hidden">
+      <!-- Monogram 8 - Cases section (larger) -->
+      <div class="monogram-element absolute top-[20%] left-[10%] w-20 h-20 md:w-24 md:h-24 opacity-14 animate-monogram-5" style="animation-delay: -30s;">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+      </div>
+      
       <div class="px-5 md:px-10 max-w-[1600px] mx-auto">
         <div class="mb-10 md:mb-14">
           <p class="text-xs tracking-[0.3em] uppercase text-white/60 mb-4">Результати</p>
@@ -654,6 +731,11 @@
 
     <!-- ========== PORTFOLIO CAROUSEL ========== -->
     <section id="portfolio" class="relative py-16 md:py-24 overflow-hidden">
+      <!-- Monogram extra 1 - Portfolio section (larger) -->
+      <div class="monogram-element absolute top-[25%] right-[15%] w-16 h-16 md:w-20 md:h-20 opacity-11 animate-monogram-3" style="animation-delay: -35s;">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+      </div>
+      
       <div class="px-5 md:px-10 max-w-[1600px] mx-auto">
         <div class="mb-10 md:mb-14">
           <p class="text-xs tracking-[0.3em] uppercase text-white/60 mb-4">Приклади роботи</p>
@@ -716,6 +798,16 @@
 
     <!-- ========== EARNINGS BANNER ========== -->
     <section id="earnings" class="relative py-16 md:py-24 overflow-hidden">
+      <!-- Monogram extra 2 - Earnings section left (larger) -->
+      <div class="monogram-element absolute top-[30%] left-[20%] w-20 h-20 md:w-24 md:h-24 opacity-13 animate-monogram-1" style="animation-delay: -40s;">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+      </div>
+      
+      <!-- Monogram extra 7 - Earnings section right -->
+      <div class="monogram-element absolute top-[60%] right-[15%] w-10 h-10 md:w-14 md:h-14 opacity-11 animate-monogram-6" style="animation-delay: -65s;">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+      </div>
+      
       <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
         <svg class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] max-w-none opacity-[0.04]" viewBox="0 0 1200 600" fill="none">
           <path d="M0 300 Q300 100 600 300 T1200 300" stroke="currentColor" stroke-width="2"/>
@@ -744,6 +836,11 @@
 
     <!-- ========== WHY US ========== -->
     <section id="about" class="relative py-16 md:py-24">
+      <!-- Monogram extra 6 - About section (larger) -->
+      <div class="monogram-element absolute top-[30%] left-[12%] w-16 h-16 md:w-20 md:h-20 opacity-12 animate-monogram-3" style="animation-delay: -60s;">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+      </div>
+      
       <div class="px-5 md:px-10 max-w-[1600px] mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
           <div class="lg:col-span-4 lg:sticky lg:top-32 self-start">
@@ -798,6 +895,11 @@
 
     <!-- ========== TEAM ========== -->
     <section id="team" class="relative py-16 md:py-24 overflow-hidden">
+      <!-- Monogram extra 3 - Team section (larger) -->
+      <div class="monogram-element absolute top-[35%] right-[12%] w-16 h-16 md:w-20 md:h-20 opacity-12 animate-monogram-4" style="animation-delay: -45s;">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+      </div>
+      
       <div class="px-5 md:px-10 max-w-[1600px] mx-auto">
         <div class="mb-10 md:mb-14">
           <p class="text-xs tracking-[0.3em] uppercase text-white/60 mb-4">Люди</p>
@@ -855,6 +957,11 @@
 
     <!-- ========== REQUIREMENTS ========== -->
     <section id="requirements" class="relative py-16 md:py-20">
+      <!-- Monogram extra 4 - Requirements section (larger) -->
+      <div class="monogram-element absolute top-[20%] left-[15%] w-16 h-16 md:w-20 md:h-20 opacity-11 animate-monogram-2" style="animation-delay: -50s;">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+      </div>
+      
       <div class="px-5 md:px-10 max-w-[1100px] mx-auto">
         <div class="text-center mb-10">
           <p class="text-xs tracking-[0.3em] uppercase text-white/60 mb-4">Перед стартом</p>
@@ -917,6 +1024,11 @@
 
     <!-- ========== APPLY / FORM ========== -->
     <section id="apply" class="relative py-16 md:py-24 overflow-hidden">
+      <!-- Monogram extra 5 - Apply section (larger) -->
+      <div class="monogram-element absolute top-[25%] right-[18%] w-20 h-20 md:w-24 md:h-24 opacity-13 animate-monogram-5" style="animation-delay: -55s;">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+      </div>
+      
       <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-paper/15 to-transparent"></div>
       <div class="px-5 md:px-10 max-w-[900px] mx-auto">
         <div class="text-center mb-10 md:mb-12">

@@ -38,9 +38,28 @@
   will-change: transform, opacity;
 }
 
+/* ========== Monogram Elements ========== */
+.monogram-element {
+  position: absolute;
+  pointer-events: none;
+  will-change: transform, opacity;
+  z-index: 1;
+  mix-blend-mode: overlay;
+}
+
+.monogram-element img {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
 /* Ensure smooth animation performance */
 @media (prefers-reduced-motion: no-preference) {
   .blob {
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .monogram-element {
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
@@ -733,6 +752,12 @@ body {
   #hero {
     min-height: 75svh;
   }
+  
+  /* Reduce monogram animation complexity on mobile */
+  .monogram-element {
+    opacity: 0.08;
+    animation-duration: 60s !important;
+  }
 }
 
 /* ========== Accessibility improvements ========== */
@@ -743,6 +768,11 @@ body {
   .hero-path {
     stroke-dashoffset: 0;
     animation: none;
+  }
+  
+  .monogram-element {
+    animation: none;
+    opacity: 0.08;
   }
 }
 
@@ -817,7 +847,8 @@ body {
 .why-item,
 .team-card,
 .floating-orb,
-.floating-gradient {
+.floating-gradient,
+.monogram-element {
   transform: translateZ(0);
   backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
