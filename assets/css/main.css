@@ -788,6 +788,68 @@ nav a {
   transform: translateY(-4px);
 }
 
+/* Case card image container for full-size images */
+/* Border moved to inner container via inline styles */
+
+/* Responsive image display for case cards */
+.case-card img {
+  transition: transform 0.4s var(--ease-out-expo);
+}
+
+.case-card:hover img {
+  transform: scale(1.02);
+}
+
+/* Desktop-specific case image styling */
+@media (min-width: 768px) {
+  .case-card [class*="col-span-5"] {
+    min-height: auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .case-card [class*="col-span-5"] > div {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    position: relative;
+    display: inline-block;
+    /* Border handled by inline styles in HTML */
+  }
+
+  .case-card [class*="col-span-5"] img {
+    max-width: 320px;
+    width: auto;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: block;
+  }
+}
+
+/* Mobile adjustments for case images */
+@media (max-width: 767px) {
+  .case-card [class*="col-span-5"] {
+    min-height: 250px !important;
+    padding: 1rem;
+  }
+
+  .case-card [class*="col-span-5"] > div {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .case-card [class*="col-span-5"] img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 /* ========== Portfolio cards ========== */
 .portfolio-card {
   background: var(--glass-700);
