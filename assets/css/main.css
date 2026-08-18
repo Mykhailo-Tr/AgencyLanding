@@ -888,14 +888,17 @@ nav a {
 #carousel-display {
   position: relative;
   width: 100%;
-  max-width: 360px;
+  max-width: 400px;
   margin: 0 auto;
-  aspect-ratio: 9/16;
+  min-height: 400px;
+  max-height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 0.75rem;
   overflow: hidden;
+  background: var(--glass-600);
+  border: 1px solid var(--pink-border);
 }
 
 .carousel-item {
@@ -938,12 +941,35 @@ nav a {
 .carousel-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+}
+
+/* Sound button styling */
+.carousel-item button[onclick="toggleVideoMute(this)"] {
+  background: var(--glass-700);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--pink-border);
+  transition: all 0.3s ease;
+}
+
+.carousel-item button[onclick="toggleVideoMute(this)"]:hover {
+  background: var(--glass-800);
+  border-color: rgba(236, 72, 153, 0.5);
+  transform: scale(1.1);
 }
 
 @media (max-width: 767px) {
   #carousel-display {
-    max-width: 280px;
+    max-width: 320px;
+    min-height: 350px;
+  }
+}
+
+@media (min-width: 768px) {
+  #carousel-display {
+    max-width: 400px;
+    min-height: 450px;
   }
 }
 
@@ -1016,6 +1042,7 @@ nav a {
 #carousel-prev,
 #carousel-next {
   will-change: transform;
+  transition: transform 0.2s ease;
 }
 
 #carousel-prev:hover,
