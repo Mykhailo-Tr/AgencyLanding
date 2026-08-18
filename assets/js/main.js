@@ -375,16 +375,22 @@
 
   // ---------- Hero entrance - Cinematic reveal ----------
   // Set initial states first
-  gsap.set('.hero-line', { 
-    y: '120%', 
+  gsap.set('.hero-line', {
+    y: '120%',
     rotationX: -45,
     opacity: 0,
     transformOrigin: 'center top'
   });
-  gsap.set('.hero-eyebrow', { 
-    y: -40, 
-    opacity: 0,
+  gsap.set('.hero-logo', {
+    y: -30,
+    scale: 0.9
+  });
+  gsap.set('.hero-eyebrow', {
+    y: -40,
     clipPath: 'inset(0 100% 0 0)'
+  });
+  gsap.set('.hero-logo + p', {
+    y: -20
   });
   gsap.set('.hero-desc', { 
     y: 60, 
@@ -407,13 +413,22 @@
   const heroTl = gsap.timeline({ defaults: { ease: 'power4.out' } });
 
   heroTl
-    .to('.hero-eyebrow', { 
-      opacity: 1, 
-      y: 0, 
-      clipPath: 'inset(0 0% 0 0)',
-      duration: 1, 
-      delay: 0.2 
+    .to('.hero-logo', {
+      y: 0,
+      scale: 1,
+      duration: 0.8,
+      delay: 0.1
     })
+    .to('.hero-logo + p', {
+      y: 0,
+      duration: 0.6
+    }, '-=0.4')
+    .to('.hero-eyebrow', {
+      y: 0,
+      clipPath: 'inset(0 0% 0 0)',
+      duration: 1,
+      delay: 0.2
+    }, '-=0.4')
     .to('.hero-line', {
       y: 0,
       rotationX: 0,

@@ -91,6 +91,26 @@ body {
   }
 }
 
+/* Mobile-specific hero adjustments */
+@media (max-width: 767px) {
+  .hero-logo-wrapper img {
+    height: 10rem;
+  }
+  
+  #hero {
+    padding-top: 5rem;
+  }
+  
+  .hero-cta {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .hero-desc {
+    text-align: center;
+  }
+}
+
 
 
 /* Noise / grain overlay */
@@ -214,6 +234,37 @@ body {
   transform: translateY(-2px);
 }
 
+/* ========== Hero Logo ========== */
+.hero-logo-wrapper {
+  animation: fadeInUp 1s var(--ease-out-expo) 0.3s both;
+  position: relative;
+}
+
+.hero-logo-wrapper img {
+  filter: drop-shadow(0 0 30px rgba(236, 72, 153, 0.4));
+  transition: transform 0.4s var(--ease-out-expo), filter 0.4s;
+}
+
+.hero-logo-wrapper img:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 50px rgba(236, 72, 153, 0.6));
+}
+
+.hero-logo-wrapper .absolute {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ========== Nav ========== */
 .nav-link {
   position: relative;
@@ -243,6 +294,16 @@ body {
 
 .menu-line {
   transition: transform 0.4s var(--ease-out-expo), opacity 0.3s;
+}
+
+#menu-toggle {
+  display: flex !important;
+}
+
+@media (min-width: 768px) {
+  #menu-toggle {
+    display: none !important;
+  }
 }
 
 #menu-toggle.open .menu-line:first-child {
@@ -750,6 +811,7 @@ body {
 
 /* GPU acceleration for animated elements */
 .hero-line,
+.hero-logo,
 .feature-card,
 .case-card,
 .why-item,
