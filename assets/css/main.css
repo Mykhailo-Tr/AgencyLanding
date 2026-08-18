@@ -53,6 +53,127 @@
   -webkit-backface-visibility: hidden;
 }
 
+/* Mobile-specific monogram positioning */
+@media (max-width: 767px) {
+  .monogram-element {
+    /* Ensure monograms stay in background on mobile */
+    z-index: 0;
+    /* Higher opacity for better visibility on mobile */
+    opacity: 0.15 !important;
+    /* Larger size on mobile for better visibility */
+    transform: scale(0.9);
+  }
+  
+  /* Specific positioning to avoid content blocks */
+  .background-blobs .monogram-element {
+    /* Ensure they don't interfere with interactive elements */
+    pointer-events: none;
+  }
+  
+  /* Better visibility in safe zones */
+  .monogram-element[style*="top-[12%]"] {
+    top: 15% !important;
+  }
+  
+  .monogram-element[style*="top-[18%]"] {
+    top: 22% !important;
+  }
+  
+  .monogram-element[style*="top-[55%]"] {
+    top: 60% !important;
+  }
+  
+  .monogram-element[style*="top-[40%]"] {
+    top: 45% !important;
+  }
+  
+  .monogram-element[style*="top-[82%]"] {
+    top: 88% !important;
+  }
+  
+  .monogram-element[style*="top-[70%]"] {
+    top: 75% !important;
+  }
+  
+  /* Additional monogram positioning for new elements */
+  .monogram-element[style*="top-[25%]"] {
+    top: 30% !important;
+  }
+  
+  .monogram-element[style*="top-[30%]"] {
+    top: 35% !important;
+  }
+  
+  .monogram-element[style*="top-[22%]"] {
+    top: 28% !important;
+  }
+  
+  .monogram-element[style*="top-[48%]"] {
+    top: 52% !important;
+  }
+  
+  .monogram-element[style*="top-[65%]"] {
+    top: 68% !important;
+  }
+  
+  .monogram-element[style*="top-[75%]"] {
+    top: 78% !important;
+  }
+  
+  .monogram-element[style*="top-[35%]"] {
+    top: 38% !important;
+  }
+  
+  .monogram-element[style*="top-[28%]"] {
+    top: 32% !important;
+  }
+  
+  .monogram-element[style*="top-[52%]"] {
+    top: 55% !important;
+  }
+  
+  .monogram-element[style*="top-[45%]"] {
+    top: 48% !important;
+  }
+  
+  .monogram-element[style*="top-[78%]"] {
+    top: 80% !important;
+  }
+  
+  .monogram-element[style*="top-[72%]"] {
+    top: 76% !important;
+  }
+  
+  .monogram-element[style*="top-[15%]"] {
+    top: 18% !important;
+  }
+  
+  .monogram-element[style*="top-[88%]"] {
+    top: 90% !important;
+  }
+  
+  .monogram-element[style*="top-[80%]"] {
+    top: 82% !important;
+  }
+  
+  /* Ensure monograms avoid content blocks on mobile */
+  .monogram-element[style*="top-[55%]"] {
+    top: 58% !important;
+  }
+  
+  .monogram-element[style*="top-[40%]"] {
+    top: 42% !important;
+  }
+  
+  .monogram-element[style*="top-[82%]"] {
+    top: 86% !important;
+  }
+  
+  .monogram-element[style*="top-[70%]"] {
+    top: 73% !important;
+  }
+}
+
 /* Ensure smooth animation performance */
 @media (prefers-reduced-motion: no-preference) {
   .blob {
@@ -757,6 +878,113 @@ body {
   .monogram-element {
     opacity: 0.08;
     animation-duration: 60s !important;
+  }
+  
+  /* Reposition monograms for mobile to avoid content overlap */
+  .monogram-element:nth-child(1) {
+    top: 8% !important;
+    left: 5% !important;
+    width: 4rem !important;
+    height: 4rem !important;
+  }
+  
+  .monogram-element:nth-child(2) {
+    top: 12% !important;
+    right: 8% !important;
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  
+  .monogram-element:nth-child(3) {
+    top: 20% !important;
+    left: 15% !important;
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  
+  .monogram-element:nth-child(4) {
+    top: 25% !important;
+    right: 12% !important;
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  
+  .monogram-element:nth-child(5) {
+    top: 35% !important;
+    left: 8% !important;
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  
+  .monogram-element:nth-child(6) {
+    top: 40% !important;
+    right: 10% !important;
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  
+  .monogram-element:nth-child(7) {
+    top: 50% !important;
+    left: 20% !important;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+  
+  .monogram-element:nth-child(8) {
+    top: 55% !important;
+    right: 15% !important;
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  
+  .monogram-element:nth-child(9) {
+    top: 65% !important;
+    left: 12% !important;
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  
+  .monogram-element:nth-child(10) {
+    top: 70% !important;
+    right: 8% !important;
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  
+  .monogram-element:nth-child(11) {
+    top: 78% !important;
+    left: 25% !important;
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  
+  .monogram-element:nth-child(12) {
+    top: 85% !important;
+    right: 12% !important;
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  
+  /* Hide additional monograms on mobile to reduce clutter */
+  .monogram-element:nth-child(n+13) {
+    display: none;
+  }
+  
+  /* Ensure monograms don't overlap with header */
+  .background-blobs .monogram-element {
+    z-index: 0;
+  }
+  
+  /* Better mobile visibility by reducing blur */
+  .monogram-element img {
+    filter: blur(0.5px) !important;
+  }
+  
+  /* Increase visibility of key monograms on mobile */
+  .monogram-element:nth-child(1),
+  .monogram-element:nth-child(3),
+  .monogram-element:nth-child(5) {
+    opacity: 0.18 !important;
   }
 }
 
