@@ -528,7 +528,7 @@
         <a href="#requirements" class="nav-link text-white/70 hover:text-pink-400 transition-colors data-magnetic whitespace-nowrap">Вимоги</a>
       </nav>
       <div class="flex items-center gap-3 flex-shrink-0">
-        <a href="https://forms.google.com/placeholder" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 border border-pink-border text-xs tracking-widest uppercase bg-gradient-to-r from-pink-500 to-pink-600 text-white hover:from-pink-400 hover:to-pink-500 transition-all duration-300 rounded-lg shadow-lg shadow-pink-500/20 hover:shadow-pink-500/40 hover:scale-105 whitespace-nowrap" data-magnetic>
+        <a href="#apply" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 border border-pink-border text-xs tracking-widest uppercase bg-gradient-to-r from-pink-500 to-pink-600 text-white hover:from-pink-400 hover:to-pink-500 transition-all duration-300 rounded-lg shadow-lg shadow-pink-500/20 hover:shadow-pink-500/40 hover:scale-105 whitespace-nowrap" data-magnetic>
           Почати
         </a>
         <div class="hidden md:flex items-center gap-3">
@@ -558,7 +558,7 @@
       <a href="#about" class="mobile-link text-white hover:text-pink-400 transition-colors">Про нас</a>
       <a href="#team" class="mobile-link text-white hover:text-pink-400 transition-colors">Команда</a>
       <a href="#requirements" class="mobile-link text-white hover:text-pink-400 transition-colors">Вимоги</a>
-      <a href="https://forms.google.com/placeholder" target="_blank" rel="noopener" class="mobile-link text-white hover:text-pink-400 transition-colors">Заявка</a>
+      <a href="#apply" class="mobile-link text-white hover:text-pink-400 transition-colors">Заявка</a>
     </nav>
     <div class="flex gap-6 mt-8">
       <a href="https://instagram.com/exlivee.agency/" target="_blank" rel="noopener" class="w-10 h-10 flex items-center justify-center text-white/60 hover:text-pink-400 transition-colors" aria-label="Instagram">
@@ -618,7 +618,7 @@
               Тренуємо, продюсуємо та запускаємо нових стрімерів у TikTok Live. Послуги безкоштовні. Потрібен лише телефон.
             </p>
             <div class="hero-cta flex flex-wrap gap-4 justify-center lg:justify-end opacity-0">
-              <a href="https://forms.google.com/placeholder" target="_blank" rel="noopener" class="btn-primary group" data-magnetic>
+              <a href="#apply" class="btn-primary group" data-magnetic>
                 <span>Почати</span>
                 <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
               </a>
@@ -1093,7 +1093,7 @@
         <p class="mt-4 text-sm text-white/70">
           Цей тренінг допоміг отримати перший дохід більш ніж <strong class="text-pink-500">640</strong> новим стрімерам.
         </p>
-        <a href="https://forms.google.com/placeholder" target="_blank" rel="noopener" class="btn-primary mt-10 inline-flex" data-magnetic>
+        <a href="#apply" class="btn-primary mt-10 inline-flex" data-magnetic>
           <span>Пройти навчання</span>
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
@@ -1289,7 +1289,7 @@
             </li>
           </ul>
           <div class="mt-10 text-center">
-            <a href="https://forms.google.com/placeholder" target="_blank" rel="noopener" class="btn-primary inline-flex" data-magnetic>
+            <a href="#apply" class="btn-primary inline-flex" data-magnetic>
               <span>Стати стрімером</span>
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
@@ -1315,12 +1315,95 @@
           <p class="mt-4 text-white/60 max-w-md mx-auto">Заповни форму — менеджер зв'яжеться протягом 24 годин.</p>
         </div>
 
-        <div class="text-center">
-          <a href="https://forms.google.com/placeholder" target="_blank" rel="noopener" class="btn-primary inline-flex" data-magnetic>
-            <span>Заповнити форму</span>
-            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-          </a>
-        </div>
+        <form id="applicationForm" class="max-w-md mx-auto space-y-6">
+          <!-- Ім'я -->
+          <div class="form-group">
+            <label for="name" class="block text-sm font-medium text-white/80 mb-2">Ім'я</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              maxlength="255"
+              required
+              class="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all duration-300"
+              placeholder="Введіть ваше ім'я"
+            >
+          </div>
+
+          <!-- Вік -->
+          <div class="form-group">
+            <label for="age" class="block text-sm font-medium text-white/80 mb-2">Вік</label>
+            <input 
+              type="number" 
+              id="age" 
+              name="age" 
+              min="18" 
+              max="100"
+              required
+              class="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all duration-300"
+              placeholder="Ваш вік"
+            >
+          </div>
+
+          <!-- TikTok -->
+          <div class="form-group">
+            <label for="tiktok" class="block text-sm font-medium text-white/80 mb-2">TikTok</label>
+            <input 
+              type="text" 
+              id="tiktok" 
+              name="tiktok" 
+              required
+              class="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all duration-300"
+              placeholder="@username"
+            >
+          </div>
+
+          <!-- Telegram -->
+          <div class="form-group">
+            <label for="telegram" class="block text-sm font-medium text-white/80 mb-2">Telegram</label>
+            <input 
+              type="text" 
+              id="telegram" 
+              name="telegram" 
+              required
+              class="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all duration-300"
+              placeholder="@username"
+            >
+          </div>
+
+          <!-- Phone -->
+          <div class="form-group">
+            <label for="phone" class="block text-sm font-medium text-white/80 mb-2">Телефон</label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              required
+              class="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all duration-300"
+              placeholder="+380 XX XXX XX XX"
+            >
+          </div>
+
+          <!-- Error/Success Messages -->
+          <div id="formMessage" class="hidden p-4 rounded-lg text-sm"></div>
+
+          <!-- Submit Button -->
+          <button 
+            type="submit" 
+            id="submitBtn"
+            class="w-full btn-primary group"
+            data-magnetic
+          >
+            <span id="btnText">Відправити заявку</span>
+            <svg id="btnSpinner" class="hidden animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            <svg id="btnArrow" class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </button>
+        </form>
       </div>
     </section>
 
@@ -1364,7 +1447,7 @@
               <li><a href="#about" class="hover:text-pink-500 transition-colors">Про нас</a></li>
               <li><a href="#cases" class="hover:text-pink-500 transition-colors">Кейси</a></li>
               <li><a href="#team" class="hover:text-pink-500 transition-colors">Команда</a></li>
-              <li><a href="https://forms.google.com/placeholder" target="_blank" rel="noopener" class="hover:text-pink-500 transition-colors">Заявка</a></li>
+              <li><a href="#apply" class="hover:text-pink-500 transition-colors">Заявка</a></li>
             </ul>
           </div>
           <div>
@@ -1404,5 +1487,214 @@
   <script defer src="https://unpkg.com/alpinejs@3.14.3/dist/cdn.min.js"></script>
   <script src="assets/js/webgl-shader.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <!-- Form Validation and Submission Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('applicationForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const btnText = document.getElementById('btnText');
+      const btnSpinner = document.getElementById('btnSpinner');
+      const btnArrow = document.getElementById('btnArrow');
+      const formMessage = document.getElementById('formMessage');
+      const API_URL = 'https://exliveagency-telegram-api.denisbaluk187.workers.dev/';
+
+      // Validation functions
+      function validateName(value) {
+        return value.trim().length <= 255 && value.trim().length > 0;
+      }
+
+      function validateAge(value) {
+        const age = parseInt(value);
+        return !isNaN(age) && age >= 18 && age <= 100;
+      }
+
+      function validateTikTok(value) {
+        return value.trim().startsWith('@') && value.trim().length > 1;
+      }
+
+      function validateTelegram(value) {
+        return value.trim().startsWith('@') && value.trim().length > 1;
+      }
+
+      function validatePhone(value) {
+        // Ukrainian phone format: +380 XX XXX XX XX or similar
+        const phoneRegex = /^\+?[0-9]{10,15}$/;
+        return phoneRegex.test(value.replace(/[\s\-()]/g, ''));
+      }
+
+      function showError(message) {
+        formMessage.textContent = message;
+        formMessage.className = 'p-4 rounded-lg text-sm bg-red-500/20 border border-red-500/50 text-red-200';
+        formMessage.classList.remove('hidden');
+      }
+
+      function showSuccess(message) {
+        formMessage.textContent = message;
+        formMessage.className = 'p-4 rounded-lg text-sm bg-green-500/20 border border-green-500/50 text-green-200';
+        formMessage.classList.remove('hidden');
+      }
+
+      function hideMessage() {
+        formMessage.classList.add('hidden');
+      }
+
+      function setLoading(isLoading) {
+        if (isLoading) {
+          submitBtn.disabled = true;
+          btnText.textContent = 'Відправлення...';
+          btnSpinner.classList.remove('hidden');
+          btnArrow.classList.add('hidden');
+        } else {
+          submitBtn.disabled = false;
+          btnText.textContent = 'Відправити заявку';
+          btnSpinner.classList.add('hidden');
+          btnArrow.classList.remove('hidden');
+        }
+      }
+
+      // Real-time validation
+      const nameInput = document.getElementById('name');
+      const ageInput = document.getElementById('age');
+      const tiktokInput = document.getElementById('tiktok');
+      const telegramInput = document.getElementById('telegram');
+      const phoneInput = document.getElementById('phone');
+
+      nameInput.addEventListener('input', function() {
+        if (!validateName(this.value)) {
+          this.classList.add('border-red-500');
+          this.classList.remove('border-white/20');
+        } else {
+          this.classList.remove('border-red-500');
+          this.classList.add('border-white/20');
+        }
+      });
+
+      ageInput.addEventListener('input', function() {
+        if (!validateAge(this.value)) {
+          this.classList.add('border-red-500');
+          this.classList.remove('border-white/20');
+        } else {
+          this.classList.remove('border-red-500');
+          this.classList.add('border-white/20');
+        }
+      });
+
+      tiktokInput.addEventListener('input', function() {
+        if (!validateTikTok(this.value)) {
+          this.classList.add('border-red-500');
+          this.classList.remove('border-white/20');
+        } else {
+          this.classList.remove('border-red-500');
+          this.classList.add('border-white/20');
+        }
+      });
+
+      telegramInput.addEventListener('input', function() {
+        if (!validateTelegram(this.value)) {
+          this.classList.add('border-red-500');
+          this.classList.remove('border-white/20');
+        } else {
+          this.classList.remove('border-red-500');
+          this.classList.add('border-white/20');
+        }
+      });
+
+      phoneInput.addEventListener('input', function() {
+        if (!validatePhone(this.value)) {
+          this.classList.add('border-red-500');
+          this.classList.remove('border-white/20');
+        } else {
+          this.classList.remove('border-red-500');
+          this.classList.add('border-white/20');
+        }
+      });
+
+      // Form submission
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        hideMessage();
+
+        // Validate all fields
+        const name = nameInput.value.trim();
+        const age = ageInput.value.trim();
+        const tiktok = tiktokInput.value.trim();
+        const telegram = telegramInput.value.trim();
+        const phone = phoneInput.value.trim();
+
+        let hasError = false;
+
+        if (!validateName(name)) {
+          showError('Ім\'я не може бути порожнім і має бути не більше 255 символів');
+          nameInput.classList.add('border-red-500');
+          hasError = true;
+        }
+
+        if (!validateAge(age)) {
+          showError('Вік має бути від 18 до 100 років');
+          ageInput.classList.add('border-red-500');
+          hasError = true;
+        }
+
+        if (!validateTikTok(tiktok)) {
+          showError('TikTok має починатися з @');
+          tiktokInput.classList.add('border-red-500');
+          hasError = true;
+        }
+
+        if (!validateTelegram(telegram)) {
+          showError('Telegram має починатися з @');
+          telegramInput.classList.add('border-red-500');
+          hasError = true;
+        }
+
+        if (!validatePhone(phone)) {
+          showError('Введіть коректний номер телефону');
+          phoneInput.classList.add('border-red-500');
+          hasError = true;
+        }
+
+        if (hasError) return;
+
+        setLoading(true);
+
+        try {
+          const response = await fetch(API_URL, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              name: name,
+              age: age,
+              tiktok: tiktok,
+              telegram: telegram,
+              phone: phone
+            })
+          });
+
+          const data = await response.json();
+
+          if (response.ok && data.success) {
+            showSuccess('✅ Заявку успішно відправлено! Менеджер зв\'яжеться з вами протягом 24 годин.');
+            form.reset();
+            
+            // Remove any validation styling
+            [nameInput, ageInput, tiktokInput, telegramInput, phoneInput].forEach(input => {
+              input.classList.remove('border-red-500');
+              input.classList.add('border-white/20');
+            });
+          } else {
+            showError('❌ Помилка: ' + (data.error || 'Невідома помилка') + (data.telegramError ? ' — ' + data.telegramError : ''));
+          }
+        } catch (error) {
+          console.error('Request error:', error);
+          showError('❌ Не вдалося підключитися до сервера. Спробуйте пізніше.');
+        } finally {
+          setLoading(false);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
