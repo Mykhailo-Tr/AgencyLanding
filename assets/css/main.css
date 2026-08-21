@@ -18,6 +18,37 @@
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+/* Prevent image selection and dragging */
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Allow pointer events for interactive images (buttons, etc.) */
+button img, a img {
+  pointer-events: auto;
+}
+
+/* Extra protection for logo images */
+img[src*="logo-exlive"] {
+  pointer-events: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+/* Prevent text selection on specific elements */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 /* ========== Background Blobs ========== */
 .background-blobs {
   position: absolute;
