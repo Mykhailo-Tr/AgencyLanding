@@ -8,12 +8,12 @@
   --pink-900: #831843;
   --pink-200: #fbcfe8;
   --pink-300: #f9a8d4;
-  --black: #000000;
-  --glass-600: rgba(0, 0, 0, 0.6);
-  --glass-700: rgba(0, 0, 0, 0.7);
-  --glass-800: rgba(0, 0, 0, 0.8);
+  --black: #0a0a0a;
+  --glass-600: rgba(20, 20, 20, 0.65);
+  --glass-700: rgba(25, 25, 25, 0.75);
+  --glass-800: rgba(30, 30, 30, 0.85);
   --white: #ffffff;
-  --pink-border: rgba(236, 72, 153, 0.25);
+  --pink-border: rgba(236, 72, 153, 0.35);
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
 }
@@ -107,9 +107,9 @@ img[src*="logo-exlive"] {
     transform: scale(1);
   }
   
-  /* Uniform opacity for all fixed monograms */
+  /* Uniform opacity for all fixed monograms - brighter */
   .fixed-monogram {
-    opacity: 0.25 !important;
+    opacity: 0.30 !important;
   }
 }
 
@@ -118,8 +118,8 @@ img[src*="logo-exlive"] {
   .monogram-element {
     /* Ensure monograms stay in background on mobile */
     z-index: 0;
-    /* Higher opacity for better visibility on mobile */
-    opacity: 0.15 !important;
+    /* Higher opacity for better visibility on mobile - brighter */
+    opacity: 0.18 !important;
     /* Larger size on mobile for better visibility */
     transform: scale(0.9);
   }
@@ -128,8 +128,8 @@ img[src*="logo-exlive"] {
   .fixed-monogram {
     /* Moderate size on mobile */
     transform: scale(0.75);
-    /* Uniform opacity on mobile */
-    opacity: 0.18 !important;
+    /* Uniform opacity on mobile - brighter */
+    opacity: 0.22 !important;
     /* Fast movement on mobile */
     transition: transform 0.04s linear;
   }
@@ -297,16 +297,17 @@ img[src*="logo-exlive"] {
 /* ========== Glassmorphism card base ========== */
 .glass-card {
   background: var(--glass-700);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   border: 1px solid var(--pink-border);
   border-radius: 1rem;
   transition: all 0.4s var(--ease-out-expo);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .glass-card:hover {
-  border-color: rgba(236, 72, 153, 0.4);
-  box-shadow: 0 0 30px rgba(236, 72, 153, 0.15);
+  border-color: rgba(236, 72, 153, 0.5);
+  box-shadow: 0 8px 35px rgba(236, 72, 153, 0.25);
   transform: translateY(-4px);
 }
 
@@ -378,16 +379,17 @@ body {
 /* Glassmorphism card base */
 .glass-card {
   background: var(--glass-700);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   border: 1px solid var(--pink-border);
   border-radius: 1rem;
   transition: all 0.4s var(--ease-out-expo);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .glass-card:hover {
-  border-color: rgba(236, 72, 153, 0.4);
-  box-shadow: 0 0 30px rgba(236, 72, 153, 0.15);
+  border-color: rgba(236, 72, 153, 0.5);
+  box-shadow: 0 8px 35px rgba(236, 72, 153, 0.25);
   transform: translateY(-4px);
 }
 
@@ -571,21 +573,21 @@ nav a {
   overflow: hidden;
   min-height: 48px; /* Touch target size */
   min-width: 44px; /* Touch target size */
-  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+  box-shadow: 0 4px 20px rgba(236, 72, 153, 0.4);
 }
 
 .btn-primary::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.15) 50%, transparent 70%);
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.2) 50%, transparent 70%);
   transform: translateX(-100%);
   transition: transform 0.6s var(--ease-out-expo);
 }
 
 .btn-primary:hover {
   background: linear-gradient(135deg, var(--pink-400), var(--pink-500));
-  box-shadow: 0 0 40px rgba(236, 72, 153, 0.5);
+  box-shadow: 0 0 50px rgba(236, 72, 153, 0.6);
   transform: translateY(-2px) scale(1.02);
 }
 
@@ -604,8 +606,8 @@ nav a {
   padding: 1rem 1.5rem;
   border: 1px solid var(--pink-border);
   background: var(--glass-600);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   font-size: 0.85rem;
   font-family: 'Unbounded', system-ui, sans-serif;
   font-weight: 600;
@@ -616,6 +618,7 @@ nav a {
   transition: border-color 0.3s, background 0.3s, color 0.3s, box-shadow 0.3s;
   min-height: 48px; /* Touch target size */
   min-width: 44px; /* Touch target size */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Desktop button enhancements */
@@ -633,9 +636,9 @@ nav a {
 }
 
 .btn-ghost:hover {
-  border-color: rgba(236, 72, 153, 0.5);
+  border-color: rgba(236, 72, 153, 0.6);
   background: var(--glass-700);
-  box-shadow: 0 0 20px rgba(236, 72, 153, 0.2);
+  box-shadow: 0 0 25px rgba(236, 72, 153, 0.3);
   transform: translateY(-2px);
 }
 
@@ -673,7 +676,7 @@ nav a {
 /* ========== Nav ========== */
 .nav-link {
   position: relative;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.8);
   transition: color 0.3s;
 }
 
@@ -690,6 +693,10 @@ nav a {
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--pink-400);
 }
 
 /* Navbar width fixes for mobile */
@@ -737,8 +744,8 @@ nav a {
 .form-input {
   width: 100%;
   background: var(--glass-600);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border: 1px solid var(--pink-border);
   border-radius: 0.5rem;
   padding: 1rem;
@@ -749,6 +756,7 @@ nav a {
   transition: border-color 0.3s, box-shadow 0.3s;
   outline: none;
   min-height: 48px; /* Touch target size */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Desktop form enhancements */
@@ -765,7 +773,7 @@ nav a {
 
 .form-input:focus {
   border-color: var(--pink-500);
-  box-shadow: 0 0 20px rgba(236, 72, 153, 0.2);
+  box-shadow: 0 0 25px rgba(236, 72, 153, 0.3);
 }
 
 .form-input:invalid:not(:placeholder-shown):not(:focus) {
@@ -775,12 +783,13 @@ nav a {
 /* ========== Feature cards ========== */
 .feature-card {
   background: var(--glass-700);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   border: 1px solid var(--pink-border);
   border-radius: 1rem;
   transition: border-color 0.4s, transform 0.5s var(--ease-out-expo), background 0.4s, box-shadow 0.4s;
   padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: 768px) {
@@ -790,21 +799,22 @@ nav a {
 }
 
 .feature-card:hover {
-  border-color: rgba(236, 72, 153, 0.4);
+  border-color: rgba(236, 72, 153, 0.5);
   background: var(--glass-800);
-  box-shadow: 0 0 30px rgba(236, 72, 153, 0.15);
+  box-shadow: 0 8px 35px rgba(236, 72, 153, 0.25);
   transform: translateY(-4px);
 }
 
 /* ========== Case cards ========== */
 .case-card {
   background: var(--glass-700);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   border: 1px solid var(--pink-border);
   border-radius: 1rem;
   transition: border-color 0.4s, transform 0.5s var(--ease-out-expo), box-shadow 0.4s;
   padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: 768px) {
@@ -814,8 +824,8 @@ nav a {
 }
 
 .case-card:hover {
-  border-color: rgba(236, 72, 153, 0.4);
-  box-shadow: 0 0 30px rgba(236, 72, 153, 0.15);
+  border-color: rgba(236, 72, 153, 0.5);
+  box-shadow: 0 8px 35px rgba(236, 72, 153, 0.25);
   transform: translateY(-4px);
 }
 
@@ -885,17 +895,18 @@ nav a {
 /* ========== Portfolio cards ========== */
 .portfolio-card {
   background: var(--glass-700);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   border: 1px solid var(--pink-border);
   border-radius: 1rem;
   overflow: hidden;
   transition: border-color 0.4s, transform 0.5s var(--ease-out-expo), box-shadow 0.4s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .portfolio-card:hover {
-  border-color: rgba(236, 72, 153, 0.4);
-  box-shadow: 0 0 30px rgba(236, 72, 153, 0.15);
+  border-color: rgba(236, 72, 153, 0.5);
+  box-shadow: 0 8px 35px rgba(236, 72, 153, 0.25);
   transform: translateY(-4px);
 }
 
@@ -945,14 +956,15 @@ nav a {
   border-radius: 0.75rem;
   overflow: hidden;
   background: var(--glass-700);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   border: 1px solid var(--pink-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .carousel-item:hover {
-  border-color: rgba(236, 72, 153, 0.4);
-  box-shadow: 0 0 30px rgba(236, 72, 153, 0.15);
+  border-color: rgba(236, 72, 153, 0.5);
+  box-shadow: 0 8px 35px rgba(236, 72, 153, 0.25);
 }
 
 .carousel-item.active {
@@ -1198,17 +1210,18 @@ nav a {
 /* ========== Team cards ========== */
 .team-card {
   background: var(--glass-700);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   border: 1px solid var(--pink-border);
   border-radius: 1rem;
   transition: border-color 0.4s, transform 0.5s var(--ease-out-expo), box-shadow 0.4s;
   overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .team-card:hover {
-  border-color: rgba(236, 72, 153, 0.4);
-  box-shadow: 0 0 30px rgba(236, 72, 153, 0.15);
+  border-color: rgba(236, 72, 153, 0.5);
+  box-shadow: 0 8px 35px rgba(236, 72, 153, 0.25);
   transform: translateY(-4px);
 }
 
@@ -1244,9 +1257,9 @@ nav a {
     min-height: 75svh;
   }
   
-  /* Reduce monogram animation complexity on mobile */
+  /* Reduce monogram animation complexity on mobile - slightly brighter */
   .monogram-element {
-    opacity: 0.08;
+    opacity: 0.10;
     animation-duration: 60s !important;
   }
   
@@ -1350,11 +1363,11 @@ nav a {
     filter: blur(0.5px) !important;
   }
   
-  /* Increase visibility of key monograms on mobile */
+  /* Increase visibility of key monograms on mobile - brighter */
   .monogram-element:nth-child(1),
   .monogram-element:nth-child(3),
   .monogram-element:nth-child(5) {
-    opacity: 0.18 !important;
+    opacity: 0.22 !important;
   }
 }
 
@@ -1370,7 +1383,7 @@ nav a {
   
   .monogram-element {
     animation: none;
-    opacity: 0.08;
+    opacity: 0.10;
   }
 }
 

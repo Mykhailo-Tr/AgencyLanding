@@ -30,7 +30,7 @@
       theme: {
         extend: {
           colors: {
-            // Pink color palette for background glow
+            // Pink color palette for background glow - brighter and more vibrant
             pink: {
               400: '#f472b6',
               500: '#ec4899',
@@ -41,18 +41,24 @@
               200: '#fbcfe8',
               300: '#f9a8d4'
             },
-            // Dark background
-            black: '#000000',
-            // Glassmorphism backgrounds
+            // Additional vibrant colors for modern look
+            lavender: {
+              400: '#c084fc',
+              500: '#a855f7',
+              600: '#9333ea'
+            },
+            // Dark background - slightly lighter for more vibrant look
+            black: '#0a0a0a',
+            // Glassmorphism backgrounds - slightly lighter and more vibrant
             glass: {
-              600: 'rgba(0, 0, 0, 0.6)',
-              700: 'rgba(0, 0, 0, 0.7)',
-              800: 'rgba(0, 0, 0, 0.8)'
+              600: 'rgba(20, 20, 20, 0.65)',
+              700: 'rgba(25, 25, 25, 0.75)',
+              800: 'rgba(30, 30, 30, 0.85)'
             },
             // Text colors
             white: '#ffffff',
-            // Border colors
-            'pink-border': 'rgba(236, 72, 153, 0.25)'
+            // Border colors - more visible pink border
+            'pink-border': 'rgba(236, 72, 153, 0.35)'
           },
           fontFamily: {
             display: ['Unbounded', 'system-ui', 'sans-serif'],
@@ -381,131 +387,131 @@
   }
   </script>
 </head>
-<body class="bg-black text-white font-body antialiased overflow-x-hidden selection:bg-pink-500 selection:text-white">
+<body class="bg-[#0a0a0a] text-white font-body antialiased overflow-x-hidden selection:bg-pink-500 selection:text-white">
   
   <!-- Skip link for accessibility -->
   <a href="#main-content" class="skip-link">Перейти до основного контенту</a>
 
   <!-- New Background Blobs - Large Pink Blurred Shapes -->
   <div class="background-blobs" aria-hidden="true">
-    <!-- Large gradient overlay base -->
-    <div class="absolute inset-0 bg-gradient-to-br from-black via-black to-pink-900/20"></div>
+    <!-- Large gradient overlay base - brighter and more vibrant -->
+    <div class="absolute inset-0 bg-gradient-to-br from-black via-black to-pink-900/30"></div>
     
-    <!-- Blob 1 - Top section area -->
-    <div class="absolute top-[5%] left-[5%] w-[500px] h-[500px] rounded-full bg-pink-500/30 blur-[80px] animate-blob-1 opacity-40" style="animation-delay: 0s;"></div>
+    <!-- Blob 1 - Top section area - brighter -->
+    <div class="absolute top-[5%] left-[5%] w-[500px] h-[500px] rounded-full bg-pink-500/40 blur-[80px] animate-blob-1 opacity-50" style="animation-delay: 0s;"></div>
     
-    <!-- Blob 2 - Upper middle section -->
-    <div class="absolute top-[15%] left-[35%] w-[600px] h-[600px] rounded-full bg-pink-600/25 blur-[100px] animate-blob-2 opacity-35" style="animation-delay: -5s;"></div>
+    <!-- Blob 2 - Upper middle section - brighter -->
+    <div class="absolute top-[15%] left-[35%] w-[600px] h-[600px] rounded-full bg-pink-600/35 blur-[100px] animate-blob-2 opacity-45" style="animation-delay: -5s;"></div>
     
-    <!-- Blob 3 - Top right section -->
-    <div class="absolute top-[8%] right-[5%] w-[550px] h-[550px] rounded-full bg-pink-400/35 blur-[90px] animate-blob-3 opacity-38" style="animation-delay: -12s;"></div>
+    <!-- Blob 3 - Top right section - brighter -->
+    <div class="absolute top-[8%] right-[5%] w-[550px] h-[550px] rounded-full bg-pink-400/45 blur-[90px] animate-blob-3 opacity-48" style="animation-delay: -12s;"></div>
     
-    <!-- Blob 4 - Middle left section -->
-    <div class="absolute top-[45%] left-[2%] w-[450px] h-[450px] rounded-full bg-pink-700/30 blur-[70px] animate-blob-4 opacity-32" style="animation-delay: -8s;"></div>
+    <!-- Blob 4 - Middle left section - brighter -->
+    <div class="absolute top-[45%] left-[2%] w-[450px] h-[450px] rounded-full bg-pink-700/40 blur-[70px] animate-blob-4 opacity-42" style="animation-delay: -8s;"></div>
     
-    <!-- Blob 5 - Middle right section -->
-    <div class="absolute top-[40%] right-[3%] w-[500px] h-[500px] rounded-full bg-pink-500/28 blur-[85px] animate-blob-5 opacity-36" style="animation-delay: -15s;"></div>
+    <!-- Blob 5 - Middle right section - brighter -->
+    <div class="absolute top-[40%] right-[3%] w-[500px] h-[500px] rounded-full bg-pink-500/38 blur-[85px] animate-blob-5 opacity-46" style="animation-delay: -15s;"></div>
     
-    <!-- Blob 6 - Lower middle section -->
-    <div class="absolute top-[70%] left-[30%] w-[650px] h-[650px] rounded-full bg-pink-600/32 blur-[110px] animate-blob-6 opacity-34" style="animation-delay: -20s;"></div>
+    <!-- Blob 6 - Lower middle section - brighter -->
+    <div class="absolute top-[70%] left-[30%] w-[650px] h-[650px] rounded-full bg-pink-600/42 blur-[110px] animate-blob-6 opacity-44" style="animation-delay: -20s;"></div>
     
-    <!-- Blob 7 - Bottom section -->
-    <div class="absolute top-[85%] right-[8%] w-[400px] h-[400px] rounded-full bg-pink-400/25 blur-[75px] animate-blob-7 opacity-30" style="animation-delay: -10s;"></div>
+    <!-- Blob 7 - Bottom section - brighter -->
+    <div class="absolute top-[85%] right-[8%] w-[400px] h-[400px] rounded-full bg-pink-400/35 blur-[75px] animate-blob-7 opacity-40" style="animation-delay: -10s;"></div>
     
     <!-- Animated Monogram Logo Elements -->
-    <!-- Monogram 1 - Top left area (larger) -->
-    <div class="monogram-element absolute top-[12%] left-[8%] w-20 h-20 md:w-24 md:h-24 opacity-18 animate-monogram-1" style="animation-delay: 0s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+    <!-- Monogram 1 - Top left area (larger) - brighter -->
+    <div class="monogram-element absolute top-[12%] left-[8%] w-20 h-20 md:w-24 md:h-24 opacity-22 animate-monogram-1" style="animation-delay: 0s;">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
     </div>
     
-    <!-- Monogram 2 - Top right area -->
-    <div class="monogram-element absolute top-[18%] right-[12%] w-14 h-14 md:w-16 md:h-16 opacity-16 animate-monogram-2" style="animation-delay: -8s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+    <!-- Monogram 2 - Top right area - brighter -->
+    <div class="monogram-element absolute top-[18%] right-[12%] w-14 h-14 md:w-16 md:h-16 opacity-20 animate-monogram-2" style="animation-delay: -8s;">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
     </div>
     
 
     
     <!-- Monogram 3 - Bottom right area (larger) -->
-    <div class="monogram-element absolute top-[82%] right-[18%] w-18 h-18 md:w-20 md:h-20 opacity-19 animate-monogram-6" style="animation-delay: -12s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+    <div class="monogram-element absolute top-[82%] right-[18%] w-18 h-18 md:w-20 md:h-20 opacity-23 animate-monogram-6" style="animation-delay: -12s;">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
     </div>
     
 
     
     <!-- Monogram 10 - Middle center -->
-    <div class="monogram-element absolute top-[48%] left-[50%] w-12 h-12 md:w-14 md:h-14 opacity-16 animate-monogram-10" style="animation-delay: -35s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+    <div class="monogram-element absolute top-[48%] left-[50%] w-12 h-12 md:w-14 md:h-14 opacity-20 animate-monogram-10" style="animation-delay: -35s;">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
     </div>
     
     <!-- Monogram 11 - Lower left area -->
-    <div class="monogram-element absolute top-[65%] left-[12%] w-12 h-12 md:w-14 md:h-14 opacity-17 animate-monogram-11" style="animation-delay: -42s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+    <div class="monogram-element absolute top-[65%] left-[12%] w-12 h-12 md:w-14 md:h-14 opacity-21 animate-monogram-11" style="animation-delay: -42s;">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
     </div>
     
     <!-- Monogram 12 - Lower right area -->
-    <div class="monogram-element absolute top-[75%] right-[10%] w-16 h-16 md:w-18 md:h-18 opacity-15 animate-monogram-12" style="animation-delay: -28s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+    <div class="monogram-element absolute top-[75%] right-[10%] w-16 h-16 md:w-18 md:h-18 opacity-19 animate-monogram-12" style="animation-delay: -28s;">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
     </div>
     
     <!-- Monogram 16 - Upper far left -->
-    <div class="monogram-element absolute top-[35%] left-[3%] w-12 h-12 md:w-14 md:h-14 opacity-18 animate-monogram-16" style="animation-delay: -55s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+    <div class="monogram-element absolute top-[35%] left-[3%] w-12 h-12 md:w-14 md:h-14 opacity-22 animate-monogram-16" style="animation-delay: -55s;">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
     </div>
     
     <!-- Monogram 17 - Upper far right -->
-    <div class="monogram-element absolute top-[28%] right-[4%] w-12 h-12 md:w-14 md:h-14 opacity-16 animate-monogram-17" style="animation-delay: -62s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+    <div class="monogram-element absolute top-[28%] right-[4%] w-12 h-12 md:w-14 md:h-14 opacity-20 animate-monogram-17" style="animation-delay: -62s;">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
     </div>
     
     <!-- Monogram 18 - Middle left extended -->
-    <div class="monogram-element absolute top-[52%] left-[18%] w-14 h-14 md:w-16 md:h-16 opacity-17 animate-monogram-18" style="animation-delay: -48s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+    <div class="monogram-element absolute top-[52%] left-[18%] w-14 h-14 md:w-16 md:h-16 opacity-21 animate-monogram-18" style="animation-delay: -48s;">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
     </div>
     
     <!-- Monogram 19 - Middle right extended -->
-    <div class="monogram-element absolute top-[45%] right-[15%] w-12 h-12 md:w-14 md:h-14 opacity-18 animate-monogram-19" style="animation-delay: -58s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+    <div class="monogram-element absolute top-[45%] right-[15%] w-12 h-12 md:w-14 md:h-14 opacity-22 animate-monogram-19" style="animation-delay: -58s;">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
     </div>
     
     <!-- Monogram 20 - Lower center left -->
-    <div class="monogram-element absolute top-[78%] left-[35%] w-12 h-12 md:w-14 md:h-14 opacity-15 animate-monogram-20" style="animation-delay: -68s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+    <div class="monogram-element absolute top-[78%] left-[35%] w-12 h-12 md:w-14 md:h-14 opacity-19 animate-monogram-20" style="animation-delay: -68s;">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
     </div>
     
     <!-- Monogram 21 - Lower center right -->
-    <div class="monogram-element absolute top-[72%] right-[22%] w-14 h-14 md:w-16 md:h-16 opacity-18 animate-monogram-21" style="animation-delay: -72s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+    <div class="monogram-element absolute top-[72%] right-[22%] w-14 h-14 md:w-16 md:h-16 opacity-22 animate-monogram-21" style="animation-delay: -72s;">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
     </div>
     
     <!-- Monogram 22 - Top right corner -->
-    <div class="monogram-element absolute top-[15%] right-[6%] w-10 h-10 md:w-12 md:h-12 opacity-14 animate-monogram-22" style="animation-delay: -78s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+    <div class="monogram-element absolute top-[15%] right-[6%] w-10 h-10 md:w-12 md:h-12 opacity-18 animate-monogram-22" style="animation-delay: -78s;">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
     </div>
     
     <!-- Monogram 23 - Bottom right corner -->
-    <div class="monogram-element absolute top-[88%] right-[12%] w-12 h-12 md:w-14 md:h-14 opacity-16 animate-monogram-23" style="animation-delay: -82s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+    <div class="monogram-element absolute top-[88%] right-[12%] w-12 h-12 md:w-14 md:h-14 opacity-20 animate-monogram-23" style="animation-delay: -82s;">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
     </div>
     
     <!-- Monogram 24 - Bottom left corner -->
-    <div class="monogram-element absolute top-[80%] left-[8%] w-12 h-12 md:w-14 md:h-14 opacity-15 animate-monogram-24" style="animation-delay: -88s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+    <div class="monogram-element absolute top-[80%] left-[8%] w-12 h-12 md:w-14 md:h-14 opacity-19 animate-monogram-24" style="animation-delay: -88s;">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
     </div>
     
     <!-- Fixed Scrolling Monograms -->
     <!-- Fixed Monogram 1 - Left side, medium size - Circle path -->
-    <div class="fixed-monogram fixed left-[3%] top-[20%] w-16 h-16 md:w-20 md:h-20 opacity-25 z-0" data-path="circle" data-speed="0.005">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.5px]">
+    <div class="fixed-monogram fixed left-[3%] top-[20%] w-16 h-16 md:w-20 md:h-20 opacity-30 z-0" data-path="circle" data-speed="0.005">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.3px]">
     </div>
     
     <!-- Fixed Monogram 2 - Right side, large size - Lissajous curve -->
-    <div class="fixed-monogram fixed right-[4%] top-[40%] w-20 h-20 md:w-24 md:h-24 opacity-25 z-0" data-path="lissajous" data-speed="0.006">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.5px]">
+    <div class="fixed-monogram fixed right-[4%] top-[40%] w-20 h-20 md:w-24 md:h-24 opacity-30 z-0" data-path="lissajous" data-speed="0.006">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.3px]">
     </div>
     
     <!-- Fixed Monogram 3 - Left side, small size - Spiral path -->
-    <div class="fixed-monogram fixed left-[8%] top-[60%] w-12 h-12 md:w-16 md:h-16 opacity-25 z-0" data-path="spiral" data-speed="0.004">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.5px]">
+    <div class="fixed-monogram fixed left-[8%] top-[60%] w-12 h-12 md:w-16 md:h-16 opacity-30 z-0" data-path="spiral" data-speed="0.004">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.3px]">
     </div>
     
     <!-- Subtle gradient overlays -->
@@ -514,31 +520,31 @@
   </div>
 
   <!-- ========== NAV ========== -->
-  <header id="site-header" class="fixed top-0 inset-x-0 z-50 bg-glass-700/80 backdrop-blur-xl border-b border-pink-border w-full max-w-full overflow-hidden">
+  <header id="site-header" class="fixed top-0 inset-x-0 z-50 bg-glass-700/80 backdrop-blur-2xl border-b border-pink-border w-full max-w-full overflow-hidden shadow-lg shadow-black/20">
     <div class="flex items-center justify-between px-4 md:px-10 py-4 md:py-6 w-full max-w-full">
       <a href="/" class="flex items-center gap-2 md:gap-3 group flex-shrink-0" data-magnetic>
         <img src="assets/images/logo-exlive.png" alt="Exlive Logo" class="h-7 md:h-10 w-auto object-contain transition-transform group-hover:scale-105">
         <span class="brand-text text-lg md:text-2xl tracking-tight text-white hover:text-pink-400 transition-colors duration-300 hidden sm:inline-block">Exlive</span>
       </a>
       <nav class="hidden md:flex items-center gap-6 md:gap-8 text-sm font-medium tracking-wide uppercase flex-shrink-0">
-        <a href="#how" class="nav-link text-white/70 hover:text-pink-400 transition-colors data-magnetic whitespace-nowrap">FAQ</a>
-        <a href="#cases" class="nav-link text-white/70 hover:text-pink-400 transition-colors data-magnetic whitespace-nowrap">Кейси</a>
-        <a href="#about" class="nav-link text-white/70 hover:text-pink-400 transition-colors data-magnetic whitespace-nowrap">Про нас</a>
-        <a href="#team" class="nav-link text-white/70 hover:text-pink-400 transition-colors data-magnetic whitespace-nowrap">Команда</a>
-        <a href="#requirements" class="nav-link text-white/70 hover:text-pink-400 transition-colors data-magnetic whitespace-nowrap">Вимоги</a>
+        <a href="#how" class="nav-link text-white/80 hover:text-pink-400 transition-colors data-magnetic whitespace-nowrap">FAQ</a>
+        <a href="#cases" class="nav-link text-white/80 hover:text-pink-400 transition-colors data-magnetic whitespace-nowrap">Кейси</a>
+        <a href="#about" class="nav-link text-white/80 hover:text-pink-400 transition-colors data-magnetic whitespace-nowrap">Про нас</a>
+        <a href="#team" class="nav-link text-white/80 hover:text-pink-400 transition-colors data-magnetic whitespace-nowrap">Команда</a>
+        <a href="#requirements" class="nav-link text-white/80 hover:text-pink-400 transition-colors data-magnetic whitespace-nowrap">Вимоги</a>
       </nav>
       <div class="flex items-center gap-3 flex-shrink-0">
-        <a href="#apply" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 border border-pink-border text-xs tracking-widest uppercase bg-gradient-to-r from-pink-500 to-pink-600 text-white hover:from-pink-400 hover:to-pink-500 transition-all duration-300 rounded-lg shadow-lg shadow-pink-500/20 hover:shadow-pink-500/40 hover:scale-105 whitespace-nowrap" data-magnetic>
+        <a href="#apply" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 border border-pink-border text-xs tracking-widest uppercase bg-gradient-to-r from-pink-500 to-pink-600 text-white hover:from-pink-400 hover:to-pink-500 transition-all duration-300 rounded-lg shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 hover:scale-105 whitespace-nowrap" data-magnetic>
           Почати
         </a>
         <div class="hidden md:flex items-center gap-3">
-          <a href="https://instagram.com/exlivee.agency/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-white/60 hover:text-pink-400 transition-colors aria-label="Instagram flex-shrink-0">
+          <a href="https://instagram.com/exlivee.agency/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-white/70 hover:text-pink-400 transition-colors aria-label="Instagram flex-shrink-0">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
-          <a href="https://t.me/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-white/60 hover:text-pink-400 transition-colors aria-label="Telegram flex-shrink-0">
+          <a href="https://t.me/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-white/70 hover:text-pink-400 transition-colors aria-label="Telegram flex-shrink-0">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
           </a>
-          <a href="https://tiktok.com/@exlive.agency/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-white/60 hover:text-pink-400 transition-colors aria-label="TikTok flex-shrink-0">
+          <a href="https://tiktok.com/@exlive.agency/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-white/70 hover:text-pink-400 transition-colors aria-label="TikTok flex-shrink-0">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
           </a>
         </div>
@@ -551,23 +557,23 @@
   </header>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex flex-col justify-center px-8 opacity-0 pointer-events-none transition-opacity duration-500">
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-[#0a0a0a]/95 backdrop-blur-2xl flex flex-col justify-center px-8 opacity-0 pointer-events-none transition-opacity duration-500">
     <nav class="flex flex-col gap-8 text-4xl font-display font-display-black tracking-tight">
-      <a href="#how" class="mobile-link text-white hover:text-pink-400 transition-colors">FAQ</a>
-      <a href="#cases" class="mobile-link text-white hover:text-pink-400 transition-colors">Кейси</a>
-      <a href="#about" class="mobile-link text-white hover:text-pink-400 transition-colors">Про нас</a>
-      <a href="#team" class="mobile-link text-white hover:text-pink-400 transition-colors">Команда</a>
-      <a href="#requirements" class="mobile-link text-white hover:text-pink-400 transition-colors">Вимоги</a>
-      <a href="#apply" class="mobile-link text-white hover:text-pink-400 transition-colors">Заявка</a>
+      <a href="#how" class="mobile-link text-white/90 hover:text-pink-400 transition-colors">FAQ</a>
+      <a href="#cases" class="mobile-link text-white/90 hover:text-pink-400 transition-colors">Кейси</a>
+      <a href="#about" class="mobile-link text-white/90 hover:text-pink-400 transition-colors">Про нас</a>
+      <a href="#team" class="mobile-link text-white/90 hover:text-pink-400 transition-colors">Команда</a>
+      <a href="#requirements" class="mobile-link text-white/90 hover:text-pink-400 transition-colors">Вимоги</a>
+      <a href="#apply" class="mobile-link text-white/90 hover:text-pink-400 transition-colors">Заявка</a>
     </nav>
     <div class="flex gap-6 mt-8">
-      <a href="https://instagram.com/exlivee.agency/" target="_blank" rel="noopener" class="w-10 h-10 flex items-center justify-center text-white/60 hover:text-pink-400 transition-colors" aria-label="Instagram">
+      <a href="https://instagram.com/exlivee.agency/" target="_blank" rel="noopener" class="w-10 h-10 flex items-center justify-center text-white/70 hover:text-pink-400 transition-colors" aria-label="Instagram">
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
       </a>
-      <a href="https://t.me/" target="_blank" rel="noopener" class="w-10 h-10 flex items-center justify-center text-white/60 hover:text-pink-400 transition-colors" aria-label="Telegram">
+      <a href="https://t.me/" target="_blank" rel="noopener" class="w-10 h-10 flex items-center justify-center text-white/70 hover:text-pink-400 transition-colors" aria-label="Telegram">
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
       </a>
-      <a href="https://tiktok.com/@exlive.agency/" target="_blank" rel="noopener" class="w-10 h-10 flex items-center justify-center text-white/60 hover:text-pink-400 transition-colors" aria-label="TikTok">
+      <a href="https://tiktok.com/@exlive.agency/" target="_blank" rel="noopener" class="w-10 h-10 flex items-center justify-center text-white/70 hover:text-pink-400 transition-colors" aria-label="TikTok">
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
       </a>
     </div>
@@ -614,7 +620,7 @@
               <div class="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-pink-600/20 blur-3xl rounded-full"></div>
               <img src="assets/images/logo-exlive.png" alt="Exlive Logo" class="h-[720px] md:h-[432px] w-auto object-contain drop-shadow-2xl relative z-10 lg:mr-12">
             </div>
-            <p class="hero-desc text-base md:text-lg text-white/70 leading-relaxed max-w-sm text-center lg:text-right opacity-0">
+            <p class="hero-desc text-base md:text-lg text-white/80 leading-relaxed max-w-sm text-center lg:text-right opacity-0">
               Тренуємо, продюсуємо та запускаємо нових стрімерів у TikTok Live. Послуги безкоштовні. Потрібен лише телефон.
             </p>
             <div class="hero-cta flex flex-wrap gap-4 justify-center lg:justify-end opacity-0">
@@ -657,12 +663,12 @@
     <section id="how" class="relative py-16 md:py-24 overflow-hidden">
       <!-- Monogram 7 - FAQ section (larger) -->
       <div class="monogram-element absolute top-[15%] right-[20%] w-16 h-16 md:w-20 md:h-20 opacity-12 animate-monogram-2" style="animation-delay: -25s;">
-        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
       </div>
       
       <!-- Monogram 16 - FAQ section bottom left (new) -->
       <div class="monogram-element absolute top-[75%] left-[8%] w-14 h-14 md:w-18 md:h-18 opacity-11 animate-monogram-4" style="animation-delay: -90s;">
-        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
       </div>
       
       <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
@@ -793,13 +799,13 @@
     <!-- ========== CASES ========== -->
     <section id="cases" class="relative py-16 md:py-24 overflow-hidden">
       <!-- Monogram 8 - Cases section (larger) -->
-      <div class="monogram-element absolute top-[20%] left-[10%] w-20 h-20 md:w-24 md:h-24 opacity-14 animate-monogram-5" style="animation-delay: -30s;">
-        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+      <div class="monogram-element absolute top-[20%] left-[10%] w-20 h-20 md:w-24 md:h-24 opacity-18 animate-monogram-5" style="animation-delay: -30s;">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
       </div>
       
       <!-- Monogram 17 - Cases section right (new) -->
       <div class="monogram-element absolute top-[60%] right-[12%] w-16 h-16 md:w-20 md:h-20 opacity-12 animate-monogram-2" style="animation-delay: -95s;">
-        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
       </div>
       
       <div class="px-5 md:px-10 max-w-[1600px] mx-auto">
@@ -989,12 +995,12 @@
     <section id="portfolio" class="relative py-16 md:py-24 overflow-hidden">
       <!-- Monogram extra 1 - Portfolio section (larger) -->
       <div class="monogram-element absolute top-[25%] right-[15%] w-16 h-16 md:w-20 md:h-20 opacity-11 animate-monogram-3" style="animation-delay: -35s;">
-        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
       </div>
       
       <!-- Monogram 18 - Portfolio section left (new) -->
       <div class="monogram-element absolute top-[70%] left-[12%] w-14 h-14 md:w-18 md:h-18 opacity-10 animate-monogram-6" style="animation-delay: -100s;">
-        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
       </div>
       
       <div class="px-5 md:px-10 max-w-[1600px] mx-auto">
@@ -1036,7 +1042,7 @@
         <div id="portfolio-loading" class="flex items-center justify-center py-12">
           <div class="flex items-center gap-3 text-white/60">
             <svg class="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24">
-              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <circle class="opacity-30" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
               <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
             </svg>
             <span class="text-sm tracking-wide uppercase">Завантаження...</span>
@@ -1061,17 +1067,17 @@
     <section id="earnings" class="relative py-16 md:py-24 overflow-hidden">
       <!-- Monogram extra 2 - Earnings section left (larger) -->
       <div class="monogram-element absolute top-[30%] left-[20%] w-20 h-20 md:w-24 md:h-24 opacity-13 animate-monogram-1" style="animation-delay: -40s;">
-        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
       </div>
       
       <!-- Monogram extra 7 - Earnings section right -->
       <div class="monogram-element absolute top-[60%] right-[15%] w-10 h-10 md:w-14 md:h-14 opacity-11 animate-monogram-6" style="animation-delay: -65s;">
-        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
       </div>
       
       <!-- Monogram 19 - Earnings section bottom (new) -->
       <div class="monogram-element absolute top-[85%] left-[30%] w-16 h-16 md:w-20 md:h-20 opacity-12 animate-monogram-3" style="animation-delay: -105s;">
-        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
       </div>
       
       <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -1104,12 +1110,12 @@
     <section id="about" class="relative py-16 md:py-24">
       <!-- Monogram extra 6 - About section (larger) -->
       <div class="monogram-element absolute top-[30%] left-[12%] w-16 h-16 md:w-20 md:h-20 opacity-12 animate-monogram-3" style="animation-delay: -60s;">
-        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
       </div>
       
       <!-- Monogram 20 - About section right (new) -->
       <div class="monogram-element absolute top-[65%] right-[20%] w-14 h-14 md:w-18 md:h-18 opacity-11 animate-monogram-5" style="animation-delay: -110s;">
-        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
       </div>
       
       <div class="px-5 md:px-10 max-w-[1600px] mx-auto">
@@ -1168,12 +1174,12 @@
     <section id="team" class="relative py-16 md:py-24 overflow-hidden">
       <!-- Monogram extra 3 - Team section (larger) -->
       <div class="monogram-element absolute top-[35%] right-[12%] w-16 h-16 md:w-20 md:h-20 opacity-12 animate-monogram-4" style="animation-delay: -45s;">
-        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
       </div>
       
       <!-- Monogram 21 - Team section left (new) -->
       <div class="monogram-element absolute top-[70%] left-[18%] w-12 h-12 md:w-16 md:h-16 opacity-10 animate-monogram-1" style="animation-delay: -115s;">
-        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
       </div>
       
       <div class="px-5 md:px-10 max-w-[1600px] mx-auto">
@@ -1235,7 +1241,7 @@
     <section id="requirements" class="relative py-16 md:py-20">
       <!-- Monogram extra 4 - Requirements section (larger) -->
       <div class="monogram-element absolute top-[20%] left-[15%] w-16 h-16 md:w-20 md:h-20 opacity-11 animate-monogram-2" style="animation-delay: -50s;">
-        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
       </div>
       
       <div class="px-5 md:px-10 max-w-[1100px] mx-auto">
@@ -1302,7 +1308,7 @@
     <section id="apply" class="relative py-16 md:py-24 overflow-hidden">
       <!-- Monogram extra 5 - Apply section (larger) -->
       <div class="monogram-element absolute top-[25%] right-[18%] w-20 h-20 md:w-24 md:h-24 opacity-13 animate-monogram-5" style="animation-delay: -55s;">
-        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[1px]">
+        <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
       </div>
       
       <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-paper/15 to-transparent"></div>
@@ -1318,21 +1324,21 @@
         <form id="applicationForm" class="max-w-md mx-auto space-y-6">
           <!-- Ім'я -->
           <div class="form-group">
-            <label for="name" class="block text-sm font-medium text-white/80 mb-2">Ім'я</label>
+            <label for="name" class="block text-sm font-medium text-white/90 mb-2">Ім'я</label>
             <input 
               type="text" 
               id="name" 
               name="name" 
               maxlength="255"
               required
-              class="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all duration-300"
+              class="w-full px-4 py-3 bg-glass-600/80 backdrop-blur-lg border border-pink-border/50 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/30 transition-all duration-300 shadow-lg"
               placeholder="Введіть ваше ім'я"
             >
           </div>
 
           <!-- Вік -->
           <div class="form-group">
-            <label for="age" class="block text-sm font-medium text-white/80 mb-2">Вік</label>
+            <label for="age" class="block text-sm font-medium text-white/90 mb-2">Вік</label>
             <input 
               type="number" 
               id="age" 
@@ -1340,46 +1346,46 @@
               min="18" 
               max="100"
               required
-              class="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all duration-300"
+              class="w-full px-4 py-3 bg-glass-600/80 backdrop-blur-lg border border-pink-border/50 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/30 transition-all duration-300 shadow-lg"
               placeholder="Ваш вік"
             >
           </div>
 
           <!-- TikTok -->
           <div class="form-group">
-            <label for="tiktok" class="block text-sm font-medium text-white/80 mb-2">TikTok</label>
+            <label for="tiktok" class="block text-sm font-medium text-white/90 mb-2">TikTok</label>
             <input 
               type="text" 
               id="tiktok" 
               name="tiktok" 
               required
-              class="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all duration-300"
+              class="w-full px-4 py-3 bg-glass-600/80 backdrop-blur-lg border border-pink-border/50 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/30 transition-all duration-300 shadow-lg"
               placeholder="@username"
             >
           </div>
 
           <!-- Telegram -->
           <div class="form-group">
-            <label for="telegram" class="block text-sm font-medium text-white/80 mb-2">Telegram</label>
+            <label for="telegram" class="block text-sm font-medium text-white/90 mb-2">Telegram</label>
             <input 
               type="text" 
               id="telegram" 
               name="telegram" 
               required
-              class="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all duration-300"
+              class="w-full px-4 py-3 bg-glass-600/80 backdrop-blur-lg border border-pink-border/50 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/30 transition-all duration-300 shadow-lg"
               placeholder="@username"
             >
           </div>
 
           <!-- Phone -->
           <div class="form-group">
-            <label for="phone" class="block text-sm font-medium text-white/80 mb-2">Телефон</label>
+            <label for="phone" class="block text-sm font-medium text-white/90 mb-2">Телефон</label>
             <input 
               type="tel" 
               id="phone" 
               name="phone" 
               required
-              class="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all duration-300"
+              class="w-full px-4 py-3 bg-glass-600/80 backdrop-blur-lg border border-pink-border/50 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/30 transition-all duration-300 shadow-lg"
               placeholder="+380 XX XXX XX XX"
             >
           </div>
@@ -1396,7 +1402,7 @@
           >
             <span id="btnText">Відправити заявку</span>
             <svg id="btnSpinner" class="hidden animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24">
-              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <circle class="opacity-30" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
               <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
             </svg>
             <svg id="btnArrow" class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
