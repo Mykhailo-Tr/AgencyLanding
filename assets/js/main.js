@@ -869,9 +869,10 @@
 
       // Honeypot
       if (data.website) {
-        formMessage.textContent = '';
-        formMessage.className = 'text-sm text-center min-h-[1.5rem] text-green-400';
-        formMessage.textContent = 'Заявку надіслано. Очікуй дзвінка.';
+        formMessage.innerHTML =
+          '<span class="form-message-icon" aria-hidden="true"><svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-10.707a1 1 0 00-1.414-1.414l-3.5 3.5-1.5-1.5a1 1 0 00-1.414 1.414l2.207 2.207a1 1 0 001.414 0l4.207-4.207z" clip-rule="evenodd"/></svg></span>' +
+          '<span class="form-message-text">Заявку надіслано. Очікуй дзвінка.</span>';
+        formMessage.className = 'form-message form-message-success';
         form.reset();
         return;
       }
@@ -916,14 +917,18 @@
 
         if (!res.ok) throw new Error('Network error');
 
-        formMessage.className = 'text-sm text-center min-h-[1.5rem] text-green-400';
-        formMessage.textContent = 'Заявку надіслано. Менеджер звʼяжеться протягом 24 годин.';
+        formMessage.innerHTML =
+          '<span class="form-message-icon" aria-hidden="true"><svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-10.707a1 1 0 00-1.414-1.414l-3.5 3.5-1.5-1.5a1 1 0 00-1.414 1.414l2.207 2.207a1 1 0 001.414 0l4.207-4.207z" clip-rule="evenodd"/></svg></span>' +
+          '<span class="form-message-text">Заявку надіслано. Менеджер звʼяжеться протягом 24 годин.</span>';
+        formMessage.className = 'form-message form-message-success';
         form.reset();
       } catch (err) {
         // For demo / offline: simulate success so UX can be tested
         console.warn('API unreachable, simulating success for demo', err);
-        formMessage.className = 'text-sm text-center min-h-[1.5rem] text-green-400';
-        formMessage.textContent = 'Заявку надіслано. Менеджер звʼяжеться протягом 24 годин.';
+        formMessage.innerHTML =
+          '<span class="form-message-icon" aria-hidden="true"><svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-10.707a1 1 0 00-1.414-1.414l-3.5 3.5-1.5-1.5a1 1 0 00-1.414 1.414l2.207 2.207a1 1 0 001.414 0l4.207-4.207z" clip-rule="evenodd"/></svg></span>' +
+          '<span class="form-message-text">Заявку надіслано. Менеджер звʼяжеться протягом 24 годин.</span>';
+        formMessage.className = 'form-message form-message-success';
         form.reset();
       } finally {
         btnText.classList.remove('hidden');
@@ -935,8 +940,10 @@
 
   function showError(msg) {
     if (!formMessage) return;
-    formMessage.className = 'text-sm text-center min-h-[1.5rem] text-red-400';
-    formMessage.textContent = msg;
+    formMessage.innerHTML =
+      '<span class="form-message-icon" aria-hidden="true"><svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L10 8.586 7.707 6.293a1 1 0 00-1.414 1.414L8.586 10l-2.293 2.293a1 1 0 001.414 1.414L10 11.414l2.293 2.293a1 1 0 001.414-1.414L11.414 10l2.293-2.293z" clip-rule="evenodd"/></svg></span>' +
+      '<span class="form-message-text">' + msg + '</span>';
+    formMessage.className = 'form-message form-message-error';
   }
 
   // ---------- Lightweight parallax effects (non-blocking) ----------

@@ -1622,3 +1622,86 @@ html {
 .ambient-bloom {
   will-change: opacity;
 }
+
+/* ========== Form Messages (Error / Success) ========== */
+
+@keyframes formMessageIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Base glassmorphism container */
+.form-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  animation: formMessageIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+  /* Mobile: full width, text wraps cleanly */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Icon wrapper — vertically centred with first text line */
+.form-message-icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Text wrapper */
+.form-message-text {
+  flex: 1;
+  min-width: 0;
+  word-break: break-word;
+}
+
+/* Error variant — coral-pink accent (#ff2d78) */
+.form-message-error {
+  background: rgba(255, 45, 120, 0.12);
+  border: 1px solid rgba(255, 45, 120, 0.40);
+  color: #8b1840;               /* WCAG AA on light bg */
+  box-shadow:
+    0 0 18px rgba(255, 45, 120, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.form-message-error .form-message-icon {
+  color: #ff2d78;
+}
+
+/* Success variant — cyan accent (#25f4ee) */
+.form-message-success {
+  background: rgba(37, 244, 238, 0.10);
+  border: 1px solid rgba(37, 244, 238, 0.38);
+  color: #0a5c59;               /* WCAG AA on light bg */
+  box-shadow:
+    0 0 18px rgba(37, 244, 238, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.form-message-success .form-message-icon {
+  color: #0dd3ce;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .form-message {
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-size: 0.8125rem;
+  }
+}
+
