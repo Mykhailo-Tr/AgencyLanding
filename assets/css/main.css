@@ -215,13 +215,15 @@ a:hover .logo-badge-footer {
   pointer-events: none;
   will-change: transform, opacity;
   z-index: 1;
-  mix-blend-mode: overlay;
+  mix-blend-mode: normal;
 }
 
 .monogram-element img {
-  will-change: transform;
+  will-change: transform, filter;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.55)) drop-shadow(0 0 12px rgba(255, 45, 120, 0.40)) drop-shadow(0 0 2px rgba(45, 27, 78, 0.25));
+  transition: filter 0.3s ease;
 }
 
 /* ========== Fixed Scrolling Monograms ========== */
@@ -235,9 +237,10 @@ a:hover .logo-badge-footer {
 }
 
 .fixed-monogram img {
-  will-change: transform;
+  will-change: transform, filter;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  filter: drop-shadow(0 0 8px rgba(255, 45, 120, 0.50)) drop-shadow(0 0 16px rgba(168, 85, 247, 0.45)) drop-shadow(0 0 20px rgba(37, 244, 238, 0.25));
 }
 
 /* Desktop enhancements for fixed monograms */
@@ -249,7 +252,7 @@ a:hover .logo-badge-footer {
   
   /* Uniform opacity for all fixed monograms - brighter */
   .fixed-monogram {
-    opacity: 0.30 !important;
+    opacity: 0.45 !important;
   }
 }
 
