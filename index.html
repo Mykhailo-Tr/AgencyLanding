@@ -32,14 +32,14 @@
           colors: {
             // Pink color palette for background glow - brighter and more vibrant
             pink: {
-              400: '#f472b6',
-              500: '#ec4899',
-              600: '#db2777',
+              400: '#ff5c94',
+              500: '#ff2d78',
+              600: '#e01b63',
               700: '#be185d',
               800: '#9d174d',
               900: '#831843',
-              200: '#fbcfe8',
-              300: '#f9a8d4'
+              200: '#ffe4ee',
+              300: '#ffb3ce'
             },
             // Additional vibrant colors for modern look
             lavender: {
@@ -47,14 +47,24 @@
               500: '#a855f7',
               600: '#9333ea'
             },
-            // Lead gray tones for modern aesthetic
+            // Turquoise / Cyan accent for TikTok style variety
+            turquoise: {
+              400: '#5eead4',
+              500: '#25f4ee',
+              600: '#0dd3ce'
+            },
+            cyan: {
+              400: '#25f4ee',
+              500: '#25f4ee'
+            },
+            // Tinted light lead tones
             lead: {
-              400: '#94a3b8',
-              500: '#64748b',
-              600: '#475569',
-              700: '#334155',
-              800: '#1e293b',
-              900: '#0f172a'
+              400: '#6b5b8a',
+              500: '#574676',
+              600: '#f0e8fb',
+              700: '#efe4fb',
+              800: '#fdf0f7',
+              900: '#f5eefe'
             },
             // Dark purple for depth
             deepPurple: {
@@ -65,28 +75,28 @@
               800: '#5b21b6',
               900: '#4c1d95'
             },
-            // Slate for modern gray tones
+            // Slate for modern light tinted tones
             slate: {
-              400: '#cbd5e1',
-              500: '#94a3b8',
-              600: '#64748b',
-              700: '#475569',
-              800: '#334155',
-              900: '#1e293b'
+              400: '#6b5b8a',
+              500: '#574676',
+              600: '#f0e8fb',
+              700: '#efe4fb',
+              800: '#fdf0f7',
+              900: '#f5eefe'
             },
-            // Dark background - lead gray instead of pure black
-            black: '#0f172a',
-            // Glassmorphism backgrounds - lighter and more vibrant
+            // Light background tint instead of pure black
+            black: '#f5eefe',
+            // Glassmorphism backgrounds - soft tinted glass
             glass: {
-              600: 'rgba(30, 41, 59, 0.7)',
-              700: 'rgba(51, 65, 85, 0.8)',
-              800: 'rgba(71, 85, 105, 0.85)'
+              600: 'rgba(250, 235, 255, 0.6)',
+              700: 'rgba(255, 240, 250, 0.75)',
+              800: 'rgba(250, 240, 255, 0.85)'
             },
-            // Text colors
-            white: '#ffffff',
-            // Border colors - more visible pink border
-            'pink-border': 'rgba(236, 72, 153, 0.4)',
-            'lead-border': 'rgba(148, 163, 184, 0.3)'
+            // Primary dark text contrast against light bg
+            white: '#2d1b4e',
+            // Border colors - visible vibrant pink border
+            'pink-border': 'rgba(255, 45, 120, 0.45)',
+            'lead-border': 'rgba(168, 85, 247, 0.25)'
           },
           fontFamily: {
             display: ['Unbounded', 'system-ui', 'sans-serif'],
@@ -415,56 +425,47 @@
   }
   </script>
 </head>
-<body class="bg-[#0f172a] text-white font-body antialiased overflow-x-hidden selection:bg-pink-500 selection:text-white">
+<body class="bg-[#f5eefe] text-[#2d1b4e] font-body antialiased overflow-x-hidden selection:bg-[#ff2d78] selection:text-white">
   
   <!-- Skip link for accessibility -->
   <a href="#main-content" class="skip-link">Перейти до основного контенту</a>
 
-  <!-- New Background Blobs - Large Pink Blurred Shapes -->
-  <div class="background-blobs" aria-hidden="true">
-    <!-- Large gradient overlay base - brighter and more vibrant with new colors -->
-    <div class="absolute inset-0 bg-gradient-to-br from-[#1e293b] via-[#334155] to-[#475569]/50"></div>
-    
-    <!-- Blob 1 - Top section area - lavender accent -->
-    <div class="absolute top-[5%] left-[5%] w-[500px] h-[500px] rounded-full bg-[#a855f7]/40 blur-[80px] animate-blob-1 opacity-60" style="animation-delay: 0s;"></div>
-    
-    <!-- Blob 2 - Upper middle section - pink accent -->
-    <div class="absolute top-[15%] left-[35%] w-[600px] h-[600px] rounded-full bg-pink-500/45 blur-[100px] animate-blob-2 opacity-55" style="animation-delay: -5s;"></div>
-    
-    <!-- Blob 3 - Top right section - deep purple accent -->
-    <div class="absolute top-[8%] right-[5%] w-[550px] h-[550px] rounded-full bg-[#8b5cf6]/42 blur-[90px] animate-blob-3 opacity-58" style="animation-delay: -12s;"></div>
-    
-    <!-- Blob 4 - Middle left section - lead accent -->
-    <div class="absolute top-[45%] left-[2%] w-[450px] h-[450px] rounded-full bg-[#64748b]/35 blur-[70px] animate-blob-4 opacity-50" style="animation-delay: -8s;"></div>
-    
-    <!-- Blob 5 - Middle right section - pink accent -->
-    <div class="absolute top-[40%] right-[3%] w-[500px] h-[500px] rounded-full bg-pink-400/48 blur-[85px] animate-blob-5 opacity-52" style="animation-delay: -15s;"></div>
-    
-    <!-- Blob 6 - Lower middle section - lavender accent -->
-    <div class="absolute top-[70%] left-[30%] w-[650px] h-[650px] rounded-full bg-[#9333ea]/40 blur-[110px] animate-blob-6 opacity-50" style="animation-delay: -20s;"></div>
-    
-    <!-- Blob 7 - Bottom section - deep purple accent -->
-    <div class="absolute top-[85%] right-[8%] w-[400px] h-[400px] rounded-full bg-[#a78bfa]/38 blur-[75px] animate-blob-7 opacity-48" style="animation-delay: -10s;"></div>
-    
-    <!-- Animated Monogram Logo Elements -->
-    <!-- Monogram 1 - Top left area (larger) - brighter -->
-    <div class="monogram-element absolute top-[12%] left-[8%] w-20 h-20 md:w-24 md:h-24 opacity-22 animate-monogram-1" style="animation-delay: 0s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
-    </div>
-    
-    <!-- Monogram 2 - Top right area - brighter -->
-    <div class="monogram-element absolute top-[18%] right-[12%] w-14 h-14 md:w-16 md:h-16 opacity-20 animate-monogram-2" style="animation-delay: -8s;">
-      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
-    </div>
-    
+  <!-- Background Canvas Container for WebGL Shader -->
+  <div class="fixed inset-0 pointer-events-none z-0"></div>
 
+  <!-- Animated Background Blobs -->
+  <div class="background-blobs pointer-events-none" aria-hidden="true">
+    <div class="absolute inset-0 bg-gradient-to-br from-[#fdf0f7] via-[#efe4fb] to-[#f0e8fb]"></div>
+    
+    <!-- Decorative Ambient Blobs -->
+    <div class="absolute top-[5%] left-[5%] w-[500px] h-[500px] rounded-full bg-[#a855f7]/25 blur-[80px] animate-blob-1 opacity-60" style="animation-delay: 0s;"></div>
+    <div class="absolute top-[12%] right-[10%] w-[400px] h-[400px] rounded-full bg-[#ff2d78]/25 blur-[70px] animate-blob-2 opacity-50" style="animation-delay: -5s;"></div>
+    <div class="absolute top-[8%] right-[5%] w-[550px] h-[550px] rounded-full bg-[#8b5cf6]/25 blur-[90px] animate-blob-3 opacity-58" style="animation-delay: -12s;"></div>
+    
+    <!-- Middle Page Blobs -->
+    <div class="absolute top-[45%] left-[2%] w-[450px] h-[450px] rounded-full bg-[#25f4ee]/20 blur-[70px] animate-blob-4 opacity-50" style="animation-delay: -8s;"></div>
+    <div class="absolute top-[55%] right-[3%] w-[500px] h-[500px] rounded-full bg-[#ff2d78]/25 blur-[85px] animate-blob-5 opacity-45" style="animation-delay: -15s;"></div>
+    
+    <!-- Lower Page Blobs -->
+    <div class="absolute top-[70%] left-[30%] w-[650px] h-[650px] rounded-full bg-[#9333ea]/25 blur-[110px] animate-blob-6 opacity-50" style="animation-delay: -20s;"></div>
+    <div class="absolute top-[85%] right-[8%] w-[400px] h-[400px] rounded-full bg-[#a78bfa]/25 blur-[75px] animate-blob-7 opacity-48" style="animation-delay: -10s;"></div>
+    <div class="absolute top-[92%] left-[15%] w-[450px] h-[450px] rounded-full bg-[#ff2d78]/20 blur-[80px] animate-blob-8 opacity-42" style="animation-delay: -25s;"></div>
+    
+    <!-- Floating Monograms for EXLIVE branding -->
+    <!-- Monogram 1 - Top left hero area -->
+    <div class="monogram-element absolute top-[12%] left-[8%] w-16 h-16 md:w-20 md:h-20 opacity-25 animate-monogram-1" style="animation-delay: 0s;">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
+    </div>
+    
+    <!-- Monogram 2 - Top right hero area -->
+    <div class="monogram-element absolute top-[18%] right-[12%] w-14 h-14 md:w-18 md:h-18 opacity-22 animate-monogram-2" style="animation-delay: -8s;">
+      <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
+    </div>
     
     <!-- Monogram 3 - Bottom right area (larger) -->
     <div class="monogram-element absolute top-[82%] right-[18%] w-18 h-18 md:w-20 md:h-20 opacity-23 animate-monogram-6" style="animation-delay: -12s;">
       <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
     </div>
-    
-
     
     <!-- Monogram 10 - Middle center -->
     <div class="monogram-element absolute top-[48%] left-[50%] w-12 h-12 md:w-14 md:h-14 opacity-20 animate-monogram-10" style="animation-delay: -35s;">
@@ -543,65 +544,67 @@
     </div>
     
     <!-- Subtle gradient overlays -->
-    <div class="absolute inset-0 bg-gradient-to-t from-[#1e293b]/50 via-transparent to-[#334155]/30"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-[#1e293b]/30 via-transparent to-[#334155]/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#fdf0f7]/40 via-transparent to-[#efe4fb]/30"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-[#fdf0f7]/30 via-transparent to-[#efe4fb]/30"></div>
   </div>
 
   <!-- ========== NAV ========== -->
-  <header id="site-header" class="fixed top-0 inset-x-0 z-50 bg-[#1e293b]/80 backdrop-blur-2xl border-b border-pink-border w-full max-w-full overflow-hidden shadow-lg shadow-[#1e293b]/30">
+  <header id="site-header" class="fixed top-0 inset-x-0 z-50 bg-[rgba(250,240,255,0.85)] backdrop-blur-2xl border-b border-pink-border w-full max-w-full overflow-hidden shadow-lg shadow-pink-500/10">
     <div class="flex items-center justify-between px-4 md:px-10 py-4 md:py-6 w-full max-w-full">
       <a href="/" class="flex items-center gap-2 md:gap-3 group flex-shrink-0" data-magnetic>
-        <img src="assets/images/logo-exlive.png" alt="Exlive Logo" class="h-7 md:h-10 w-auto object-contain transition-transform group-hover:scale-105">
-        <span class="brand-text text-lg md:text-2xl tracking-tight text-white hover:text-pink-400 transition-colors duration-300 hidden sm:inline-block">Exlive</span>
+        <span class="logo-badge-nav">
+          <img src="assets/images/logo-exlive.png" alt="Exlive Logo" class="h-7 md:h-10 w-auto object-contain transition-transform group-hover:scale-105 relative z-10">
+        </span>
+        <span class="brand-text text-lg md:text-2xl tracking-tight text-[#2d1b4e] hover:text-[#ff2d78] transition-colors duration-300 hidden sm:inline-block">Exlive</span>
       </a>
       <nav class="hidden md:flex items-center gap-6 md:gap-8 text-sm font-medium tracking-wide uppercase flex-shrink-0">
-        <a href="#how" class="nav-link text-white/80 hover:text-purple-400 transition-colors data-magnetic whitespace-nowrap">FAQ</a>
-        <a href="#cases" class="nav-link text-white/80 hover:text-purple-400 transition-colors data-magnetic whitespace-nowrap">Кейси</a>
-        <a href="#about" class="nav-link text-white/80 hover:text-purple-400 transition-colors data-magnetic whitespace-nowrap">Про нас</a>
-        <a href="#team" class="nav-link text-white/80 hover:text-purple-400 transition-colors data-magnetic whitespace-nowrap">Команда</a>
-        <a href="#requirements" class="nav-link text-white/80 hover:text-purple-400 transition-colors data-magnetic whitespace-nowrap">Вимоги</a>
+        <a href="#how" class="nav-link text-[#2d1b4e]/85 hover:text-[#ff2d78] transition-colors data-magnetic whitespace-nowrap">FAQ</a>
+        <a href="#cases" class="nav-link text-[#2d1b4e]/85 hover:text-[#ff2d78] transition-colors data-magnetic whitespace-nowrap">Кейси</a>
+        <a href="#about" class="nav-link text-[#2d1b4e]/85 hover:text-[#ff2d78] transition-colors data-magnetic whitespace-nowrap">Про нас</a>
+        <a href="#team" class="nav-link text-[#2d1b4e]/85 hover:text-[#ff2d78] transition-colors data-magnetic whitespace-nowrap">Команда</a>
+        <a href="#requirements" class="nav-link text-[#2d1b4e]/85 hover:text-[#ff2d78] transition-colors data-magnetic whitespace-nowrap">Вимоги</a>
       </nav>
       <div class="flex items-center gap-3 flex-shrink-0">
-        <a href="#apply" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 border border-pink-border text-xs tracking-widest uppercase bg-gradient-to-r from-pink-500 to-[#7c3aed] text-white hover:from-pink-400 hover:to-[#8b5cf6] transition-all duration-300 rounded-lg shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 hover:scale-105 whitespace-nowrap" data-magnetic>
+        <a href="#apply" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 border border-pink-border text-xs tracking-widest uppercase bg-gradient-to-r from-[#ff2d78] via-[#a855f7] to-[#25f4ee] text-white hover:opacity-95 transition-all duration-300 rounded-lg shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 hover:scale-105 whitespace-nowrap" data-magnetic>
           Почати
         </a>
         <div class="hidden md:flex items-center gap-3">
-          <a href="https://instagram.com/exlivee.agency/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-white/70 hover:text-purple-400 transition-colors aria-label="Instagram flex-shrink-0">
+          <a href="https://instagram.com/exlivee.agency/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-[#2d1b4e]/70 hover:text-[#ff2d78] transition-colors" aria-label="Instagram">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
-          <a href="https://t.me/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-white/70 hover:text-purple-400 transition-colors aria-label="Telegram flex-shrink-0">
+          <a href="https://t.me/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-[#2d1b4e]/70 hover:text-[#ff2d78] transition-colors" aria-label="Telegram">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
           </a>
-          <a href="https://tiktok.com/@exlive.agency/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-white/70 hover:text-purple-400 transition-colors aria-label="TikTok flex-shrink-0">
+          <a href="https://tiktok.com/@exlive.agency/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-[#2d1b4e]/70 hover:text-[#ff2d78] transition-colors" aria-label="TikTok">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
           </a>
         </div>
         <button id="menu-toggle" class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 flex-shrink-0" aria-label="Меню">
-          <span class="menu-line w-6 h-px bg-white"></span>
-          <span class="menu-line w-6 h-px bg-white"></span>
+          <span class="menu-line w-6 h-px bg-[#2d1b4e]"></span>
+          <span class="menu-line w-6 h-px bg-[#2d1b4e]"></span>
         </button>
       </div>
     </div>
   </header>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="fixed inset-0 z-40 bg-[#1e293b]/95 backdrop-blur-2xl flex flex-col justify-center px-8 opacity-0 pointer-events-none transition-opacity duration-500">
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-[#f5eefe]/98 backdrop-blur-2xl flex flex-col justify-center px-8 opacity-0 pointer-events-none transition-opacity duration-500">
     <nav class="flex flex-col gap-8 text-4xl font-display font-display-black tracking-tight">
-      <a href="#how" class="mobile-link text-white/90 hover:text-purple-400 transition-colors">FAQ</a>
-      <a href="#cases" class="mobile-link text-white/90 hover:text-purple-400 transition-colors">Кейси</a>
-      <a href="#about" class="mobile-link text-white/90 hover:text-purple-400 transition-colors">Про нас</a>
-      <a href="#team" class="mobile-link text-white/90 hover:text-purple-400 transition-colors">Команда</a>
-      <a href="#requirements" class="mobile-link text-white/90 hover:text-purple-400 transition-colors">Вимоги</a>
-      <a href="#apply" class="mobile-link text-white/90 hover:text-purple-400 transition-colors">Заявка</a>
+      <a href="#how" class="mobile-link text-[#2d1b4e] hover:text-[#ff2d78] transition-colors">FAQ</a>
+      <a href="#cases" class="mobile-link text-[#2d1b4e] hover:text-[#ff2d78] transition-colors">Кейси</a>
+      <a href="#about" class="mobile-link text-[#2d1b4e] hover:text-[#ff2d78] transition-colors">Про нас</a>
+      <a href="#team" class="mobile-link text-[#2d1b4e] hover:text-[#ff2d78] transition-colors">Команда</a>
+      <a href="#requirements" class="mobile-link text-[#2d1b4e] hover:text-[#ff2d78] transition-colors">Вимоги</a>
+      <a href="#apply" class="mobile-link text-[#2d1b4e] hover:text-[#ff2d78] transition-colors">Заявка</a>
     </nav>
     <div class="flex gap-6 mt-8">
-      <a href="https://instagram.com/exlivee.agency/" target="_blank" rel="noopener" class="w-10 h-10 flex items-center justify-center text-white/70 hover:text-purple-400 transition-colors" aria-label="Instagram">
+      <a href="https://instagram.com/exlivee.agency/" target="_blank" rel="noopener" class="w-10 h-10 flex items-center justify-center text-[#2d1b4e]/70 hover:text-[#ff2d78] transition-colors" aria-label="Instagram">
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
       </a>
-      <a href="https://t.me/" target="_blank" rel="noopener" class="w-10 h-10 flex items-center justify-center text-white/70 hover:text-purple-400 transition-colors" aria-label="Telegram">
+      <a href="https://t.me/" target="_blank" rel="noopener" class="w-10 h-10 flex items-center justify-center text-[#2d1b4e]/70 hover:text-[#ff2d78] transition-colors" aria-label="Telegram">
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
       </a>
-      <a href="https://tiktok.com/@exlive.agency/" target="_blank" rel="noopener" class="w-10 h-10 flex items-center justify-center text-white/70 hover:text-purple-400 transition-colors" aria-label="TikTok">
+      <a href="https://tiktok.com/@exlive.agency/" target="_blank" rel="noopener" class="w-10 h-10 flex items-center justify-center text-[#2d1b4e]/70 hover:text-[#ff2d78] transition-colors" aria-label="TikTok">
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
       </a>
     </div>
@@ -609,7 +612,7 @@
 
   <main id="main-content">
     <!-- ========== HERO ========== -->
-    <section id="hero" class="relative min-h-[100vh] md:min-h-[100vh] flex flex-col justify-end pt-24 md:pt-32 pb-12 md:pb-16 overflow-hidden bg-black">
+    <section id="hero" class="relative min-h-[100vh] md:min-h-[100vh] flex flex-col justify-end pt-24 md:pt-32 pb-12 md:pb-16 overflow-hidden bg-gradient-to-br from-[#ff2d78] via-[#a855f7] to-[#6d28d9] text-white">
       <!-- Layered SVG mesh / abstract geometry -->
       <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
         <svg class="absolute -top-[20%] -right-[15%] w-[90vw] h-[90vw] opacity-[0.07]" viewBox="0 0 800 800" fill="none">
@@ -618,12 +621,12 @@
           <circle class="hero-orb" cx="400" cy="400" r="40" fill="url(#g1)"/>
           <defs>
             <radialGradient id="g1" cx="0.3" cy="0.3">
-              <stop offset="0%" stop-color="#ec4899"/>
-              <stop offset="100%" stop-color="#ec4899" stop-opacity="0"/>
+              <stop offset="0%" stop-color="#ff2d78"/>
+              <stop offset="100%" stop-color="#ff2d78" stop-opacity="0"/>
             </radialGradient>
           </defs>
         </svg>
-        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#f5eefe] via-[#f5eefe]/80 to-transparent"></div>
       </div>
 
       <div class="relative z-10 px-5 md:px-10 max-w-[1600px] mx-auto w-full">
@@ -636,7 +639,7 @@
                 <span class="hero-line inline-block font-display-bold pb-3.5">Official</span>
               </span>
               <span class="block overflow-hidden">
-                <span class="hero-line inline-block font-display-extrabold bg-gradient-to-r from-pink-400 via-purple-400 to-purple-600 bg-clip-text text-transparent pt-1 pb-3">TikTok</span>
+                <span class="hero-line inline-block font-display-extrabold bg-gradient-to-r from-[#ffffff] to-[#25f4ee] bg-clip-text text-transparent pt-1 pb-3">TikTok</span>
               </span>
               <span class="block overflow-hidden">
                 <span class="hero-line inline-block font-display-semibold pb-[10px] md:pb-[140px]">Agency</span>
@@ -644,11 +647,12 @@
             </h1>
           </div>
           <div class="col-span-12 lg:col-span-4 lg:pl-8 flex flex-col gap-2 items-center lg:items-end">
-            <div class="hero-logo-wrapper flex flex-col items-center gap-1 mb-1 relative">
-              <div class="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-pink-600/20 blur-3xl rounded-full"></div>
-              <img src="assets/images/logo-exlive.png" alt="Exlive Logo" class="h-[720px] md:h-[432px] w-auto object-contain drop-shadow-2xl relative z-10 lg:mr-12">
+            <div class="hero-logo-wrapper flex flex-col items-center gap-1 mb-1 relative lg:mr-12">
+              <div class="hero-logo-glow-wrap">
+                <img src="assets/images/logo-exlive.png" alt="Exlive Logo" class="h-[720px] md:h-[432px] w-auto object-contain relative z-10">
+              </div>
             </div>
-            <p class="hero-desc text-base md:text-lg text-white/80 leading-relaxed max-w-sm text-center lg:text-right opacity-0">
+            <p class="hero-desc text-base md:text-lg text-white/90 leading-relaxed max-w-sm text-center lg:text-right opacity-0">
               Тренуємо, продюсуємо та запускаємо нових стрімерів у TikTok Live. Послуги безкоштовні. Потрібен лише телефон.
             </p>
             <div class="hero-cta flex flex-wrap gap-4 justify-center lg:justify-end opacity-0">
@@ -666,15 +670,15 @@
         <div class="hero-stats mt-10 md:mt-14 flex flex-wrap gap-x-12 gap-y-4 text-sm font-medium tracking-wide opacity-0">
           <div>
             <span class="block text-2xl md:text-3xl stat-number text-white">???+</span>
-            <span class="label-text text-white/60 uppercase tracking-widest">стрімерів</span>
+            <span class="label-text text-white/75 uppercase tracking-widest">стрімерів</span>
           </div>
           <div>
             <span class="block text-2xl md:text-3xl stat-number text-white">?</span>
-            <span class="label-text text-white/60 uppercase tracking-widest">роки на ринку</span>
+            <span class="label-text text-white/75 uppercase tracking-widest">роки на ринку</span>
           </div>
           <div>
-            <span class="block text-2xl md:text-3xl font-display font-700 bg-gradient-to-r from-pink-400 to-pink-600 bg-clip-text text-transparent">$???</span>
-            <span class="text-white/60 uppercase text-xs tracking-widest">на місяць</span>
+            <span class="block text-2xl md:text-3xl font-display font-700 bg-gradient-to-r from-[#ff2d78] to-[#25f4ee] bg-clip-text text-transparent">$???</span>
+            <span class="text-white/75 uppercase text-xs tracking-widest">на місяць</span>
           </div>
         </div>
       </div>
@@ -689,7 +693,7 @@
     </section>
 
     <!-- ========== HOW IT WORKS ========== -->
-    <section id="how" class="relative py-16 md:py-24 overflow-hidden bg-[#1e293b]/50">
+    <section id="how" class="relative py-16 md:py-24 overflow-hidden bg-[#efe4fb]/60">
       <!-- Monogram 7 - FAQ section (larger) -->
       <div class="monogram-element absolute top-[15%] right-[20%] w-16 h-16 md:w-20 md:h-20 opacity-12 animate-monogram-2" style="animation-delay: -25s;">
         <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
@@ -700,17 +704,17 @@
         <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
       </div>
       
-      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#ff2d78]/25 to-transparent"></div>
       
       <div class="px-5 md:px-10 max-w-[1600px] mx-auto">
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 md:mb-14">
           <div>
-            <p class="text-xs tracking-[0.3em] uppercase text-white/60 mb-4">FAQ</p>
-            <h2 class="font-display font-700 text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.95] tracking-tighter max-w-xl">
-              Часті<br><span class="text-pink-500">запитання</span>
+            <p class="text-xs tracking-[0.3em] uppercase text-[#6b5b8a] mb-4">FAQ</p>
+            <h2 class="font-display font-700 text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.95] tracking-tighter max-w-xl text-[#2d1b4e]">
+              Часті<br><span class="text-[#ff2d78]">запитання</span>
             </h2>
           </div>
-          <p class="text-white/60 max-w-xs text-sm md:text-base leading-relaxed md:text-right">
+          <p class="text-[#6b5b8a] max-w-xs text-sm md:text-base leading-relaxed md:text-right">
             Відповіді на найпопулярніші питання про роботу в Exlive Agency.
           </p>
         </div>
@@ -719,11 +723,11 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           <!-- FAQ Card 1 -->
           <article class="feature-card relative group overflow-hidden p-6 md:p-8 min-h-[280px] flex flex-col">
-            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-pink-500/10 blur-2xl group-hover:bg-pink-500/20 transition-all duration-500"></div>
+            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-[#ff2d78]/10 blur-2xl group-hover:bg-[#ff2d78]/20 transition-all duration-500"></div>
             <div class="relative z-10">
-              <span class="text-3xl md:text-4xl font-display font-800 text-pink-500/30 group-hover:text-pink-500/50 transition-colors">01</span>
-              <h3 class="mt-4 text-lg md:text-xl font-display font-700 tracking-tight text-white">Який дохід реально можливий?</h3>
-              <p class="mt-3 text-white/60 text-sm leading-relaxed">
+              <span class="text-3xl md:text-4xl font-display font-800 text-[#ff2d78]/40 group-hover:text-[#ff2d78]/70 transition-colors">01</span>
+              <h3 class="mt-4 text-lg md:text-xl font-display font-700 tracking-tight text-[#2d1b4e]">Який дохід реально можливий?</h3>
+              <p class="mt-3 text-[#6b5b8a] text-sm leading-relaxed">
                 У Exlive Agency немає «обіцянок з повітря». Реальні середні показники наших стрімерів — $2000–$6000 на місяць. Все залежить від якості глядачів на ефірі. Навіть з онлайном 10 людей можна мати стабільний дохід — якщо це правильна аудиторія. Саме цьому ми і навчаємо всіх наших дівчат в агенції.
               </p>
             </div>
@@ -731,11 +735,11 @@
 
           <!-- FAQ Card 2 -->
           <article class="feature-card relative group overflow-hidden p-6 md:p-8 min-h-[280px] flex flex-col">
-            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-pink-500/10 blur-2xl group-hover:bg-pink-500/20 transition-all duration-500"></div>
+            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-[#ff2d78]/10 blur-2xl group-hover:bg-[#ff2d78]/20 transition-all duration-500"></div>
             <div class="relative z-10">
-              <span class="text-3xl md:text-4xl font-display font-800 text-pink-500/30 group-hover:text-pink-500/50 transition-colors">02</span>
-              <h3 class="mt-4 text-lg md:text-xl font-display font-700 tracking-tight text-white">Що мені потрібно буде робити?</h3>
-              <p class="mt-3 text-white/60 text-sm leading-relaxed">
+              <span class="text-3xl md:text-4xl font-display font-800 text-[#ff2d78]/40 group-hover:text-[#ff2d78]/70 transition-colors">02</span>
+              <h3 class="mt-4 text-lg md:text-xl font-display font-700 tracking-tight text-[#2d1b4e]">Що мені потрібно буде робити?</h3>
+              <p class="mt-3 text-[#6b5b8a] text-sm leading-relaxed">
                 Ти будеш вести розмовні стріми в TikTok — ми впевнені, ти бачив такі, коли гортав стрічку. На цих стрімах твої фанати будуть дарувати тобі подарунки, а ти за це отримуватимеш гроші. Ми навчимо тебе й проведемо за руку через усі етапи.
               </p>
             </div>
@@ -743,11 +747,11 @@
 
           <!-- FAQ Card 3 -->
           <article class="feature-card relative group overflow-hidden p-6 md:p-8 min-h-[280px] flex flex-col">
-            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-pink-500/10 blur-2xl group-hover:bg-pink-500/20 transition-all duration-500"></div>
+            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-[#ff2d78]/10 blur-2xl group-hover:bg-[#ff2d78]/20 transition-all duration-500"></div>
             <div class="relative z-10">
-              <span class="text-3xl md:text-4xl font-display font-800 text-pink-500/30 group-hover:text-pink-500/50 transition-colors">03</span>
-              <h3 class="mt-4 text-lg md:text-xl font-display font-700 tracking-tight text-white">А якщо в мене немає досвіду?</h3>
-              <p class="mt-3 text-white/60 text-sm leading-relaxed">
+              <span class="text-3xl md:text-4xl font-display font-800 text-[#ff2d78]/40 group-hover:text-[#ff2d78]/70 transition-colors">03</span>
+              <h3 class="mt-4 text-lg md:text-xl font-display font-700 tracking-tight text-[#2d1b4e]">А якщо в мене немає досвіду?</h3>
+              <p class="mt-3 text-[#6b5b8a] text-sm leading-relaxed">
                 Це нормально. Більшість наших стрімерів починали без досвіду. Ми крок за кроком пояснюємо все від «а» до «я», підтримка кураторів 24/7, повний супровід, контролюємо всю можливу статистику та процеси, налаштовуємо таргетовану рекламу для того щоб результат був вже тут і зараз.
               </p>
             </div>
@@ -755,11 +759,11 @@
 
           <!-- FAQ Card 4 -->
           <article class="feature-card relative group overflow-hidden p-6 md:p-8 min-h-[280px] flex flex-col">
-            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-pink-500/10 blur-2xl group-hover:bg-pink-500/20 transition-all duration-500"></div>
+            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-[#ff2d78]/10 blur-2xl group-hover:bg-[#ff2d78]/20 transition-all duration-500"></div>
             <div class="relative z-10">
-              <span class="text-3xl md:text-4xl font-display font-800 text-pink-500/30 group-hover:text-pink-500/50 transition-colors">04</span>
-              <h3 class="mt-4 text-lg md:text-xl font-display font-700 tracking-tight text-white">Скільки коштує навчання або участь?</h3>
-              <p class="mt-3 text-white/60 text-sm leading-relaxed">
+              <span class="text-3xl md:text-4xl font-display font-800 text-[#ff2d78]/40 group-hover:text-[#ff2d78]/70 transition-colors">04</span>
+              <h3 class="mt-4 text-lg md:text-xl font-display font-700 tracking-tight text-[#2d1b4e]">Скільки коштує навчання або участь?</h3>
+              <p class="mt-3 text-[#6b5b8a] text-sm leading-relaxed">
                 Нуль гривень. Exlive не продає курси й не бере оплату за навчання. Ми працюємо у продюсерському форматі: наш інтерес — навчити стрімера заробляти та довести його до стабільного доходу.
               </p>
             </div>
@@ -767,11 +771,11 @@
 
           <!-- FAQ Card 5 -->
           <article class="feature-card relative group overflow-hidden p-6 md:p-8 min-h-[280px] flex flex-col">
-            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-pink-500/10 blur-2xl group-hover:bg-pink-500/20 transition-all duration-500"></div>
+            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-[#ff2d78]/10 blur-2xl group-hover:bg-[#ff2d78]/20 transition-all duration-500"></div>
             <div class="relative z-10">
-              <span class="text-3xl md:text-4xl font-display font-800 text-pink-500/30 group-hover:text-pink-500/50 transition-colors">05</span>
-              <h3 class="mt-4 text-lg md:text-xl font-display font-700 tracking-tight text-white">Це точно не OnlyFans і не «офіси»?</h3>
-              <p class="mt-3 text-white/60 text-sm leading-relaxed">
+              <span class="text-3xl md:text-4xl font-display font-800 text-[#ff2d78]/40 group-hover:text-[#ff2d78]/70 transition-colors">05</span>
+              <h3 class="mt-4 text-lg md:text-xl font-display font-700 tracking-tight text-[#2d1b4e]">Це точно не OnlyFans і не «офіси»?</h3>
+              <p class="mt-3 text-[#6b5b8a] text-sm leading-relaxed">
                 НІ! EXlive — це робота у TikTok LIVE. Ніякого контенту 18+, жодних «офісів». Усе детально пояснюється на особистій онлайн-зустрічі з HR. Exlive - напряму працює з TikTok Live.
               </p>
             </div>
@@ -779,11 +783,11 @@
 
           <!-- FAQ Card 6 -->
           <article class="feature-card relative group overflow-hidden p-6 md:p-8 min-h-[280px] flex flex-col">
-            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-pink-500/10 blur-2xl group-hover:bg-pink-500/20 transition-all duration-500"></div>
+            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-[#ff2d78]/10 blur-2xl group-hover:bg-[#ff2d78]/20 transition-all duration-500"></div>
             <div class="relative z-10">
-              <span class="text-3xl md:text-4xl font-display font-800 text-pink-500/30 group-hover:text-pink-500/50 transition-colors">06</span>
-              <h3 class="mt-4 text-lg md:text-xl font-display font-700 tracking-tight text-white">Чи потрібно звільнятися з основної роботи?</h3>
-              <p class="mt-3 text-white/60 text-sm leading-relaxed">
+              <span class="text-3xl md:text-4xl font-display font-800 text-[#ff2d78]/40 group-hover:text-[#ff2d78]/70 transition-colors">06</span>
+              <h3 class="mt-4 text-lg md:text-xl font-display font-700 tracking-tight text-[#2d1b4e]">Чи потрібно звільнятися з основної роботи?</h3>
+              <p class="mt-3 text-[#6b5b8a] text-sm leading-relaxed">
                 Ні, це все можна спокійно поєднувати. Багато наших стрімерів починали паралельно з навчанням або роботою. За перші тижні стає все зрозуміло, який у тебе дохід з TikTok Live — і тоді ти сама вирішуєш, як рухатись далі.
               </p>
             </div>
@@ -791,11 +795,11 @@
 
           <!-- FAQ Card 7 - Full width on mobile, spans 2 columns on desktop -->
           <article class="feature-card md:col-span-2 lg:col-span-3 relative group overflow-hidden p-6 md:p-8 min-h-[280px] flex flex-col">
-            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-pink-500/10 blur-2xl group-hover:bg-pink-500/20 transition-all duration-500"></div>
+            <div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-[#ff2d78]/10 blur-2xl group-hover:bg-[#ff2d78]/20 transition-all duration-500"></div>
             <div class="relative z-10">
-              <span class="text-3xl md:text-4xl font-display font-800 text-pink-500/30 group-hover:text-pink-500/50 transition-colors">07</span>
-              <h3 class="mt-4 text-lg md:text-xl font-display font-700 tracking-tight text-white">EXlive — це реальна агенція?</h3>
-              <p class="mt-3 text-white/60 text-sm leading-relaxed">
+              <span class="text-3xl md:text-4xl font-display font-800 text-[#ff2d78]/40 group-hover:text-[#ff2d78]/70 transition-colors">07</span>
+              <h3 class="mt-4 text-lg md:text-xl font-display font-700 tracking-tight text-[#2d1b4e]">EXlive — це реальна агенція?</h3>
+              <p class="mt-3 text-[#6b5b8a] text-sm leading-relaxed">
                 Так. Exlive - це агенція, яка працює з TikTok LIVE. У нас є команда HR - менеджерів, кураторів, рекрутерів і продюсерів, які щодня працюють зі стрімерами та супроводжують їх до результату. Власниками агенції є медійні люди (блогери), які ведуть блог та щодня розповідають в себе в сторіс про нашу агенцію.
               </p>
             </div>
@@ -818,7 +822,7 @@
     </section>
 
     <!-- SVG Wave Divider -->
-    <div class="relative w-full overflow-hidden h-16 md:h-24 bg-[#1e293b]/50" aria-hidden="true">
+    <div class="relative w-full overflow-hidden h-16 md:h-24 bg-[#fdf0f7]/60" aria-hidden="true">
       <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 120" preserveAspectRatio="none">
         <path class="wave-path" d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,90 1440,60 L1440,120 L0,120 Z" fill="currentColor" opacity="0.03"/>
         <path class="wave-path-2" d="M0,80 C360,140 720,20 1080,80 C1260,110 1380,110 1440,80 L1440,120 L0,120 Z" fill="currentColor" opacity="0.02"/>
@@ -826,7 +830,7 @@
     </div>
 
     <!-- ========== CASES ========== -->
-    <section id="cases" class="relative py-16 md:py-24 overflow-hidden bg-[#1e293b]/50">
+    <section id="cases" class="relative py-16 md:py-24 overflow-hidden bg-[#fdf0f7]/60">
       <!-- Monogram 8 - Cases section (larger) -->
       <div class="monogram-element absolute top-[20%] left-[10%] w-20 h-20 md:w-24 md:h-24 opacity-18 animate-monogram-5" style="animation-delay: -30s;">
         <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
@@ -839,9 +843,9 @@
       
       <div class="px-5 md:px-10 max-w-[1600px] mx-auto">
         <div class="mb-10 md:mb-14">
-          <p class="text-xs tracking-[0.3em] uppercase text-white/60 mb-4">Результати</p>
-          <h2 class="font-display font-700 text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.95] tracking-tighter">
-            Наші <span class="text-pink-500">кейси</span>
+          <p class="text-xs tracking-[0.3em] uppercase text-[#6b5b8a] mb-4">Результати</p>
+          <h2 class="font-display font-700 text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.95] tracking-tighter text-[#2d1b4e]">
+            Наші <span class="text-[#ff2d78]">кейси</span>
           </h2>
         </div>
 
@@ -851,25 +855,25 @@
           <!-- Case 1 -->
           <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 p-8 md:p-10">
             <div class="md:col-span-5 flex items-center justify-center p-4">
-              <div class="relative inline-block p-3 rounded-lg bg-black/50 border border-pink-border">
-                <div class="absolute inset-0 bg-gradient-to-br from-pink-500/20 via-transparent to-pink-600/10 rounded-lg"></div>
+              <div class="relative inline-block p-3 rounded-lg bg-[rgba(255,240,250,0.85)] border border-pink-border">
+                <div class="absolute inset-0 bg-gradient-to-br from-[#ff2d78]/15 via-transparent to-[#a855f7]/10 rounded-lg"></div>
                 <img src="assets/images/IMG_0892.jpg" alt="Case 1" class="relative z-10 max-w-[320px] h-auto object-contain rounded shadow-lg">
-                <div class="absolute bottom-2 left-2 text-xs tracking-widest uppercase text-white/60 z-20"></div>
+                <div class="absolute bottom-2 left-2 text-xs tracking-widest uppercase text-[#6b5b8a] z-20"></div>
               </div>
             </div>
             <div class="md:col-span-7 p-8 md:p-12 flex flex-col justify-center">
-              <h3 class="font-display text-3xl md:text-4xl font-700 tracking-tight">Настя</h3>
+              <h3 class="font-display text-3xl md:text-4xl font-700 tracking-tight text-[#2d1b4e]">Настя</h3>
               <div class="mt-6 flex flex-wrap gap-8">
                 <div>
-                  <span class="block text-3xl md:text-4xl font-display font-700 text-pink-500">???</span>
-                  <span class="text-xs tracking-widest uppercase text-white/60">підписників</span>
+                  <span class="block text-3xl md:text-4xl font-display font-700 text-[#ff2d78]">???</span>
+                  <span class="text-xs tracking-widest uppercase text-[#6b5b8a]">підписників</span>
                 </div>
                 <div>
-                  <span class="block text-3xl md:text-4xl font-display font-700">???</span>
-                  <span class="text-xs tracking-widest uppercase text-white/60">на місяць</span>
+                  <span class="block text-3xl md:text-4xl font-display font-700 text-[#2d1b4e]">???</span>
+                  <span class="text-xs tracking-widest uppercase text-[#6b5b8a]">на місяць</span>
                 </div>
               </div>
-              <a href="#" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-white/20/30 pb-1 w-fit hover:border-accent hover:text-pink-500 transition-colors">
+              <a href="#" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-[#2d1b4e]/30 pb-1 w-fit text-[#2d1b4e] hover:border-[#ff2d78] hover:text-[#ff2d78] transition-colors">
                 Відкрити профіль
                 <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </a>
@@ -877,55 +881,55 @@
           </article>
 
           <!-- Case 2 - offset -->
-          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 border border-white/20/10 overflow-hidden bg-glass-700/60">
+          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 border border-pink-border/40 overflow-hidden bg-glass-700">
             <div class="md:col-span-7 p-8 md:p-12 flex flex-col justify-center order-2 md:order-1">
-              <h3 class="font-display text-3xl md:text-4xl font-700 tracking-tight">Даріна</h3>
+              <h3 class="font-display text-3xl md:text-4xl font-700 tracking-tight text-[#2d1b4e]">Даріна</h3>
               <div class="mt-6 flex flex-wrap gap-8">
                 <div>
-                  <span class="block text-3xl md:text-4xl font-display font-700 text-pink-500">???</span>
-                  <span class="text-xs tracking-widest uppercase text-white/60">підписників</span>
+                  <span class="block text-3xl md:text-4xl font-display font-700 text-[#ff2d78]">???</span>
+                  <span class="text-xs tracking-widest uppercase text-[#6b5b8a]">підписників</span>
                 </div>
                 <div>
-                  <span class="block text-3xl md:text-4xl font-display font-700">???</span>
-                  <span class="text-xs tracking-widest uppercase text-white/60">на місяць</span>
+                  <span class="block text-3xl md:text-4xl font-display font-700 text-[#2d1b4e]">???</span>
+                  <span class="text-xs tracking-widest uppercase text-[#6b5b8a]">на місяць</span>
                 </div>
               </div>
-              <a href="#" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-white/20/30 pb-1 w-fit hover:border-accent hover:text-pink-500 transition-colors">
+              <a href="#" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-[#2d1b4e]/30 pb-1 w-fit text-[#2d1b4e] hover:border-[#ff2d78] hover:text-[#ff2d78] transition-colors">
                 Відкрити профіль
                 <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </a>
             </div>
             <div class="md:col-span-5 flex items-center justify-center p-4 order-1 md:order-2">
-              <div class="relative inline-block p-3 rounded-lg bg-black/50 border border-pink-border">
-                <div class="absolute inset-0 bg-gradient-to-bl from-pink-600/15 via-transparent to-pink-500/10 rounded-lg"></div>
+              <div class="relative inline-block p-3 rounded-lg bg-[rgba(255,240,250,0.85)] border border-pink-border">
+                <div class="absolute inset-0 bg-gradient-to-bl from-[#ff2d78]/15 via-transparent to-[#a855f7]/10 rounded-lg"></div>
                 <img src="assets/images/IMG_5581.JPG" alt="Case 2" class="relative z-10 max-w-[320px] h-auto object-contain rounded shadow-lg">
-                <div class="absolute bottom-2 right-2 text-xs tracking-widest uppercase text-white/60 z-20"></div>
+                <div class="absolute bottom-2 right-2 text-xs tracking-widest uppercase text-[#6b5b8a] z-20"></div>
               </div>
             </div>
           </article>
 
           <!-- Case 3 -->
-          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 border border-white/20/10 overflow-hidden bg-glass-700/60">
+          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 border border-pink-border/40 overflow-hidden bg-glass-700">
             <div class="md:col-span-5 flex items-center justify-center p-4">
-              <div class="relative inline-block p-3 rounded-lg bg-black/50 border border-pink-border">
-                <div class="absolute inset-0 bg-gradient-to-tr from-accent/15 via-transparent to-paper/5 rounded-lg"></div>
+              <div class="relative inline-block p-3 rounded-lg bg-[rgba(255,240,250,0.85)] border border-pink-border">
+                <div class="absolute inset-0 bg-gradient-to-tr from-[#25f4ee]/15 via-transparent to-[#ff2d78]/10 rounded-lg"></div>
                 <img src="assets/images/IMG_8816.JPG" alt="Case 3" class="relative z-10 max-w-[320px] h-auto object-contain rounded shadow-lg">
-                <div class="absolute bottom-2 left-2 text-xs tracking-widest uppercase text-white/60 z-20"></div>
+                <div class="absolute bottom-2 left-2 text-xs tracking-widest uppercase text-[#6b5b8a] z-20"></div>
               </div>
             </div>
             <div class="md:col-span-7 p-8 md:p-12 flex flex-col justify-center">
-              <h3 class="font-display text-3xl md:text-4xl font-700 tracking-tight">Діана</h3>
+              <h3 class="font-display text-3xl md:text-4xl font-700 tracking-tight text-[#2d1b4e]">Діана</h3>
               <div class="mt-6 flex flex-wrap gap-8">
                 <div>
-                  <span class="block text-3xl md:text-4xl font-display font-700 text-pink-500">???</span>
-                  <span class="text-xs tracking-widest uppercase text-white/60">підписників</span>
+                  <span class="block text-3xl md:text-4xl font-display font-700 text-[#ff2d78]">???</span>
+                  <span class="text-xs tracking-widest uppercase text-[#6b5b8a]">підписників</span>
                 </div>
                 <div>
-                  <span class="block text-3xl md:text-4xl font-display font-700">???</span>
-                  <span class="text-xs tracking-widest uppercase text-white/60">на місяць</span>
+                  <span class="block text-3xl md:text-4xl font-display font-700 text-[#2d1b4e]">???</span>
+                  <span class="text-xs tracking-widest uppercase text-[#6b5b8a]">на місяць</span>
                 </div>
               </div>
-              <a href="#" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-white/20/30 pb-1 w-fit hover:border-accent hover:text-pink-500 transition-colors">
+              <a href="#" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-[#2d1b4e]/30 pb-1 w-fit text-[#2d1b4e] hover:border-[#ff2d78] hover:text-[#ff2d78] transition-colors">
                 Відкрити профіль
                 <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </a>
@@ -933,29 +937,29 @@
           </article>
 
           <!-- Case 4 - offset -->
-          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 border border-white/20/10 overflow-hidden bg-glass-700/60">
+          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 border border-pink-border/40 overflow-hidden bg-glass-700">
             <div class="md:col-span-7 p-8 md:p-12 flex flex-col justify-center order-2 md:order-1">
-              <h3 class="font-display text-3xl md:text-4xl font-700 tracking-tight">Соломія</h3>
+              <h3 class="font-display text-3xl md:text-4xl font-700 tracking-tight text-[#2d1b4e]">Соломія</h3>
               <div class="mt-6 flex flex-wrap gap-8">
                 <div>
-                  <span class="block text-3xl md:text-4xl font-display font-700 text-pink-500">???</span>
-                  <span class="text-xs tracking-widest uppercase text-white/60">підписників</span>
+                  <span class="block text-3xl md:text-4xl font-display font-700 text-[#ff2d78]">???</span>
+                  <span class="text-xs tracking-widest uppercase text-[#6b5b8a]">підписників</span>
                 </div>
                 <div>
-                  <span class="block text-3xl md:text-4xl font-display font-700">???</span>
-                  <span class="text-xs tracking-widest uppercase text-white/60">на місяць</span>
+                  <span class="block text-3xl md:text-4xl font-display font-700 text-[#2d1b4e]">???</span>
+                  <span class="text-xs tracking-widest uppercase text-[#6b5b8a]">на місяць</span>
                 </div>
               </div>
-              <a href="#" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-white/20/30 pb-1 w-fit hover:border-accent hover:text-pink-500 transition-colors">
+              <a href="#" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-[#2d1b4e]/30 pb-1 w-fit text-[#2d1b4e] hover:border-[#ff2d78] hover:text-[#ff2d78] transition-colors">
                 Відкрити профіль
                 <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </a>
             </div>
             <div class="md:col-span-5 flex items-center justify-center p-4 order-1 md:order-2">
-              <div class="relative inline-block p-3 rounded-lg bg-black/50 border border-pink-border">
-                <div class="absolute inset-0 bg-gradient-to-bl from-pink-600/15 via-transparent to-pink-500/10 rounded-lg"></div>
+              <div class="relative inline-block p-3 rounded-lg bg-[rgba(255,240,250,0.85)] border border-pink-border">
+                <div class="absolute inset-0 bg-gradient-to-bl from-[#ff2d78]/15 via-transparent to-[#a855f7]/10 rounded-lg"></div>
                 <img src="assets/images/IMG_5588.PNG" alt="Case 4" class="relative z-10 max-w-[320px] h-auto object-contain rounded shadow-lg">
-                <div class="absolute bottom-2 right-2 text-xs tracking-widest uppercase text-white/60 z-20"></div>
+                <div class="absolute bottom-2 right-2 text-xs tracking-widest uppercase text-[#6b5b8a] z-20"></div>
               </div>
             </div>
           </article>
@@ -963,25 +967,25 @@
           <!-- Case 5 -->
           <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 p-8 md:p-10">
             <div class="md:col-span-5 flex items-center justify-center p-4">
-              <div class="relative inline-block p-3 rounded-lg bg-black/50 border border-pink-border">
-                <div class="absolute inset-0 bg-gradient-to-br from-pink-500/20 via-transparent to-pink-600/10 rounded-lg"></div>
+              <div class="relative inline-block p-3 rounded-lg bg-[rgba(255,240,250,0.85)] border border-pink-border">
+                <div class="absolute inset-0 bg-gradient-to-br from-[#ff2d78]/15 via-transparent to-[#a855f7]/10 rounded-lg"></div>
                 <img src="assets/images/IMG_5777.JPG" alt="Case 5" class="relative z-10 max-w-[320px] h-auto object-contain rounded shadow-lg">
-                <div class="absolute bottom-2 left-2 text-xs tracking-widest uppercase text-white/60 z-20"></div>
+                <div class="absolute bottom-2 left-2 text-xs tracking-widest uppercase text-[#6b5b8a] z-20"></div>
               </div>
             </div>
             <div class="md:col-span-7 p-8 md:p-12 flex flex-col justify-center">
-              <h3 class="font-display text-3xl md:text-4xl font-700 tracking-tight">Ніка</h3>
+              <h3 class="font-display text-3xl md:text-4xl font-700 tracking-tight text-[#2d1b4e]">Ніка</h3>
               <div class="mt-6 flex flex-wrap gap-8">
                 <div>
-                  <span class="block text-3xl md:text-4xl font-display font-700 text-pink-500">???</span>
-                  <span class="text-xs tracking-widest uppercase text-white/60">підписників</span>
+                  <span class="block text-3xl md:text-4xl font-display font-700 text-[#ff2d78]">???</span>
+                  <span class="text-xs tracking-widest uppercase text-[#6b5b8a]">підписників</span>
                 </div>
                 <div>
-                  <span class="block text-3xl md:text-4xl font-display font-700">???</span>
-                  <span class="text-xs tracking-widest uppercase text-white/60">на місяць</span>
+                  <span class="block text-3xl md:text-4xl font-display font-700 text-[#2d1b4e]">???</span>
+                  <span class="text-xs tracking-widest uppercase text-[#6b5b8a]">на місяць</span>
                 </div>
               </div>
-              <a href="#" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-white/20/30 pb-1 w-fit hover:border-accent hover:text-pink-500 transition-colors">
+              <a href="#" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-[#2d1b4e]/30 pb-1 w-fit text-[#2d1b4e] hover:border-[#ff2d78] hover:text-[#ff2d78] transition-colors">
                 Відкрити профіль
                 <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </a>
@@ -989,29 +993,29 @@
           </article>
 
           <!-- Case 6 - offset -->
-          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 border border-white/20/10 overflow-hidden bg-glass-700/60">
+          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 border border-pink-border/40 overflow-hidden bg-glass-700">
             <div class="md:col-span-7 p-8 md:p-12 flex flex-col justify-center order-2 md:order-1">
-              <h3 class="font-display text-3xl md:text-4xl font-700 tracking-tight">Катя</h3>
+              <h3 class="font-display text-3xl md:text-4xl font-700 tracking-tight text-[#2d1b4e]">Катя</h3>
               <div class="mt-6 flex flex-wrap gap-8">
                 <div>
-                  <span class="block text-3xl md:text-4xl font-display font-700 text-pink-500">???</span>
-                  <span class="text-xs tracking-widest uppercase text-white/60">підписників</span>
+                  <span class="block text-3xl md:text-4xl font-display font-700 text-[#ff2d78]">???</span>
+                  <span class="text-xs tracking-widest uppercase text-[#6b5b8a]">підписників</span>
                 </div>
                 <div>
-                  <span class="block text-3xl md:text-4xl font-display font-700">???</span>
-                  <span class="text-xs tracking-widest uppercase text-white/60">на місяць</span>
+                  <span class="block text-3xl md:text-4xl font-display font-700 text-[#2d1b4e]">???</span>
+                  <span class="text-xs tracking-widest uppercase text-[#6b5b8a]">на місяць</span>
                 </div>
               </div>
-              <a href="#" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-white/20/30 pb-1 w-fit hover:border-accent hover:text-pink-500 transition-colors">
+              <a href="#" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-[#2d1b4e]/30 pb-1 w-fit text-[#2d1b4e] hover:border-[#ff2d78] hover:text-[#ff2d78] transition-colors">
                 Відкрити профіль
                 <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </a>
             </div>
             <div class="md:col-span-5 flex items-center justify-center p-4 order-1 md:order-2">
-              <div class="relative inline-block p-3 rounded-lg bg-black/50 border border-pink-border">
-                <div class="absolute inset-0 bg-gradient-to-bl from-pink-600/15 via-transparent to-pink-500/10 rounded-lg"></div>
+              <div class="relative inline-block p-3 rounded-lg bg-[rgba(255,240,250,0.85)] border border-pink-border">
+                <div class="absolute inset-0 bg-gradient-to-bl from-[#ff2d78]/15 via-transparent to-[#a855f7]/10 rounded-lg"></div>
                 <img src="assets/images/IMG_7473.JPG" alt="Case 6" class="relative z-10 max-w-[320px] h-auto object-contain rounded shadow-lg">
-                <div class="absolute bottom-2 right-2 text-xs tracking-widest uppercase text-white/60 z-20"></div>
+                <div class="absolute bottom-2 right-2 text-xs tracking-widest uppercase text-[#6b5b8a] z-20"></div>
               </div>
             </div>
           </article>
@@ -1021,7 +1025,7 @@
     </section>
 
     <!-- ========== PORTFOLIO CAROUSEL ========== -->
-    <section id="portfolio" class="relative py-16 md:py-24 overflow-hidden bg-[#1e293b]/50">
+    <section id="portfolio" class="relative py-16 md:py-24 overflow-hidden bg-[#efe4fb]/60">
       <!-- Monogram extra 1 - Portfolio section (larger) -->
       <div class="monogram-element absolute top-[25%] right-[15%] w-16 h-16 md:w-20 md:h-20 opacity-11 animate-monogram-3" style="animation-delay: -35s;">
         <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
@@ -1034,9 +1038,9 @@
       
       <div class="px-5 md:px-10 max-w-[1600px] mx-auto">
         <div class="mb-10 md:mb-14">
-          <p class="text-xs tracking-[0.3em] uppercase text-white/60 mb-4">Приклади роботи</p>
-          <h2 class="font-display font-700 text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.95] tracking-tighter">
-            Наші <span class="text-pink-500">роботи</span>
+          <p class="text-xs tracking-[0.3em] uppercase text-[#6b5b8a] mb-4">Приклади роботи</p>
+          <h2 class="font-display font-700 text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.95] tracking-tighter text-[#2d1b4e]">
+            Наші <span class="text-[#ff2d78]">роботи</span>
           </h2>
         </div>
 
@@ -1048,12 +1052,12 @@
           </div>
 
           <!-- Navigation Buttons -->
-          <button id="carousel-prev" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-4 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full glass-card text-white/80 hover:text-pink-400 transition-all duration-300 z-10 group hover:scale-110">
+          <button id="carousel-prev" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-4 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full glass-card text-[#2d1b4e] hover:text-[#ff2d78] transition-all duration-300 z-10 group hover:scale-110">
             <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
             </svg>
           </button>
-          <button id="carousel-next" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-4 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full glass-card text-white/80 hover:text-pink-400 transition-all duration-300 z-10 group hover:scale-110">
+          <button id="carousel-next" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-4 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full glass-card text-[#2d1b4e] hover:text-[#ff2d78] transition-all duration-300 z-10 group hover:scale-110">
             <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
             </svg>
@@ -1069,7 +1073,7 @@
 
         <!-- Loading State -->
         <div id="portfolio-loading" class="flex items-center justify-center py-12">
-          <div class="flex items-center gap-3 text-white/60">
+          <div class="flex items-center gap-3 text-[#6b5b8a]">
             <svg class="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24">
               <circle class="opacity-30" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
               <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
@@ -1080,20 +1084,20 @@
 
         <!-- Error State -->
         <div id="portfolio-error" class="hidden text-center py-12">
-          <p class="text-white/60 text-sm">Не вдалося завантажити файли. Спробуйте пізніше.</p>
+          <p class="text-[#6b5b8a] text-sm">Не вдалося завантажити файли. Спробуйте пізніше.</p>
         </div>
       </div>
     </section>
 
     <!-- SVG Diagonal Divider -->
-    <div class="relative w-full overflow-hidden h-20 md:h-28 bg-[#1e293b]/50" aria-hidden="true">
+    <div class="relative w-full overflow-hidden h-20 md:h-28 bg-[#fdf0f7]/70" aria-hidden="true">
       <svg class="absolute -top-1 left-0 w-full" viewBox="0 0 1440 120" preserveAspectRatio="none">
         <path class="diagonal-path" d="M0,0 L1440,120 L1440,0 Z" fill="currentColor" opacity="0.02"/>
       </svg>
     </div>
 
     <!-- ========== EARNINGS BANNER ========== -->
-    <section id="earnings" class="relative py-16 md:py-24 overflow-hidden bg-[#1e293b]/50">
+    <section id="earnings" class="relative py-16 md:py-24 overflow-hidden bg-[#fdf0f7]/70">
       <!-- Monogram extra 2 - Earnings section left (larger) -->
       <div class="monogram-element absolute top-[30%] left-[20%] w-20 h-20 md:w-24 md:h-24 opacity-13 animate-monogram-1" style="animation-delay: -40s;">
         <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
@@ -1116,17 +1120,17 @@
         </svg>
       </div>
       <div class="relative px-5 md:px-10 max-w-[1400px] mx-auto text-center">
-        <p class="text-xs tracking-[0.3em] uppercase text-white/60 mb-6">Заробляй з нами</p>
-        <h2 class="font-display font-800 text-[clamp(2.8rem,8vw,6.5rem)] leading-[0.9] tracking-tightest">
-          Від <span class="text-pink-500">$2 000</span><br>
-          до <span class="text-pink-500">$10 000</span><br>
-          <span class="text-white/90">на місяць</span>
+        <p class="text-xs tracking-[0.3em] uppercase text-[#6b5b8a] mb-6">Заробляй з нами</p>
+        <h2 class="font-display font-800 text-[clamp(2.8rem,8vw,6.5rem)] leading-[0.9] tracking-tightest text-[#2d1b4e]">
+          Від <span class="text-[#ff2d78]">$2 000</span><br>
+          до <span class="text-[#ff2d78]">$10 000</span><br>
+          <span class="text-[#2d1b4e]">на місяць</span>
         </h2>
-        <p class="mt-8 text-white/60 max-w-lg mx-auto text-base md:text-lg leading-relaxed">
+        <p class="mt-8 text-[#6b5b8a] max-w-lg mx-auto text-base md:text-lg leading-relaxed">
           Без досвіду у прямих ефірах. Навчальна програма від професійних продюсерів, створена за 2+ роки вивчення TikTok Live.
         </p>
-        <p class="mt-4 text-sm text-white/70">
-          Цей тренінг допоміг отримати перший дохід більш ніж <strong class="text-pink-500">640</strong> новим стрімерам.
+        <p class="mt-4 text-sm text-[#2d1b4e]/80">
+          Цей тренінг допоміг отримати перший дохід більш ніж <strong class="text-[#ff2d78]">640</strong> новим стрімерам.
         </p>
         <a href="#apply" class="btn-primary mt-10 inline-flex" data-magnetic>
           <span>Пройти навчання</span>
@@ -1136,7 +1140,7 @@
     </section>
 
     <!-- ========== WHY US ========== -->
-    <section id="about" class="relative py-16 md:py-24 bg-[#1e293b]/50">
+    <section id="about" class="relative py-16 md:py-24 bg-[#efe4fb]/60">
       <!-- Monogram extra 6 - About section (larger) -->
       <div class="monogram-element absolute top-[30%] left-[12%] w-16 h-16 md:w-20 md:h-20 opacity-12 animate-monogram-3" style="animation-delay: -60s;">
         <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
@@ -1150,48 +1154,48 @@
       <div class="px-5 md:px-10 max-w-[1600px] mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
           <div class="lg:col-span-4 lg:sticky lg:top-32 self-start">
-            <p class="text-xs tracking-[0.3em] uppercase text-white/60 mb-4">Чому саме ми</p>
-            <h2 class="font-display font-700 text-[clamp(2.2rem,4vw,3.5rem)] leading-[0.95] tracking-tighter">
-              Зростай<br>разом<br><span class="text-pink-500">з нами</span>
+            <p class="text-xs tracking-[0.3em] uppercase text-[#6b5b8a] mb-4">Чому саме ми</p>
+            <h2 class="font-display font-700 text-[clamp(2.2rem,4vw,3.5rem)] leading-[0.95] tracking-tighter text-[#2d1b4e]">
+              Зростай<br>разом<br><span class="text-[#ff2d78]">з нами</span>
             </h2>
           </div>
           <div class="lg:col-span-8">
             <ul class="why-list space-y-0">
-              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-white/20/10 group">
-                <span class="text-white/60 text-sm font-display pt-1 w-8 shrink-0">01</span>
-                <span class="text-lg md:text-xl font-medium group-hover:text-pink-500 transition-colors">4 роки на ринку прямих трансляцій</span>
+              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-[#2d1b4e]/15 group">
+                <span class="text-[#6b5b8a] text-sm font-display pt-1 w-8 shrink-0">01</span>
+                <span class="text-lg md:text-xl font-medium text-[#2d1b4e] group-hover:text-[#ff2d78] transition-colors">4 роки на ринку прямих трансляцій</span>
               </li>
-              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-white/20/10 group">
-                <span class="text-white/60 text-sm font-display pt-1 w-8 shrink-0">02</span>
-                <span class="text-lg md:text-xl font-medium group-hover:text-pink-500 transition-colors">Продюсуємо понад 640 стрімерів</span>
+              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-[#2d1b4e]/15 group">
+                <span class="text-[#6b5b8a] text-sm font-display pt-1 w-8 shrink-0">02</span>
+                <span class="text-lg md:text-xl font-medium text-[#2d1b4e] group-hover:text-[#ff2d78] transition-colors">Продюсуємо понад 640 стрімерів</span>
               </li>
-              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-white/20/10 group">
-                <span class="text-white/60 text-sm font-display pt-1 w-8 shrink-0">03</span>
-                <span class="text-lg md:text-xl font-medium group-hover:text-pink-500 transition-colors">Закритий чат зі стрімерами агентства</span>
+              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-[#2d1b4e]/15 group">
+                <span class="text-[#6b5b8a] text-sm font-display pt-1 w-8 shrink-0">03</span>
+                <span class="text-lg md:text-xl font-medium text-[#2d1b4e] group-hover:text-[#ff2d78] transition-colors">Закритий чат зі стрімерами агентства</span>
               </li>
-              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-white/20/10 group">
-                <span class="text-white/60 text-sm font-display pt-1 w-8 shrink-0">04</span>
-                <span class="text-lg md:text-xl font-medium group-hover:text-pink-500 transition-colors">Наші стрімери займають топи TikTok</span>
+              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-[#2d1b4e]/15 group">
+                <span class="text-[#6b5b8a] text-sm font-display pt-1 w-8 shrink-0">04</span>
+                <span class="text-lg md:text-xl font-medium text-[#2d1b4e] group-hover:text-[#ff2d78] transition-colors">Наші стрімери займають топи TikTok</span>
               </li>
-              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-white/20/10 group">
-                <span class="text-white/60 text-sm font-display pt-1 w-8 shrink-0">05</span>
-                <span class="text-lg md:text-xl font-medium group-hover:text-pink-500 transition-colors">Професійна програма навчання</span>
+              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-[#2d1b4e]/15 group">
+                <span class="text-[#6b5b8a] text-sm font-display pt-1 w-8 shrink-0">05</span>
+                <span class="text-lg md:text-xl font-medium text-[#2d1b4e] group-hover:text-[#ff2d78] transition-colors">Професійна програма навчання</span>
               </li>
-              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-white/20/10 group">
-                <span class="text-white/60 text-sm font-display pt-1 w-8 shrink-0">06</span>
-                <span class="text-lg md:text-xl font-medium group-hover:text-pink-500 transition-colors">Робота з донатерами + аналітика ефірів</span>
+              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-[#2d1b4e]/15 group">
+                <span class="text-[#6b5b8a] text-sm font-display pt-1 w-8 shrink-0">06</span>
+                <span class="text-lg md:text-xl font-medium text-[#2d1b4e] group-hover:text-[#ff2d78] transition-colors">Робота з донатерами + аналітика ефірів</span>
               </li>
-              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-white/20/10 group">
-                <span class="text-white/60 text-sm font-display pt-1 w-8 shrink-0">07</span>
-                <span class="text-lg md:text-xl font-medium group-hover:text-pink-500 transition-colors">Технічна підтримка акаунта</span>
+              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-[#2d1b4e]/15 group">
+                <span class="text-[#6b5b8a] text-sm font-display pt-1 w-8 shrink-0">07</span>
+                <span class="text-lg md:text-xl font-medium text-[#2d1b4e] group-hover:text-[#ff2d78] transition-colors">Технічна підтримка акаунта</span>
               </li>
-              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-white/20/10 group">
-                <span class="text-white/60 text-sm font-display pt-1 w-8 shrink-0">08</span>
-                <span class="text-lg md:text-xl font-medium group-hover:text-pink-500 transition-colors">15 кваліфікованих спеціалістів</span>
+              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-[#2d1b4e]/15 group">
+                <span class="text-[#6b5b8a] text-sm font-display pt-1 w-8 shrink-0">08</span>
+                <span class="text-lg md:text-xl font-medium text-[#2d1b4e] group-hover:text-[#ff2d78] transition-colors">15 кваліфікованих спеціалістів</span>
               </li>
-              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-b border-white/20/10 group">
-                <span class="text-white/60 text-sm font-display pt-1 w-8 shrink-0">09</span>
-                <span class="text-lg md:text-xl font-medium group-hover:text-pink-500 transition-colors">Онлайн майстер-класи від топів TikTok</span>
+              <li class="why-item flex gap-6 md:gap-10 py-6 border-t border-b border-[#2d1b4e]/15 group">
+                <span class="text-[#6b5b8a] text-sm font-display pt-1 w-8 shrink-0">09</span>
+                <span class="text-lg md:text-xl font-medium text-[#2d1b4e] group-hover:text-[#ff2d78] transition-colors">Онлайн майстер-класи від топів TikTok</span>
               </li>
             </ul>
           </div>
@@ -1200,7 +1204,7 @@
     </section>
 
     <!-- ========== TEAM ========== -->
-    <section id="team" class="relative py-16 md:py-24 overflow-hidden bg-[#1e293b]/50">
+    <section id="team" class="relative py-16 md:py-24 overflow-hidden bg-[#fdf0f7]/60">
       <!-- Monogram extra 3 - Team section (larger) -->
       <div class="monogram-element absolute top-[35%] right-[12%] w-16 h-16 md:w-20 md:h-20 opacity-12 animate-monogram-4" style="animation-delay: -45s;">
         <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
@@ -1213,53 +1217,53 @@
       
       <div class="px-5 md:px-10 max-w-[1600px] mx-auto">
         <div class="mb-10 md:mb-14">
-          <p class="text-xs tracking-[0.3em] uppercase text-white/60 mb-4">Люди</p>
-          <h2 class="font-display font-700 text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.95] tracking-tighter">
+          <p class="text-xs tracking-[0.3em] uppercase text-[#6b5b8a] mb-4">Люди</p>
+          <h2 class="font-display font-700 text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.95] tracking-tighter text-[#2d1b4e]">
             Співзасновники
           </h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4">
-          <article class="team-card group relative border border-white/20/10 overflow-hidden bg-black/50/50">
+          <article class="team-card group relative border border-pink-border/40 overflow-hidden bg-glass-700">
             <div class="aspect-[4/5] relative overflow-hidden bg-glass-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent opacity-80"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#f5eefe] via-transparent to-transparent opacity-80"></div>
               <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-28 h-28 rounded-full border border-white/20/15 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                  <span class="font-display text-3xl font-700 text-white/70">N1</span>
+                <div class="w-28 h-28 rounded-full border border-pink-border/30 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                  <span class="font-display text-3xl font-700 text-[#2d1b4e]">N1</span>
                 </div>
               </div>
             </div>
             <div class="p-6">
-              <h3 class="font-display text-xl font-700 tracking-tight">Name 1</h3>
-              <p class="mt-1 text-xs tracking-widest uppercase text-white/60">Співзасновник</p>
+              <h3 class="font-display text-xl font-700 tracking-tight text-[#2d1b4e]">Name 1</h3>
+              <p class="mt-1 text-xs tracking-widest uppercase text-[#6b5b8a]">Співзасновник</p>
             </div>
           </article>
-          <article class="team-card group relative border border-white/20/10 overflow-hidden bg-black/50/50 md:mt-12">
+          <article class="team-card group relative border border-pink-border/40 overflow-hidden bg-glass-700 md:mt-12">
             <div class="aspect-[4/5] relative overflow-hidden bg-glass-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent opacity-80"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#f5eefe] via-transparent to-transparent opacity-80"></div>
               <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-28 h-28 rounded-full border border-white/20/15 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                  <span class="font-display text-3xl font-700 text-white/70">N2</span>
+                <div class="w-28 h-28 rounded-full border border-pink-border/30 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                  <span class="font-display text-3xl font-700 text-[#2d1b4e]">N2</span>
                 </div>
               </div>
             </div>
             <div class="p-6">
-              <h3 class="font-display text-xl font-700 tracking-tight">Name 2</h3>
-              <p class="mt-1 text-xs tracking-widest uppercase text-white/60">Співзасновник</p>
+              <h3 class="font-display text-xl font-700 tracking-tight text-[#2d1b4e]">Name 2</h3>
+              <p class="mt-1 text-xs tracking-widest uppercase text-[#6b5b8a]">Співзасновник</p>
             </div>
           </article>
-          <article class="team-card group relative border border-white/20/10 overflow-hidden bg-black/50/50">
+          <article class="team-card group relative border border-pink-border/40 overflow-hidden bg-glass-700">
             <div class="aspect-[4/5] relative overflow-hidden bg-glass-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent opacity-80"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#f5eefe] via-transparent to-transparent opacity-80"></div>
               <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-28 h-28 rounded-full border border-white/20/15 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                  <span class="font-display text-3xl font-700 text-white/70">N3</span>
+                <div class="w-28 h-28 rounded-full border border-pink-border/30 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                  <span class="font-display text-3xl font-700 text-[#2d1b4e]">N3</span>
                 </div>
               </div>
             </div>
             <div class="p-6">
-              <h3 class="font-display text-xl font-700 tracking-tight">Name 3</h3>
-              <p class="mt-1 text-xs tracking-widest uppercase text-white/60">Співзасновник</p>
+              <h3 class="font-display text-xl font-700 tracking-tight text-[#2d1b4e]">Name 3</h3>
+              <p class="mt-1 text-xs tracking-widest uppercase text-[#6b5b8a]">Співзасновник</p>
             </div>
           </article>
         </div>
@@ -1267,7 +1271,7 @@
     </section>
 
     <!-- ========== REQUIREMENTS ========== -->
-    <section id="requirements" class="relative py-16 md:py-20 bg-[#1e293b]/50">
+    <section id="requirements" class="relative py-16 md:py-20 bg-[#efe4fb]/60">
       <!-- Monogram extra 4 - Requirements section (larger) -->
       <div class="monogram-element absolute top-[20%] left-[15%] w-16 h-16 md:w-20 md:h-20 opacity-11 animate-monogram-2" style="animation-delay: -50s;">
         <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
@@ -1275,51 +1279,51 @@
       
       <div class="px-5 md:px-10 max-w-[1100px] mx-auto">
         <div class="text-center mb-10">
-          <p class="text-xs tracking-[0.3em] uppercase text-white/60 mb-4">Перед стартом</p>
-          <h2 class="font-display font-700 text-[clamp(2rem,5vw,3.5rem)] leading-[0.95] tracking-tighter">
+          <p class="text-xs tracking-[0.3em] uppercase text-[#6b5b8a] mb-4">Перед стартом</p>
+          <h2 class="font-display font-700 text-[clamp(2rem,5vw,3.5rem)] leading-[0.95] tracking-tighter text-[#2d1b4e]">
             Мінімальні вимоги
           </h2>
         </div>
-        <div class="border border-white/20/10 bg-black/50/30 p-8 md:p-12">
-          <ul class="space-y-5 text-base md:text-lg leading-relaxed">
+        <div class="border border-pink-border/40 bg-[rgba(255,240,250,0.85)] p-8 md:p-12 rounded-2xl shadow-sm">
+          <ul class="space-y-5 text-base md:text-lg leading-relaxed text-[#2d1b4e]">
             <li class="flex gap-4">
-              <span class="text-pink-500 shrink-0 mt-1">▸</span>
+              <span class="text-[#ff2d78] shrink-0 mt-1">▸</span>
               <span>Бути старше 18 років</span>
             </li>
             <li class="flex gap-4">
-              <span class="text-pink-500 shrink-0 mt-1">▸</span>
+              <span class="text-[#ff2d78] shrink-0 mt-1">▸</span>
               <span>Не співпрацювати з іншими TikTok Live агентствами</span>
             </li>
             <li class="flex gap-4">
-              <span class="text-pink-500 shrink-0 mt-1">▸</span>
-              <span>Бути готовим проводити прямі ефіри не менше <strong class="text-white">4 годин на день</strong>, щоб заробляти від <strong class="text-pink-500">$2 000</strong> щомісяця</span>
+              <span class="text-[#ff2d78] shrink-0 mt-1">▸</span>
+              <span>Бути готовим проводити прямі ефіри не менше <strong class="text-[#2d1b4e]">4 годин на день</strong>, щоб заробляти від <strong class="text-[#ff2d78]">$2 000</strong> щомісяця</span>
             </li>
             <li class="flex gap-4">
-              <span class="text-pink-500 shrink-0 mt-1">▸</span>
+              <span class="text-[#ff2d78] shrink-0 mt-1">▸</span>
               <span>Дотримуватися правил платформи TikTok та правил нашої спільноти</span>
             </li>
             <li class="flex gap-4">
-              <span class="text-pink-500 shrink-0 mt-1">▸</span>
+              <span class="text-[#ff2d78] shrink-0 mt-1">▸</span>
               <span>Проходити навчання від наших продюсерів</span>
             </li>
             <li class="flex gap-4">
-              <span class="text-pink-500 shrink-0 mt-1">▸</span>
-              <span>Бути на зв'язку зі своїм менеджером <strong class="text-white">6 днів на тиждень</strong></span>
+              <span class="text-[#ff2d78] shrink-0 mt-1">▸</span>
+              <span>Бути на зв'язку зі своїм менеджером <strong class="text-[#2d1b4e]">6 днів на тиждень</strong></span>
             </li>
             <li class="flex gap-4">
-              <span class="text-pink-500 shrink-0 mt-1">▸</span>
+              <span class="text-[#ff2d78] shrink-0 mt-1">▸</span>
               <span>Вміти працювати в команді</span>
             </li>
             <li class="flex gap-4">
-              <span class="text-pink-500 shrink-0 mt-1">▸</span>
+              <span class="text-[#ff2d78] shrink-0 mt-1">▸</span>
               <span>Мати смартфон із якісною фронтальною камерою</span>
             </li>
             <li class="flex gap-4">
-              <span class="text-pink-500 shrink-0 mt-1">▸</span>
+              <span class="text-[#ff2d78] shrink-0 mt-1">▸</span>
               <span>Бути харизматичним, активним та комунікабельним</span>
             </li>
             <li class="flex gap-4">
-              <span class="text-pink-500 shrink-0 mt-1">▸</span>
+              <span class="text-[#ff2d78] shrink-0 mt-1">▸</span>
               <span>Усвідомлювати, що стрімінг — це повноцінна високооплачувана робота</span>
             </li>
           </ul>
@@ -1334,40 +1338,40 @@
     </section>
 
     <!-- ========== APPLY / FORM ========== -->
-    <section id="apply" class="relative py-16 md:py-24 overflow-hidden bg-[#1e293b]/50">
+    <section id="apply" class="relative py-16 md:py-24 overflow-hidden bg-[#fdf0f7]/70">
       <!-- Monogram extra 5 - Apply section (larger) -->
       <div class="monogram-element absolute top-[25%] right-[18%] w-20 h-20 md:w-24 md:h-24 opacity-13 animate-monogram-5" style="animation-delay: -55s;">
         <img src="assets/images/logo-exlive.png" alt="" class="w-full h-full object-contain filter blur-[0.8px]">
       </div>
       
-      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-paper/15 to-transparent"></div>
+      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#ff2d78]/20 to-transparent"></div>
       <div class="px-5 md:px-10 max-w-[900px] mx-auto">
         <div class="text-center mb-10 md:mb-12">
-          <p class="text-xs tracking-[0.3em] uppercase text-white/60 mb-4">Заявка</p>
-          <h2 class="font-display font-700 text-[clamp(2.2rem,5vw,3.8rem)] leading-[0.95] tracking-tighter">
-            Зростати разом<br><span class="text-pink-500">з нами</span>
+          <p class="text-xs tracking-[0.3em] uppercase text-[#6b5b8a] mb-4">Заявка</p>
+          <h2 class="font-display font-700 text-[clamp(2.2rem,5vw,3.8rem)] leading-[0.95] tracking-tighter text-[#2d1b4e]">
+            Зростати разом<br><span class="text-[#ff2d78]">з нами</span>
           </h2>
-          <p class="mt-4 text-white/60 max-w-md mx-auto">Заповни форму — менеджер зв'яжеться протягом 24 годин.</p>
+          <p class="mt-4 text-[#6b5b8a] max-w-md mx-auto">Заповни форму — менеджер зв'яжеться протягом 24 годин.</p>
         </div>
 
         <form id="applicationForm" class="max-w-md mx-auto space-y-6">
           <!-- Ім'я -->
           <div class="form-group">
-            <label for="name" class="block text-sm font-medium text-white/90 mb-2">Ім'я</label>
+            <label for="name" class="block text-sm font-medium text-[#2d1b4e] mb-2">Ім'я</label>
             <input 
               type="text" 
               id="name" 
               name="name" 
               maxlength="255"
               required
-              class="w-full px-4 py-3 bg-glass-600/80 backdrop-blur-lg border border-pink-border/50 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/30 transition-all duration-300 shadow-lg"
+              class="w-full px-4 py-3 bg-[rgba(255,240,250,0.9)] backdrop-blur-lg border border-pink-border rounded-lg text-[#2d1b4e] placeholder-[#6b5b8a]/60 focus:outline-none focus:border-[#ff2d78] focus:ring-2 focus:ring-pink-500/30 transition-all duration-300 shadow-md"
               placeholder="Введіть ваше ім'я"
             >
           </div>
 
           <!-- Вік -->
           <div class="form-group">
-            <label for="age" class="block text-sm font-medium text-white/90 mb-2">Вік</label>
+            <label for="age" class="block text-sm font-medium text-[#2d1b4e] mb-2">Вік</label>
             <input 
               type="number" 
               id="age" 
@@ -1375,46 +1379,46 @@
               min="18" 
               max="100"
               required
-              class="w-full px-4 py-3 bg-glass-600/80 backdrop-blur-lg border border-pink-border/50 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/30 transition-all duration-300 shadow-lg"
+              class="w-full px-4 py-3 bg-[rgba(255,240,250,0.9)] backdrop-blur-lg border border-pink-border rounded-lg text-[#2d1b4e] placeholder-[#6b5b8a]/60 focus:outline-none focus:border-[#ff2d78] focus:ring-2 focus:ring-pink-500/30 transition-all duration-300 shadow-md"
               placeholder="Ваш вік"
             >
           </div>
 
           <!-- TikTok -->
           <div class="form-group">
-            <label for="tiktok" class="block text-sm font-medium text-white/90 mb-2">TikTok</label>
+            <label for="tiktok" class="block text-sm font-medium text-[#2d1b4e] mb-2">TikTok</label>
             <input 
               type="text" 
               id="tiktok" 
               name="tiktok" 
               required
-              class="w-full px-4 py-3 bg-glass-600/80 backdrop-blur-lg border border-pink-border/50 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/30 transition-all duration-300 shadow-lg"
+              class="w-full px-4 py-3 bg-[rgba(255,240,250,0.9)] backdrop-blur-lg border border-pink-border rounded-lg text-[#2d1b4e] placeholder-[#6b5b8a]/60 focus:outline-none focus:border-[#ff2d78] focus:ring-2 focus:ring-pink-500/30 transition-all duration-300 shadow-md"
               placeholder="@username"
             >
           </div>
 
           <!-- Telegram -->
           <div class="form-group">
-            <label for="telegram" class="block text-sm font-medium text-white/90 mb-2">Telegram</label>
+            <label for="telegram" class="block text-sm font-medium text-[#2d1b4e] mb-2">Telegram</label>
             <input 
               type="text" 
               id="telegram" 
               name="telegram" 
               required
-              class="w-full px-4 py-3 bg-glass-600/80 backdrop-blur-lg border border-pink-border/50 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/30 transition-all duration-300 shadow-lg"
+              class="w-full px-4 py-3 bg-[rgba(255,240,250,0.9)] backdrop-blur-lg border border-pink-border rounded-lg text-[#2d1b4e] placeholder-[#6b5b8a]/60 focus:outline-none focus:border-[#ff2d78] focus:ring-2 focus:ring-pink-500/30 transition-all duration-300 shadow-md"
               placeholder="@username"
             >
           </div>
 
           <!-- Phone -->
           <div class="form-group">
-            <label for="phone" class="block text-sm font-medium text-white/90 mb-2">Телефон</label>
+            <label for="phone" class="block text-sm font-medium text-[#2d1b4e] mb-2">Телефон</label>
             <input 
               type="tel" 
               id="phone" 
               name="phone" 
               required
-              class="w-full px-4 py-3 bg-glass-600/80 backdrop-blur-lg border border-pink-border/50 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/30 transition-all duration-300 shadow-lg"
+              class="w-full px-4 py-3 bg-[rgba(255,240,250,0.9)] backdrop-blur-lg border border-pink-border rounded-lg text-[#2d1b4e] placeholder-[#6b5b8a]/60 focus:outline-none focus:border-[#ff2d78] focus:ring-2 focus:ring-pink-500/30 transition-all duration-300 shadow-md"
               placeholder="+380 XX XXX XX XX"
             >
           </div>
@@ -1445,56 +1449,58 @@
   </main>
 
   <!-- ========== FOOTER ========== -->
-  <footer class="relative border-t border-white/20/10 pt-16 pb-10 bg-[#0f172a]/80">
+  <footer class="relative border-t border-pink-border/30 pt-16 pb-10 bg-[#efe4fb]">
     <div class="px-5 md:px-10 max-w-[1600px] mx-auto">
       <div class="flex flex-col md:flex-row justify-between gap-12">
         <div>
           <a href="/" class="flex items-center gap-3 group">
-            <img src="assets/images/logo-exlive.png" alt="Exlive Logo" class="h-10 w-auto object-contain transition-transform group-hover:scale-105">
-            <span class="font-display text-2xl font-800 tracking-tighter">Exlive</span>
+            <span class="logo-badge-footer">
+              <img src="assets/images/logo-exlive.png" alt="Exlive Logo" class="h-10 w-auto object-contain transition-transform group-hover:scale-105 relative z-10">
+            </span>
+            <span class="font-display text-2xl font-800 tracking-tighter text-[#2d1b4e]">Exlive</span>
           </a>
-          <p class="mt-4 text-sm text-white/60 max-w-xs leading-relaxed">
+          <p class="mt-4 text-sm text-[#6b5b8a] max-w-xs leading-relaxed">
             Офіційна TikTok Live Agency. Тренуємо та продюсуємо стрімерів з xxxx року.
           </p>
           <div class="flex gap-4 mt-6">
-            <a href="https://instagram.com/exlivee.agency/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-white/60 hover:text-pink-500 transition-colors" aria-label="Instagram">
+            <a href="https://instagram.com/exlivee.agency/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-[#6b5b8a] hover:text-[#ff2d78] transition-colors" aria-label="Instagram">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             </a>
-            <a href="https://t.me/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-white/60 hover:text-pink-500 transition-colors" aria-label="Telegram">
+            <a href="https://t.me/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-[#6b5b8a] hover:text-[#ff2d78] transition-colors" aria-label="Telegram">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
             </a>
-            <a href="https://tiktok.com/@exlive.agency/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-white/60 hover:text-pink-500 transition-colors" aria-label="TikTok">
+            <a href="https://tiktok.com/@exlive.agency/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-[#6b5b8a] hover:text-[#ff2d78] transition-colors" aria-label="TikTok">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
             </a>
           </div>
         </div>
-        <div class="flex flex-wrap gap-x-16 gap-y-8 text-sm">
+        <div class="flex flex-wrap gap-x-16 gap-y-8 text-sm text-[#2d1b4e]">
           <div>
-            <p class="text-xs tracking-widest uppercase text-white/60 mb-4">Навігація</p>
+            <p class="text-xs tracking-widest uppercase text-[#6b5b8a] mb-4">Навігація</p>
             <ul class="space-y-2">
-              <li><a href="#about" class="hover:text-purple-400 transition-colors">Про нас</a></li>
-              <li><a href="#cases" class="hover:text-purple-400 transition-colors">Кейси</a></li>
-              <li><a href="#team" class="hover:text-purple-400 transition-colors">Команда</a></li>
-              <li><a href="#apply" class="hover:text-purple-400 transition-colors">Заявка</a></li>
+              <li><a href="#about" class="hover:text-[#ff2d78] transition-colors">Про нас</a></li>
+              <li><a href="#cases" class="hover:text-[#ff2d78] transition-colors">Кейси</a></li>
+              <li><a href="#team" class="hover:text-[#ff2d78] transition-colors">Команда</a></li>
+              <li><a href="#apply" class="hover:text-[#ff2d78] transition-colors">Заявка</a></li>
             </ul>
           </div>
           <div>
-            <p class="text-xs tracking-widest uppercase text-white/60 mb-4">Соціальні мережі</p>
+            <p class="text-xs tracking-widest uppercase text-[#6b5b8a] mb-4">Соціальні мережі</p>
             <div class="flex gap-3">
-              <a href="https://instagram.com/exlivee.agency/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-white/60 hover:text-purple-400 transition-colors" aria-label="Instagram">
+              <a href="https://instagram.com/exlivee.agency/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-[#6b5b8a] hover:text-[#ff2d78] transition-colors" aria-label="Instagram">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
               </a>
-              <a href="https://t.me/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-white/60 hover:text-purple-400 transition-colors" aria-label="Telegram">
+              <a href="https://t.me/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-[#6b5b8a] hover:text-[#ff2d78] transition-colors" aria-label="Telegram">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
               </a>
-              <a href="https://tiktok.com/@exlive.agency/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-white/60 hover:text-purple-400 transition-colors" aria-label="TikTok">
+              <a href="https://tiktok.com/@exlive.agency/" target="_blank" rel="noopener" class="w-8 h-8 flex items-center justify-center text-[#6b5b8a] hover:text-[#ff2d78] transition-colors" aria-label="TikTok">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
               </a>
             </div>
           </div>
           <div>
-            <p class="text-xs tracking-widest uppercase text-white/60 mb-4">Юридична</p>
-            <p class="text-white/60 text-xs leading-relaxed max-w-[200px]">
+            <p class="text-xs tracking-widest uppercase text-[#6b5b8a] mb-4">Юридична</p>
+            <p class="text-[#6b5b8a] text-xs leading-relaxed max-w-[200px]">
               EXLIVE LIMITED<br>
               Incorporated in England and Wales<br>
               Incorporation Number: XXXXXXXX
@@ -1502,7 +1508,7 @@
           </div>
         </div>
       </div>
-      <div class="mt-16 pt-8 border-t border-white/20/10 flex flex-col sm:flex-row justify-between gap-4 text-xs text-white/60">
+      <div class="mt-16 pt-8 border-t border-pink-border/20 flex flex-col sm:flex-row justify-between gap-4 text-xs text-[#6b5b8a]">
         <p>Copyright © 2022–2026 All Rights Reserved.</p>
         <p>EXLIVE LIMITED</p>
       </div>
