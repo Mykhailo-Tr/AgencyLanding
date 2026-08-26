@@ -702,7 +702,6 @@
         toggleActions: 'play none none none'
       },
       scale: 0.92,
-      opacity: 0,
       duration: 1.1,
       ease: 'power3.out'
     });
