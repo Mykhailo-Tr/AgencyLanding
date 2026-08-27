@@ -10,7 +10,7 @@
   
   if (prefersReducedMotion) {
     // Fallback to static gradient for reduced motion
-    document.body.style.background = 'radial-gradient(ellipse at top right, rgba(244, 63, 142, 0.3) 0%, transparent 50%), radial-gradient(ellipse at bottom left, rgba(56, 232, 220, 0.25) 0%, transparent 50%), #1c1430';
+    document.body.style.background = 'radial-gradient(ellipse at top right, rgba(255, 45, 85, 0.15) 0%, transparent 50%), radial-gradient(ellipse at bottom left, rgba(0, 240, 255, 0.1) 0%, transparent 50%), #050505';
     return;
   }
 
@@ -23,7 +23,7 @@
   const gl = canvas.getContext('webgl2');
   if (!gl) {
     console.warn('WebGL2 not supported, using fallback');
-    document.body.style.background = 'radial-gradient(ellipse at top right, rgba(244, 63, 142, 0.3) 0%, transparent 50%), radial-gradient(ellipse at bottom left, rgba(56, 232, 220, 0.25) 0%, transparent 50%), #1c1430';
+    document.body.style.background = 'radial-gradient(ellipse at top right, rgba(255, 45, 85, 0.15) 0%, transparent 50%), radial-gradient(ellipse at bottom left, rgba(0, 240, 255, 0.1) 0%, transparent 50%), #050505';
     return;
   }
 
@@ -90,9 +90,9 @@
       }
       
       // Color palette
-      vec3 bgBase = vec3(0.9608, 0.9333, 0.9961);   // Light tinted lavender base (#1c1430)
-      vec3 accentLive = vec3(0.9569, 0.2471, 0.5569);  // Vibrant pink accent (#f43f8e)
-      vec3 accentTech = vec3(0.2196, 0.9098, 0.8627); // Turquoise accent (#38e8dc)
+      vec3 bgBase = vec3(0.02, 0.02, 0.03);      // Dark base
+      vec3 accentLive = vec3(0.96, 0.18, 0.42);  // Pink accent
+      vec3 accentTech = vec3(0.0, 0.94, 1.0);    // Cyan accent
       
       // Mix colors based on noise and position
       vec3 color = mix(bgBase, accentLive, (combinedNoise + 0.5) * 0.3 * uv.y);

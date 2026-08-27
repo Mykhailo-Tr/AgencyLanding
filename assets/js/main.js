@@ -113,8 +113,7 @@
 
       if (isVideo) {
         card.innerHTML = `
-          <div class="relative w-full h-full bg-[rgba(61,42,99,0.7)] flex items-center justify-center">
-          <div class="relative w-full h-full bg-gradient-to-br from-[rgba(42,28,74,0.85)] to-[rgba(28,18,52,0.95)] border border-pink-border/40 flex items-center justify-center">
+          <div class="relative w-full h-full bg-black/50 flex items-center justify-center">
             <video 
               src="${file}" 
               class="carousel-video w-full h-full object-contain"
@@ -124,13 +123,13 @@
               preload="metadata"
               onerror="console.error('Video error:', '${file}'); this.parentElement.parentElement.classList.add('error');"
             ></video>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#1c1430]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <button class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" onclick="toggleVideoPlay(this)">
-              <svg class="w-12 h-12 text-[#f43f8e]" fill="currentColor" viewBox="0 0 24 24">
+              <svg class="w-12 h-12 text-white/90" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z"/>
               </svg>
             </button>
-            <button class="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center rounded-full glass-card text-[#f1e9fb] hover:text-[#f43f8e] transition-all duration-300 z-20" onclick="toggleVideoMute(this)" title="Увімкнути звук">
+            <button class="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center rounded-full glass-card text-white/80 hover:text-pink-400 transition-all duration-300 z-20" onclick="toggleVideoMute(this)" title="Увімкнути звук">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
               </svg>
@@ -139,8 +138,7 @@
         `;
       } else if (isImage) {
         card.innerHTML = `
-          <div class="relative w-full h-full bg-[rgba(61,42,99,0.7)]">
-          <div class="relative w-full h-full bg-gradient-to-br from-[rgba(42,28,74,0.85)] to-[rgba(28,18,52,0.95)] border border-pink-border/40">
+          <div class="relative w-full h-full bg-black/50">
             <img 
               src="${file}" 
               alt="Portfolio work ${index + 1}" 
@@ -148,7 +146,7 @@
               loading="lazy"
               onerror="console.error('Image error:', '${file}'); this.parentElement.parentElement.classList.add('error');"
             >
-            <div class="absolute inset-0 bg-gradient-to-t from-[#1c1430]/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
         `;
       } else {
@@ -392,7 +390,7 @@
         
         // Add glow effect on hover
         gsap.to(el, {
-          boxShadow: '0 0 30px rgba(244, 63, 142, 0.45)',
+          boxShadow: '0 0 30px rgba(236, 72, 153, 0.4)',
           duration: 0.3
         });
       });
@@ -695,16 +693,24 @@
   // Earnings big numbers subtle scale
   const earningsSection = document.getElementById('earnings');
   if (earningsSection) {
-    gsap.from(earningsSection.querySelector('h2'), {
-      scrollTrigger: {
-        trigger: earningsSection,
-        start: 'top 75%',
-        toggleActions: 'play none none none'
+    gsap.fromTo(
+      earningsSection.querySelector('h2'),
+      {
+        opacity: 0,
+        scale: 0.92
       },
-      scale: 0.92,
-      duration: 1.1,
-      ease: 'power3.out'
-    });
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 1.1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: earningsSection,
+          start: 'top 75%',
+          toggleActions: 'play none none none'
+        }
+      }
+    );
   }
 
   // ---------- Header hide/show on scroll ----------
@@ -870,10 +876,9 @@
 
       // Honeypot
       if (data.website) {
-        formMessage.innerHTML =
-          '<span class="form-message-icon" aria-hidden="true"><svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-10.707a1 1 0 00-1.414-1.414l-3.5 3.5-1.5-1.5a1 1 0 00-1.414 1.414l2.207 2.207a1 1 0 001.414 0l4.207-4.207z" clip-rule="evenodd"/></svg></span>' +
-          '<span class="form-message-text">Заявку надіслано. Очікуй дзвінка.</span>';
-        formMessage.className = 'form-message form-message-success';
+        formMessage.textContent = '';
+        formMessage.className = 'text-sm text-center min-h-[1.5rem] text-green-400';
+        formMessage.textContent = 'Заявку надіслано. Очікуй дзвінка.';
         form.reset();
         return;
       }
@@ -918,18 +923,14 @@
 
         if (!res.ok) throw new Error('Network error');
 
-        formMessage.innerHTML =
-          '<span class="form-message-icon" aria-hidden="true"><svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-10.707a1 1 0 00-1.414-1.414l-3.5 3.5-1.5-1.5a1 1 0 00-1.414 1.414l2.207 2.207a1 1 0 001.414 0l4.207-4.207z" clip-rule="evenodd"/></svg></span>' +
-          '<span class="form-message-text">Заявку надіслано. Менеджер звʼяжеться протягом 24 годин.</span>';
-        formMessage.className = 'form-message form-message-success';
+        formMessage.className = 'text-sm text-center min-h-[1.5rem] text-green-400';
+        formMessage.textContent = 'Заявку надіслано. Менеджер звʼяжеться протягом 24 годин.';
         form.reset();
       } catch (err) {
         // For demo / offline: simulate success so UX can be tested
         console.warn('API unreachable, simulating success for demo', err);
-        formMessage.innerHTML =
-          '<span class="form-message-icon" aria-hidden="true"><svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-10.707a1 1 0 00-1.414-1.414l-3.5 3.5-1.5-1.5a1 1 0 00-1.414 1.414l2.207 2.207a1 1 0 001.414 0l4.207-4.207z" clip-rule="evenodd"/></svg></span>' +
-          '<span class="form-message-text">Заявку надіслано. Менеджер звʼяжеться протягом 24 годин.</span>';
-        formMessage.className = 'form-message form-message-success';
+        formMessage.className = 'text-sm text-center min-h-[1.5rem] text-green-400';
+        formMessage.textContent = 'Заявку надіслано. Менеджер звʼяжеться протягом 24 годин.';
         form.reset();
       } finally {
         btnText.classList.remove('hidden');
@@ -941,10 +942,8 @@
 
   function showError(msg) {
     if (!formMessage) return;
-    formMessage.innerHTML =
-      '<span class="form-message-icon" aria-hidden="true"><svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L10 8.586 7.707 6.293a1 1 0 00-1.414 1.414L8.586 10l-2.293 2.293a1 1 0 001.414 1.414L10 11.414l2.293 2.293a1 1 0 001.414-1.414L11.414 10l2.293-2.293z" clip-rule="evenodd"/></svg></span>' +
-      '<span class="form-message-text">' + msg + '</span>';
-    formMessage.className = 'form-message form-message-error';
+    formMessage.className = 'text-sm text-center min-h-[1.5rem] text-red-400';
+    formMessage.textContent = msg;
   }
 
   // ---------- Lightweight parallax effects (non-blocking) ----------
