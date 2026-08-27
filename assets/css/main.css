@@ -1475,3 +1475,99 @@ html {
 .ambient-bloom {
   will-change: opacity;
 }
+
+/* ===== FAQ Card unique pink backgrounds ===== */
+.faq-card-1 {
+  background:
+    radial-gradient(ellipse 70% 60% at 110% -10%, rgba(236,72,153,0.48) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 45% at -10% 110%, rgba(219,39,119,0.32) 0%, transparent 60%),
+    var(--glass-700);
+}
+.faq-card-1:hover {
+  background:
+    radial-gradient(ellipse 70% 60% at 110% -10%, rgba(236,72,153,0.62) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 45% at -10% 110%, rgba(219,39,119,0.46) 0%, transparent 60%),
+    var(--glass-800);
+}
+
+.faq-card-2 {
+  background:
+    radial-gradient(ellipse 80% 55% at 50% 120%, rgba(236,72,153,0.52) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 40% at -5% -5%, rgba(244,114,182,0.38) 0%, transparent 55%),
+    var(--glass-700);
+}
+.faq-card-2:hover {
+  background:
+    radial-gradient(ellipse 80% 55% at 50% 120%, rgba(236,72,153,0.66) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 40% at -5% -5%, rgba(244,114,182,0.50) 0%, transparent 55%),
+    var(--glass-800);
+}
+
+.faq-card-3 {
+  background:
+    radial-gradient(ellipse 60% 70% at 115% 35%, rgba(236,72,153,0.44) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 40% at -5% 100%, rgba(219,39,119,0.36) 0%, transparent 58%),
+    var(--glass-700);
+}
+.faq-card-3:hover {
+  background:
+    radial-gradient(ellipse 60% 70% at 115% 35%, rgba(236,72,153,0.58) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 40% at -5% 100%, rgba(219,39,119,0.50) 0%, transparent 58%),
+    var(--glass-800);
+}
+
+.faq-card-4 {
+  background:
+    radial-gradient(ellipse 65% 65% at -10% -10%, rgba(236,72,153,0.52) 0%, transparent 62%),
+    radial-gradient(ellipse 60% 60% at 110% 110%, rgba(219,39,119,0.46) 0%, transparent 60%),
+    var(--glass-700);
+}
+.faq-card-4:hover {
+  background:
+    radial-gradient(ellipse 65% 65% at -10% -10%, rgba(236,72,153,0.66) 0%, transparent 62%),
+    radial-gradient(ellipse 60% 60% at 110% 110%, rgba(219,39,119,0.60) 0%, transparent 60%),
+    var(--glass-800);
+}
+
+.faq-card-5 {
+  background:
+    radial-gradient(ellipse 100% 55% at 50% 120%, rgba(236,72,153,0.44) 0%, transparent 62%),
+    radial-gradient(ellipse 35% 35% at 50% -5%, rgba(244,114,182,0.30) 0%, transparent 55%),
+    var(--glass-700);
+}
+.faq-card-5:hover {
+  background:
+    radial-gradient(ellipse 100% 55% at 50% 120%, rgba(236,72,153,0.58) 0%, transparent 62%),
+    radial-gradient(ellipse 35% 35% at 50% -5%, rgba(244,114,182,0.44) 0%, transparent 55%),
+    var(--glass-800);
+}
+
+.faq-card-6 {
+  background:
+    radial-gradient(ellipse 60% 80% at -10% 50%, rgba(236,72,153,0.48) 0%, transparent 62%),
+    radial-gradient(ellipse 50% 50% at 110% -10%, rgba(244,114,182,0.36) 0%, transparent 58%),
+    var(--glass-700);
+}
+.faq-card-6:hover {
+  background:
+    radial-gradient(ellipse 60% 80% at -10% 50%, rgba(236,72,153,0.62) 0%, transparent 62%),
+    radial-gradient(ellipse 50% 50% at 110% -10%, rgba(244,114,182,0.50) 0%, transparent 58%),
+    var(--glass-800);
+}
+
+.faq-card-7 {
+  background:
+    radial-gradient(ellipse 40% 90% at -5% 50%, rgba(236,72,153,0.48) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 60% at 50% 115%, rgba(219,39,119,0.42) 0%, transparent 62%),
+    radial-gradient(ellipse 40% 90% at 105% 50%, rgba(236,72,153,0.44) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 50% -5%, rgba(244,114,182,0.30) 0%, transparent 55%),
+    var(--glass-700);
+}
+.faq-card-7:hover {
+  background:
+    radial-gradient(ellipse 40% 90% at -5% 50%, rgba(236,72,153,0.62) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 60% at 50% 115%, rgba(219,39,119,0.56) 0%, transparent 62%),
+    radial-gradient(ellipse 40% 90% at 105% 50%, rgba(236,72,153,0.58) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 50% -5%, rgba(244,114,182,0.44) 0%, transparent 55%),
+    var(--glass-800);
+}
