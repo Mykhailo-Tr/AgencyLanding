@@ -8,24 +8,24 @@
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   
-  if (prefersReducedMotion) {
-    // Fallback to static gradient for reduced motion
-    document.body.style.background = 'radial-gradient(ellipse at top right, rgba(255, 45, 85, 0.15) 0%, transparent 50%), radial-gradient(ellipse at bottom left, rgba(0, 240, 255, 0.1) 0%, transparent 50%), #050505';
-    return;
-  }
+    if (prefersReducedMotion) {
+      // Fallback to static gradient for reduced motion
+      document.body.style.background = 'radial-gradient(ellipse at top right, rgba(236, 72, 153, 0.35) 0%, transparent 60%), radial-gradient(ellipse at bottom left, rgba(244, 114, 182, 0.25) 0%, transparent 60%), #0a030d';
+      return;
+    }
 
-  // Check WebGL2 support
-  const canvas = document.createElement('canvas');
-  canvas.id = 'webgl-canvas';
-  canvas.style.cssText = 'position: fixed; inset: 0; z-index: -1; pointer-events: none;';
-  document.body.insertBefore(canvas, document.body.firstChild);
+    // Check WebGL2 support
+    const canvas = document.createElement('canvas');
+    canvas.id = 'webgl-canvas';
+    canvas.style.cssText = 'position: fixed; inset: 0; z-index: -1; pointer-events: none;';
+    document.body.insertBefore(canvas, document.body.firstChild);
 
-  const gl = canvas.getContext('webgl2');
-  if (!gl) {
-    console.warn('WebGL2 not supported, using fallback');
-    document.body.style.background = 'radial-gradient(ellipse at top right, rgba(255, 45, 85, 0.15) 0%, transparent 50%), radial-gradient(ellipse at bottom left, rgba(0, 240, 255, 0.1) 0%, transparent 50%), #050505';
-    return;
-  }
+    const gl = canvas.getContext('webgl2');
+    if (!gl) {
+      console.warn('WebGL2 not supported, using fallback');
+      document.body.style.background = 'radial-gradient(ellipse at top right, rgba(236, 72, 153, 0.35) 0%, transparent 60%), radial-gradient(ellipse at bottom left, rgba(244, 114, 182, 0.25) 0%, transparent 60%), #0a030d';
+      return;
+    }
 
   // Vertex shader - simple fullscreen triangle
   const vertexShaderSource = `#version 300 es
@@ -90,13 +90,13 @@
       }
       
       // Color palette
-      vec3 bgBase = vec3(0.02, 0.02, 0.03);      // Dark base
-      vec3 accentLive = vec3(0.96, 0.18, 0.42);  // Pink accent
-      vec3 accentTech = vec3(0.0, 0.94, 1.0);    // Cyan accent
+      vec3 bgBase = vec3(0.06, 0.02, 0.07);      // Warm deep pink-violet tinted base
+      vec3 accentLive = vec3(0.96, 0.22, 0.55);  // Vibrant pink accent
+      vec3 accentTech = vec3(0.85, 0.20, 0.65);  // Magenta-pink secondary accent
       
-      // Mix colors based on noise and position
-      vec3 color = mix(bgBase, accentLive, (combinedNoise + 0.5) * 0.3 * uv.y);
-      color = mix(color, accentTech, (combinedNoise + 0.5) * 0.15 * (1.0 - uv.y));
+      // Mix colors based on noise and position - richer pink presence
+      vec3 color = mix(bgBase, accentLive, (combinedNoise + 0.6) * 0.55 * (uv.y + 0.2));
+      color = mix(color, accentTech, (combinedNoise + 0.5) * 0.35 * (1.2 - uv.y));
       
       // Add mouse influence
       color += accentLive * mouseInfluence;
