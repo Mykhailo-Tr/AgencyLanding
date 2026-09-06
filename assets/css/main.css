@@ -874,11 +874,11 @@ nav a {
   }
 }
 
-/* Mobile adjustments for case images */
+/* Mobile adjustments for case cards */
 @media (max-width: 767px) {
   .case-card [class*="col-span-5"] {
-    min-height: 250px !important;
-    padding: 1rem;
+    min-height: auto !important;
+    padding: 0;
   }
 
   .case-card [class*="col-span-5"] > div {

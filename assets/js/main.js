@@ -48,7 +48,8 @@
     'assets/videos/IMG_1284.mp4',
     'assets/videos/IMG_1285.mp4',
     'assets/videos/IMG_1286.mp4',
-    'assets/videos/IMG_8778.mp4'
+    'assets/videos/IMG_8778.mp4',
+    'assets/videos/IMG_8781.mp4',
   ];
 
   // Convert all extensions to lowercase for consistent checking
