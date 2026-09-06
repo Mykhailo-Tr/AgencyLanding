@@ -608,23 +608,19 @@
       });
     }
   } else {
-    // Mobile fallback - regular stagger animations
+    // Mobile fallback - fast & responsive entrance
     gsap.utils.toArray('.case-card').forEach((card, i) => {
-      const isEven = i % 2 === 0;
-      
       gsap.from(card, {
         scrollTrigger: {
           trigger: card,
-          start: 'top 80%',
+          start: 'top 92%',
           toggleActions: 'play none none none'
         },
-        x: isEven ? -150 : 150,
-        y: 60,
-        rotation: isEven ? -3 : 3,
+        y: 20,
         opacity: 0,
-        scale: 0.92,
-        duration: 1.1,
-        ease: 'expo.out'
+        scale: 0.97,
+        duration: 0.35,
+        ease: 'power2.out'
       });
     });
   }

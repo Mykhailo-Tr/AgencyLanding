@@ -796,195 +796,231 @@
         <!-- Horizontal scroll track for pinned effect -->
         <div class="cases-track-wrapper relative">
           <div class="cases-track flex flex-col md:flex-row gap-6 md:gap-8" style="width: 100%;">
-          <!-- Case 1 (Настя) — 60% fill, 60-75% brightness -->
-          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 border border-pink-border/40 overflow-hidden bg-glass-700 p-5 md:p-6">
+          <!-- Case 1 (Настя) -->
+          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 items-center gap-5 md:gap-6 lg:gap-8 rounded-3xl border border-pink-border/40 overflow-hidden bg-glass-700 p-4 sm:p-5 md:py-5 md:px-6 lg:py-6 lg:px-8 shadow-2xl transition-all duration-500 hover:border-pink-500/50">
             <!-- Background pink blobs -->
             <div class="absolute -left-12 -top-12 w-80 h-80 rounded-full bg-pink-500/65 blur-3xl group-hover:bg-pink-500/80 transition-all duration-500 pointer-events-none"></div>
             <div class="absolute -right-10 -bottom-10 w-96 h-64 rounded-full bg-pink-600/55 blur-3xl group-hover:bg-pink-600/75 transition-all duration-500 pointer-events-none"></div>
             
-            <div class="md:col-span-5 flex items-center justify-center p-3 relative z-10">
-              <div class="relative inline-block p-2 rounded-lg bg-glass-600 border border-pink-border/50 shadow-2xl">
-                <div class="absolute inset-0 bg-gradient-to-br from-pink-500/30 via-transparent to-pink-600/20 rounded-lg"></div>
-                <img src="assets/images/IMG_0892.jpg" alt="Case 1" class="relative z-10 max-w-[280px] h-auto object-contain rounded shadow-lg">
-                <div class="absolute bottom-2 left-2 text-xs tracking-widest uppercase text-white/60 z-20"></div>
+            <!-- Image Column -->
+            <div class="md:col-span-6 lg:col-span-7 flex items-center justify-center relative z-10 w-full">
+              <div class="relative w-full max-w-[280px] sm:max-w-[340px] md:max-w-none p-2 rounded-2xl bg-glass-600 border border-pink-border/50 shadow-2xl group-hover:border-pink-500/60 transition-all duration-500">
+                <div class="absolute inset-0 bg-gradient-to-br from-pink-500/20 via-transparent to-pink-600/20 rounded-2xl pointer-events-none"></div>
+                <img src="assets/images/IMG_0892.jpg" alt="Case 1 - Настя" class="relative z-10 w-full max-h-[300px] sm:max-h-[340px] md:max-h-[340px] lg:max-h-[380px] object-cover rounded-xl shadow-lg transition-transform duration-500 group-hover:scale-[1.02]">
               </div>
             </div>
-            <div class="md:col-span-7 p-5 md:p-6 flex flex-col justify-center relative z-10">
-              <h3 class="font-display text-2xl md:text-3xl font-700 tracking-tight text-white">Настя</h3>
-              <div class="mt-4 flex flex-wrap gap-3">
-                <div class="px-4 py-2.5 rounded-2xl bg-black/20 backdrop-blur-md border border-white/10 shadow-sm">
-                  <span class="block text-2xl md:text-3xl font-display font-700 text-pink-500">30 тис.</span>
-                  <span class="text-xs tracking-widest uppercase text-white/80 font-medium">підписників</span>
+
+            <!-- Content Column -->
+            <div class="md:col-span-6 lg:col-span-5 flex flex-col justify-center relative z-10 w-full">
+              <h3 class="font-display text-2xl sm:text-3xl lg:text-3xl font-700 tracking-tight text-white">Настя</h3>
+              
+              <!-- Stats Grid (1 row on mobile, vertical stack on PC) -->
+              <div class="mt-3 md:mt-4 grid grid-cols-2 md:grid-cols-1 gap-2.5 md:gap-3 w-full">
+                <div class="p-2.5 sm:p-3 md:py-2 md:px-3 rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-sm flex flex-col justify-center">
+                  <span class="block text-lg sm:text-xl md:text-2xl lg:text-3xl font-display font-700 text-pink-500 leading-tight">30 тис.</span>
+                  <span class="text-[10px] sm:text-xs tracking-wider uppercase text-white/80 font-medium mt-0.5">підписників</span>
                 </div>
-                <div class="px-4 py-2.5 rounded-2xl bg-black/20 backdrop-blur-md border border-white/10 shadow-sm">
-                  <span class="block text-2xl md:text-3xl font-display font-700 text-pink-400">???</span>
-                  <span class="text-xs tracking-widest uppercase text-white/80 font-medium">на місяць</span>
+                <div class="p-2.5 sm:p-3 md:py-2 md:px-3 rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-sm flex flex-col justify-center">
+                  <span class="block text-lg sm:text-xl md:text-2xl lg:text-3xl font-display font-700 text-pink-400 leading-tight">???</span>
+                  <span class="text-[10px] sm:text-xs tracking-wider uppercase text-white/80 font-medium mt-0.5">на місяць</span>
                 </div>
               </div>
-              <a href="#" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-white/20/30 pb-1 w-fit hover:border-accent hover:text-pink-500 transition-colors">
-                Відкрити профіль
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+
+              <!-- Action Link -->
+              <a href="#" target="_blank" rel="noopener" class="mt-4 md:mt-5 inline-flex items-center justify-center sm:justify-start gap-2 px-4 py-2.5 rounded-xl bg-pink-500/10 hover:bg-pink-500 text-white border border-pink-500/30 hover:border-pink-500 text-xs sm:text-xs md:text-sm tracking-wide uppercase transition-all duration-300 w-full sm:w-fit group/btn shadow-md hover:shadow-pink-500/25">
+                <span>Відкрити профіль</span>
+                <svg class="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </a>
             </div>
           </article>
 
-          <!-- Case 2 (Даріна) — 65% fill, 60-80% brightness -->
-          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 border border-pink-border/40 overflow-hidden bg-glass-700 p-5 md:p-6">
+          <!-- Case 2 (Даріна) -->
+          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 items-center gap-5 md:gap-6 lg:gap-8 rounded-3xl border border-pink-border/40 overflow-hidden bg-glass-700 p-4 sm:p-5 md:py-5 md:px-6 lg:py-6 lg:px-8 shadow-2xl transition-all duration-500 hover:border-pink-500/50">
             <!-- Background pink blobs -->
             <div class="absolute -right-12 -top-10 w-96 h-80 rounded-full bg-pink-500/70 blur-3xl group-hover:bg-pink-500/85 transition-all duration-500 pointer-events-none"></div>
             <div class="absolute -left-10 -bottom-12 w-80 h-64 rounded-full bg-pink-600/60 blur-3xl group-hover:bg-pink-600/80 transition-all duration-500 pointer-events-none"></div>
 
-            <div class="md:col-span-7 p-5 md:p-6 flex flex-col justify-center order-2 md:order-1 relative z-10">
-              <h3 class="font-display text-2xl md:text-3xl font-700 tracking-tight text-white">Даріна</h3>
-              <div class="mt-4 flex flex-wrap gap-3">
-                <div class="px-4 py-2.5 rounded-2xl bg-black/20 backdrop-blur-md border border-white/10 shadow-sm">
-                  <span class="block text-2xl md:text-3xl font-display font-700 text-pink-500">30 тис.</span>
-                  <span class="text-xs tracking-widest uppercase text-white/80 font-medium">підписників</span>
-                </div>
-                <div class="px-4 py-2.5 rounded-2xl bg-black/20 backdrop-blur-md border border-white/10 shadow-sm">
-                  <span class="block text-2xl md:text-3xl font-display font-700 text-pink-400">$3 тис.</span>
-                  <span class="text-xs tracking-widest uppercase text-white/80 font-medium">на місяць</span>
-                </div>
+            <!-- Image Column -->
+            <div class="md:col-span-6 lg:col-span-7 flex items-center justify-center relative z-10 w-full">
+              <div class="relative w-full max-w-[280px] sm:max-w-[340px] md:max-w-none p-2 rounded-2xl bg-glass-600 border border-pink-border/50 shadow-2xl group-hover:border-pink-500/60 transition-all duration-500">
+                <div class="absolute inset-0 bg-gradient-to-bl from-pink-500/20 via-transparent to-pink-600/20 rounded-2xl pointer-events-none"></div>
+                <img src="assets/images/IMG_5581.JPG" alt="Case 2 - Даріна" class="relative z-10 w-full max-h-[300px] sm:max-h-[340px] md:max-h-[340px] lg:max-h-[380px] object-cover rounded-xl shadow-lg transition-transform duration-500 group-hover:scale-[1.02]">
               </div>
-              <a href="#" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-white/20/30 pb-1 w-fit hover:border-accent hover:text-pink-500 transition-colors">
-                Відкрити профіль
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-              </a>
             </div>
-            <div class="md:col-span-5 flex items-center justify-center p-3 order-1 md:order-2 relative z-10">
-              <div class="relative inline-block p-2 rounded-lg bg-glass-600 border border-pink-border/50 shadow-2xl">
-                <div class="absolute inset-0 bg-gradient-to-bl from-pink-500/30 via-transparent to-pink-600/20 rounded-lg"></div>
-                <img src="assets/images/IMG_5581.JPG" alt="Case 2" class="relative z-10 max-w-[280px] h-auto object-contain rounded shadow-lg">
-                <div class="absolute bottom-2 right-2 text-xs tracking-widest uppercase text-white/60 z-20"></div>
+
+            <!-- Content Column -->
+            <div class="md:col-span-6 lg:col-span-5 flex flex-col justify-center relative z-10 w-full">
+              <h3 class="font-display text-2xl sm:text-3xl lg:text-3xl font-700 tracking-tight text-white">Даріна</h3>
+              
+              <!-- Stats Grid (1 row on mobile, vertical stack on PC) -->
+              <div class="mt-3 md:mt-4 grid grid-cols-2 md:grid-cols-1 gap-2.5 md:gap-3 w-full">
+                <div class="p-2.5 sm:p-3 md:py-2 md:px-3 rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-sm flex flex-col justify-center">
+                  <span class="block text-lg sm:text-xl md:text-2xl lg:text-3xl font-display font-700 text-pink-500 leading-tight">30 тис.</span>
+                  <span class="text-[10px] sm:text-xs tracking-wider uppercase text-white/80 font-medium mt-0.5">підписників</span>
+                </div>
+                <div class="p-2.5 sm:p-3 md:py-2 md:px-3 rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-sm flex flex-col justify-center">
+                  <span class="block text-lg sm:text-xl md:text-2xl lg:text-3xl font-display font-700 text-pink-400 leading-tight">$3 тис.</span>
+                  <span class="text-[10px] sm:text-xs tracking-wider uppercase text-white/80 font-medium mt-0.5">на місяць</span>
+                </div>
               </div>
+
+              <!-- Action Link -->
+              <a href="#" target="_blank" rel="noopener" class="mt-4 md:mt-5 inline-flex items-center justify-center sm:justify-start gap-2 px-4 py-2.5 rounded-xl bg-pink-500/10 hover:bg-pink-500 text-white border border-pink-500/30 hover:border-pink-500 text-xs sm:text-xs md:text-sm tracking-wide uppercase transition-all duration-300 w-full sm:w-fit group/btn shadow-md hover:shadow-pink-500/25">
+                <span>Відкрити профіль</span>
+                <svg class="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
             </div>
           </article>
 
-          <!-- Case 3 (Діана) — 70% fill, 65-80% brightness -->
-          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 border border-pink-border/40 overflow-hidden bg-glass-700 p-5 md:p-6">
+          <!-- Case 3 (Діана) -->
+          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 items-center gap-5 md:gap-6 lg:gap-8 rounded-3xl border border-pink-border/40 overflow-hidden bg-glass-700 p-4 sm:p-5 md:py-5 md:px-6 lg:py-6 lg:px-8 shadow-2xl transition-all duration-500 hover:border-pink-500/50">
             <!-- Background pink blobs -->
             <div class="absolute -left-16 top-1/2 -translate-y-1/2 w-[55%] h-[120%] rounded-full bg-pink-600/75 blur-3xl group-hover:bg-pink-500/90 transition-all duration-500 pointer-events-none"></div>
             <div class="absolute -right-8 -top-8 w-72 h-72 rounded-full bg-pink-600/60 blur-3xl group-hover:bg-pink-400/80 transition-all duration-500 pointer-events-none"></div>
 
-            <div class="md:col-span-5 flex items-center justify-center p-3 relative z-10">
-              <div class="relative inline-block p-2 rounded-lg bg-glass-600 border border-pink-border/50 shadow-2xl">
-                <div class="absolute inset-0 bg-gradient-to-tr from-pink-500/30 via-transparent to-pink-600/20 rounded-lg"></div>
-                <img src="assets/images/IMG_8816.JPG" alt="Case 3" class="relative z-10 max-w-[280px] h-auto object-contain rounded shadow-lg">
-                <div class="absolute bottom-2 left-2 text-xs tracking-widest uppercase text-white/60 z-20"></div>
+            <!-- Image Column -->
+            <div class="md:col-span-6 lg:col-span-7 flex items-center justify-center relative z-10 w-full">
+              <div class="relative w-full max-w-[280px] sm:max-w-[340px] md:max-w-none p-2 rounded-2xl bg-glass-600 border border-pink-border/50 shadow-2xl group-hover:border-pink-500/60 transition-all duration-500">
+                <div class="absolute inset-0 bg-gradient-to-tr from-pink-500/20 via-transparent to-pink-600/20 rounded-2xl pointer-events-none"></div>
+                <img src="assets/images/IMG_8816.JPG" alt="Case 3 - Діана" class="relative z-10 w-full max-h-[300px] sm:max-h-[340px] md:max-h-[340px] lg:max-h-[380px] object-cover rounded-xl shadow-lg transition-transform duration-500 group-hover:scale-[1.02]">
               </div>
             </div>
-            <div class="md:col-span-7 p-5 md:p-6 flex flex-col justify-center relative z-10">
-              <h3 class="font-display text-2xl md:text-3xl font-700 tracking-tight text-white">Діана</h3>
-              <div class="mt-4 flex flex-wrap gap-3">
-                <div class="px-4 py-2.5 rounded-2xl bg-black/20 backdrop-blur-md border border-white/10 shadow-sm">
-                  <span class="block text-2xl md:text-3xl font-display font-700 text-pink-500">31 тис.</span>
-                  <span class="text-xs tracking-widest uppercase text-white/80 font-medium">підписників</span>
+
+            <!-- Content Column -->
+            <div class="md:col-span-6 lg:col-span-5 flex flex-col justify-center relative z-10 w-full">
+              <h3 class="font-display text-2xl sm:text-3xl lg:text-3xl font-700 tracking-tight text-white">Діана</h3>
+              
+              <!-- Stats Grid (1 row on mobile, vertical stack on PC) -->
+              <div class="mt-3 md:mt-4 grid grid-cols-2 md:grid-cols-1 gap-2.5 md:gap-3 w-full">
+                <div class="p-2.5 sm:p-3 md:py-2 md:px-3 rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-sm flex flex-col justify-center">
+                  <span class="block text-lg sm:text-xl md:text-2xl lg:text-3xl font-display font-700 text-pink-500 leading-tight">31 тис.</span>
+                  <span class="text-[10px] sm:text-xs tracking-wider uppercase text-white/80 font-medium mt-0.5">підписників</span>
                 </div>
-                <div class="px-4 py-2.5 rounded-2xl bg-black/20 backdrop-blur-md border border-white/10 shadow-sm">
-                  <span class="block text-2xl md:text-3xl font-display font-700 text-pink-400">$2-2.5 тис.</span>
-                  <span class="text-xs tracking-widest uppercase text-white/80 font-medium">на місяць</span>
+                <div class="p-2.5 sm:p-3 md:py-2 md:px-3 rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-sm flex flex-col justify-center">
+                  <span class="block text-lg sm:text-xl md:text-2xl lg:text-3xl font-display font-700 text-pink-400 leading-tight">$2-2.5 тис.</span>
+                  <span class="text-[10px] sm:text-xs tracking-wider uppercase text-white/80 font-medium mt-0.5">на місяць</span>
                 </div>
               </div>
-              <a href="#" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-white/20/30 pb-1 w-fit hover:border-accent hover:text-pink-500 transition-colors">
-                Відкрити профіль
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+
+              <!-- Action Link -->
+              <a href="#" target="_blank" rel="noopener" class="mt-4 md:mt-5 inline-flex items-center justify-center sm:justify-start gap-2 px-4 py-2.5 rounded-xl bg-pink-500/10 hover:bg-pink-500 text-white border border-pink-500/30 hover:border-pink-500 text-xs sm:text-xs md:text-sm tracking-wide uppercase transition-all duration-300 w-full sm:w-fit group/btn shadow-md hover:shadow-pink-500/25">
+                <span>Відкрити профіль</span>
+                <svg class="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </a>
             </div>
           </article>
 
-          <!-- Case 4 (Соломія) — 55% fill, 55-75% brightness -->
-          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 border border-pink-border/40 overflow-hidden bg-glass-700 p-8 md:p-12">
+          <!-- Case 4 (Соломія) -->
+          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 items-center gap-5 md:gap-6 lg:gap-8 rounded-3xl border border-pink-border/40 overflow-hidden bg-glass-700 p-4 sm:p-5 md:py-5 md:px-6 lg:py-6 lg:px-8 shadow-2xl transition-all duration-500 hover:border-pink-500/50">
             <!-- Background pink blobs -->
             <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] h-56 rounded-full bg-pink-600/70 blur-3xl group-hover:bg-pink-500/85 transition-all duration-500 pointer-events-none"></div>
             <div class="absolute -left-10 -top-10 w-72 h-72 rounded-full bg-pink-600/55 blur-3xl group-hover:bg-pink-600/75 transition-all duration-500 pointer-events-none"></div>
 
-            <div class="md:col-span-7 p-8 md:p-12 flex flex-col justify-center order-2 md:order-1 relative z-10">
-              <h3 class="font-display text-3xl md:text-4xl font-700 tracking-tight text-white">Соломія</h3>
-              <div class="mt-6 flex flex-wrap gap-4">
-                <div class="px-5 py-3 rounded-2xl bg-black/20 backdrop-blur-md border border-white/10 shadow-sm">
-                  <span class="block text-3xl md:text-4xl font-display font-700 text-pink-500">50 тис.</span>
-                  <span class="text-xs tracking-widest uppercase text-white/80 font-medium">підписників</span>
-                </div>
-                <div class="px-5 py-3 rounded-2xl bg-black/20 backdrop-blur-md border border-white/10 shadow-sm">
-                  <span class="block text-3xl md:text-4xl font-display font-700 text-pink-400">$2-3 тис.</span>
-                  <span class="text-xs tracking-widest uppercase text-white/80 font-medium">на місяць</span>
-                </div>
+            <!-- Image Column -->
+            <div class="md:col-span-6 lg:col-span-7 flex items-center justify-center relative z-10 w-full">
+              <div class="relative w-full max-w-[280px] sm:max-w-[340px] md:max-w-none p-2 rounded-2xl bg-glass-600 border border-pink-border/50 shadow-2xl group-hover:border-pink-500/60 transition-all duration-500">
+                <div class="absolute inset-0 bg-gradient-to-bl from-pink-500/20 via-transparent to-pink-600/20 rounded-2xl pointer-events-none"></div>
+                <img src="assets/images/IMG_5588.PNG" alt="Case 4 - Соломія" class="relative z-10 w-full max-h-[300px] sm:max-h-[340px] md:max-h-[340px] lg:max-h-[380px] object-cover rounded-xl shadow-lg transition-transform duration-500 group-hover:scale-[1.02]">
               </div>
-              <a href="#" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-white/20/30 pb-1 w-fit hover:border-accent hover:text-pink-500 transition-colors">
-                Відкрити профіль
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-              </a>
             </div>
-            <div class="md:col-span-5 flex items-center justify-center p-4 order-1 md:order-2 relative z-10">
-              <div class="relative inline-block p-3 rounded-lg bg-glass-600 border border-pink-border/50 shadow-2xl">
-                <div class="absolute inset-0 bg-gradient-to-bl from-pink-500/30 via-transparent to-pink-600/20 rounded-lg"></div>
-                <img src="assets/images/IMG_5588.PNG" alt="Case 4" class="relative z-10 max-w-[320px] h-auto object-contain rounded shadow-lg">
-                <div class="absolute bottom-2 right-2 text-xs tracking-widest uppercase text-white/60 z-20"></div>
+
+            <!-- Content Column -->
+            <div class="md:col-span-6 lg:col-span-5 flex flex-col justify-center relative z-10 w-full">
+              <h3 class="font-display text-2xl sm:text-3xl lg:text-3xl font-700 tracking-tight text-white">Соломія</h3>
+              
+              <!-- Stats Grid (1 row on mobile, vertical stack on PC) -->
+              <div class="mt-3 md:mt-4 grid grid-cols-2 md:grid-cols-1 gap-2.5 md:gap-3 w-full">
+                <div class="p-2.5 sm:p-3 md:py-2 md:px-3 rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-sm flex flex-col justify-center">
+                  <span class="block text-lg sm:text-xl md:text-2xl lg:text-3xl font-display font-700 text-pink-500 leading-tight">50 тис.</span>
+                  <span class="text-[10px] sm:text-xs tracking-wider uppercase text-white/80 font-medium mt-0.5">підписників</span>
+                </div>
+                <div class="p-2.5 sm:p-3 md:py-2 md:px-3 rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-sm flex flex-col justify-center">
+                  <span class="block text-lg sm:text-xl md:text-2xl lg:text-3xl font-display font-700 text-pink-400 leading-tight">$2-3 тис.</span>
+                  <span class="text-[10px] sm:text-xs tracking-wider uppercase text-white/80 font-medium mt-0.5">на місяць</span>
+                </div>
               </div>
+
+              <!-- Action Link -->
+              <a href="#" target="_blank" rel="noopener" class="mt-4 md:mt-5 inline-flex items-center justify-center sm:justify-start gap-2 px-4 py-2.5 rounded-xl bg-pink-500/10 hover:bg-pink-500 text-white border border-pink-500/30 hover:border-pink-500 text-xs sm:text-xs md:text-sm tracking-wide uppercase transition-all duration-300 w-full sm:w-fit group/btn shadow-md hover:shadow-pink-500/25">
+                <span>Відкрити профіль</span>
+                <svg class="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
             </div>
           </article>
 
-          <!-- Case 5 (Ніка) — 65% fill, 60-80% brightness -->
-          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 border border-pink-border/40 overflow-hidden bg-glass-700 p-8 md:p-10">
+          <!-- Case 5 (Ніка) -->
+          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 items-center gap-5 md:gap-6 lg:gap-8 rounded-3xl border border-pink-border/40 overflow-hidden bg-glass-700 p-4 sm:p-5 md:py-5 md:px-6 lg:py-6 lg:px-8 shadow-2xl transition-all duration-500 hover:border-pink-500/50">
             <!-- Background pink blobs -->
             <div class="absolute -left-10 -top-8 w-80 h-72 rounded-full bg-pink-500/65 blur-3xl group-hover:bg-pink-500/80 transition-all duration-500 pointer-events-none"></div>
             <div class="absolute -right-12 -bottom-12 w-96 h-72 rounded-full bg-pink-600/70 blur-3xl group-hover:bg-pink-600/85 transition-all duration-500 pointer-events-none"></div>
 
-            <div class="md:col-span-5 flex items-center justify-center p-4 relative z-10">
-              <div class="relative inline-block p-3 rounded-lg bg-glass-600 border border-pink-border/50 shadow-2xl">
-                <div class="absolute inset-0 bg-gradient-to-br from-pink-500/30 via-transparent to-pink-600/20 rounded-lg"></div>
-                <img src="assets/images/IMG_5777.JPG" alt="Case 5" class="relative z-10 max-w-[320px] h-auto object-contain rounded shadow-lg">
-                <div class="absolute bottom-2 left-2 text-xs tracking-widest uppercase text-white/60 z-20"></div>
+            <!-- Image Column -->
+            <div class="md:col-span-6 lg:col-span-7 flex items-center justify-center relative z-10 w-full">
+              <div class="relative w-full max-w-[280px] sm:max-w-[340px] md:max-w-none p-2 rounded-2xl bg-glass-600 border border-pink-border/50 shadow-2xl group-hover:border-pink-500/60 transition-all duration-500">
+                <div class="absolute inset-0 bg-gradient-to-br from-pink-500/20 via-transparent to-pink-600/20 rounded-2xl pointer-events-none"></div>
+                <img src="assets/images/IMG_5777.JPG" alt="Case 5 - Ніка" class="relative z-10 w-full max-h-[300px] sm:max-h-[340px] md:max-h-[340px] lg:max-h-[380px] object-cover rounded-xl shadow-lg transition-transform duration-500 group-hover:scale-[1.02]">
               </div>
             </div>
-            <div class="md:col-span-7 p-8 md:p-12 flex flex-col justify-center relative z-10">
-              <h3 class="font-display text-3xl md:text-4xl font-700 tracking-tight text-white">Ніка</h3>
-              <div class="mt-6 flex flex-wrap gap-4">
-                <div class="px-5 py-3 rounded-2xl bg-black/20 backdrop-blur-md border border-white/10 shadow-sm">
-                  <span class="block text-3xl md:text-4xl font-display font-700 text-pink-500">25 тис.</span>
-                  <span class="text-xs tracking-widest uppercase text-white/80 font-medium">підписників</span>
+
+            <!-- Content Column -->
+            <div class="md:col-span-6 lg:col-span-5 flex flex-col justify-center relative z-10 w-full">
+              <h3 class="font-display text-2xl sm:text-3xl lg:text-3xl font-700 tracking-tight text-white">Ніка</h3>
+              
+              <!-- Stats Grid (1 row on mobile, vertical stack on PC) -->
+              <div class="mt-3 md:mt-4 grid grid-cols-2 md:grid-cols-1 gap-2.5 md:gap-3 w-full">
+                <div class="p-2.5 sm:p-3 md:py-2 md:px-3 rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-sm flex flex-col justify-center">
+                  <span class="block text-lg sm:text-xl md:text-2xl lg:text-3xl font-display font-700 text-pink-500 leading-tight">25 тис.</span>
+                  <span class="text-[10px] sm:text-xs tracking-wider uppercase text-white/80 font-medium mt-0.5">підписників</span>
                 </div>
-                <div class="px-5 py-3 rounded-2xl bg-black/20 backdrop-blur-md border border-white/10 shadow-sm">
-                  <span class="block text-3xl md:text-4xl font-display font-700 text-pink-400">$1-1.5 тис.</span>
-                  <span class="text-xs tracking-widest uppercase text-white/80 font-medium">на місяць</span>
+                <div class="p-2.5 sm:p-3 md:py-2 md:px-3 rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-sm flex flex-col justify-center">
+                  <span class="block text-lg sm:text-xl md:text-2xl lg:text-3xl font-display font-700 text-pink-400 leading-tight">$1-1.5 тис.</span>
+                  <span class="text-[10px] sm:text-xs tracking-wider uppercase text-white/80 font-medium mt-0.5">на місяць</span>
                 </div>
               </div>
-              <a href="#" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-white/20/30 pb-1 w-fit hover:border-accent hover:text-pink-500 transition-colors">
-                Відкрити профіль
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+
+              <!-- Action Link -->
+              <a href="#" target="_blank" rel="noopener" class="mt-4 md:mt-5 inline-flex items-center justify-center sm:justify-start gap-2 px-4 py-2.5 rounded-xl bg-pink-500/10 hover:bg-pink-500 text-white border border-pink-500/30 hover:border-pink-500 text-xs sm:text-xs md:text-sm tracking-wide uppercase transition-all duration-300 w-full sm:w-fit group/btn shadow-md hover:shadow-pink-500/25">
+                <span>Відкрити профіль</span>
+                <svg class="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </a>
             </div>
           </article>
 
-          <!-- Case 6 (Катя) — 70% fill, 65-80% brightness -->
-          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 border border-pink-border/40 overflow-hidden bg-glass-700 p-8 md:p-12">
+          <!-- Case 6 (Катя) -->
+          <article class="case-card group relative grid grid-cols-1 md:grid-cols-12 items-center gap-5 md:gap-6 lg:gap-8 rounded-3xl border border-pink-border/40 overflow-hidden bg-glass-700 p-4 sm:p-5 md:py-5 md:px-6 lg:py-6 lg:px-8 shadow-2xl transition-all duration-500 hover:border-pink-500/50">
             <!-- Background pink blobs -->
             <div class="absolute -right-14 top-1/2 -translate-y-1/2 w-[55%] h-[120%] rounded-full bg-pink-600/75 blur-3xl group-hover:bg-pink-500/90 transition-all duration-500 pointer-events-none"></div>
             <div class="absolute -left-12 -bottom-10 w-80 h-72 rounded-full bg-pink-500/65 blur-3xl group-hover:bg-pink-600/80 transition-all duration-500 pointer-events-none"></div>
 
-            <div class="md:col-span-7 p-8 md:p-12 flex flex-col justify-center order-2 md:order-1 relative z-10">
-              <h3 class="font-display text-3xl md:text-4xl font-700 tracking-tight text-white">Катя</h3>
-              <div class="mt-6 flex flex-wrap gap-4">
-                <div class="px-5 py-3 rounded-2xl bg-black/20 backdrop-blur-md border border-white/10 shadow-sm">
-                  <span class="block text-3xl md:text-4xl font-display font-700 text-pink-500">15 тис.</span>
-                  <span class="text-xs tracking-widest uppercase text-white/80 font-medium">підписників</span>
-                </div>
-                <div class="px-5 py-3 rounded-2xl bg-black/20 backdrop-blur-md border border-white/10 shadow-sm">
-                  <span class="block text-3xl md:text-4xl font-display font-700 text-pink-400">???</span>
-                  <span class="text-xs tracking-widest uppercase text-white/80 font-medium">на місяць</span>
-                </div>
+            <!-- Image Column -->
+            <div class="md:col-span-6 lg:col-span-7 flex items-center justify-center relative z-10 w-full">
+              <div class="relative w-full max-w-[280px] sm:max-w-[340px] md:max-w-none p-2 rounded-2xl bg-glass-600 border border-pink-border/50 shadow-2xl group-hover:border-pink-500/60 transition-all duration-500">
+                <div class="absolute inset-0 bg-gradient-to-bl from-pink-500/20 via-transparent to-pink-600/20 rounded-2xl pointer-events-none"></div>
+                <img src="assets/images/IMG_7473.JPG" alt="Case 6 - Катя" class="relative z-10 w-full max-h-[300px] sm:max-h-[340px] md:max-h-[340px] lg:max-h-[380px] object-cover rounded-xl shadow-lg transition-transform duration-500 group-hover:scale-[1.02]">
               </div>
-              <a href="#" target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 text-sm tracking-wide uppercase border-b border-white/20/30 pb-1 w-fit hover:border-accent hover:text-pink-500 transition-colors">
-                Відкрити профіль
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-              </a>
             </div>
-            <div class="md:col-span-5 flex items-center justify-center p-4 order-1 md:order-2 relative z-10">
-              <div class="relative inline-block p-3 rounded-lg bg-glass-600 border border-pink-border/50 shadow-2xl">
-                <div class="absolute inset-0 bg-gradient-to-bl from-pink-500/30 via-transparent to-pink-600/20 rounded-lg"></div>
-                <img src="assets/images/IMG_7473.JPG" alt="Case 6" class="relative z-10 max-w-[320px] h-auto object-contain rounded shadow-lg">
-                <div class="absolute bottom-2 right-2 text-xs tracking-widest uppercase text-white/60 z-20"></div>
+
+            <!-- Content Column -->
+            <div class="md:col-span-6 lg:col-span-5 flex flex-col justify-center relative z-10 w-full">
+              <h3 class="font-display text-2xl sm:text-3xl lg:text-3xl font-700 tracking-tight text-white">Катя</h3>
+              
+              <!-- Stats Grid (1 row on mobile, vertical stack on PC) -->
+              <div class="mt-3 md:mt-4 grid grid-cols-2 md:grid-cols-1 gap-2.5 md:gap-3 w-full">
+                <div class="p-2.5 sm:p-3 md:py-2 md:px-3 rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-sm flex flex-col justify-center">
+                  <span class="block text-lg sm:text-xl md:text-2xl lg:text-3xl font-display font-700 text-pink-500 leading-tight">15 тис.</span>
+                  <span class="text-[10px] sm:text-xs tracking-wider uppercase text-white/80 font-medium mt-0.5">підписників</span>
+                </div>
+                <div class="p-2.5 sm:p-3 md:py-2 md:px-3 rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 shadow-sm flex flex-col justify-center">
+                  <span class="block text-lg sm:text-xl md:text-2xl lg:text-3xl font-display font-700 text-pink-400 leading-tight">???</span>
+                  <span class="text-[10px] sm:text-xs tracking-wider uppercase text-white/80 font-medium mt-0.5">на місяць</span>
+                </div>
               </div>
+
+              <!-- Action Link -->
+              <a href="#" target="_blank" rel="noopener" class="mt-4 md:mt-5 inline-flex items-center justify-center sm:justify-start gap-2 px-4 py-2.5 rounded-xl bg-pink-500/10 hover:bg-pink-500 text-white border border-pink-500/30 hover:border-pink-500 text-xs sm:text-xs md:text-sm tracking-wide uppercase transition-all duration-300 w-full sm:w-fit group/btn shadow-md hover:shadow-pink-500/25">
+                <span>Відкрити профіль</span>
+                <svg class="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
             </div>
           </article>
           </div>
